@@ -28,5 +28,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Torre/" />
+        <folder expanded="1" path="animation-folder/Tiro/" />
+        <folder expanded="1" path="animation-folder/Inimigo/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
     </folders-expanded>
 </c2uistate>

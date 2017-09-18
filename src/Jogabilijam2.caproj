@@ -9,8 +9,17 @@
     <app-id>delrose.jogabilijam2</app-id>
     <unique-id>19h5e6iiz1hif</unique-id>
     <saved-with-version>24400</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -37,7 +46,88 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
+    <object-folder>
+        <object-type name="Torre" sid="982098852941829">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="993364112708820">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259355335699946" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tiro" sid="752742269701277">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="278874839627376">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="258159188746283">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983054233126207" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Inimigo" sid="841004437916550">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="281412106680753">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568657784837430" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnPronto" sid="687779603834311">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="btnTorre" sid="858037176280526">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="txtOnda" sid="653972415933431">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtDinheiro" sid="714195652183497">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtVidas" sid="645772860270992">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtFalhou" sid="309002550746601">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TiledBackground" sid="941024211247901">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite" sid="533936856541509">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175769218504405" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="300076170929547">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221535068442910" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
