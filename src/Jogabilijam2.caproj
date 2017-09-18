@@ -49,6 +49,9 @@
     <object-folder>
         <object-type name="Torre" sid="982098852941829">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Floating" sid="264057170557532" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Turret" sid="993364112708820">
                     <behavior id="Turret" />
@@ -62,6 +65,9 @@
         </object-type>
         <object-type name="Tiro" sid="752742269701277">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Damage" sid="711586793846316" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="278874839627376">
                     <behavior id="Bullet" />
@@ -78,6 +84,10 @@
         </object-type>
         <object-type name="Inimigo" sid="841004437916550">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="CurrentDestination" sid="861662585701697" type="number" />
+                <instance-variable name="HitPoints" sid="679263425231402" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="281412106680753">
                     <behavior id="Bullet" />

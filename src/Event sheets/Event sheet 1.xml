@@ -2,5 +2,13 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <variable constant="0" name="InHand" sid="508071098799263" static="0" type="number">0</variable>
+        <variable constant="0" name="Lives" sid="737657344023187" static="0" type="number">20</variable>
+        <variable constant="0" name="Timer" sid="746709797750586" static="0" type="number">-1</variable>
+        <variable constant="0" name="CurrentCash" sid="147354329828043" static="0" type="number">100</variable>
+        <variable constant="0" name="CurrentWave" sid="621447858659797" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
+        <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
+    </events>
 </c2eventsheet>

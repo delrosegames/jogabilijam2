@@ -119,6 +119,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Floating>true</Floating>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">
                             <properties>
@@ -156,6 +159,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Damage>10</Damage>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
@@ -191,6 +197,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <CurrentDestination>0</CurrentDestination>
+                        <HitPoints>10</HitPoints>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
