@@ -11,6 +11,8 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -121,7 +123,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="Sprite" sid="533936856541509">
+        <object-type name="SpawnPoint" sid="533936856541509">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175769218504405" speed="5">
@@ -129,13 +131,19 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="300076170929547">
+        <object-type name="Destination" sid="300076170929547">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221535068442910" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="565626247793604">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Keyboard" sid="315499532680391">
+            <plugin id="Keyboard" />
         </object-type>
     </object-folder>
     <families />
@@ -145,7 +153,10 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Mouse" uid="12" />
+        <global-instance type="Keyboard" uid="13" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>

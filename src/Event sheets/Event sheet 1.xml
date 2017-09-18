@@ -10,5 +10,112 @@
         <variable constant="0" name="CurrentWave" sid="621447858659797" static="0" type="number">0</variable>
         <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
         <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
+        <event-group description="" sid="151515409627195" title="Construção da Torre">
+            <sub-events>
+                <comment>Spawn a new tower to be placed</comment>
+                <event-block any="1" sid="347986029819191">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="489082550060844" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btnTorre</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="402083677724742" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="720486602592119">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="280226585548888" type="System">
+                                    <param id="0" name="Variable">CurrentCash</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="332181892537707" type="System">
+                                    <param id="0" name="Variable">InHand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="933994160082759" type="System">
+                                    <param id="0" name="Object to create">Torre</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="425558981733557" type="System">
+                                    <param id="0" name="Variable">InHand</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Always set the tower in hand to snap to the grid</comment>
+                <event-block sid="159002158328114">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="608737569731522" type="Torre">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="308480826924656" type="Torre">
+                            <param id="0" name="X">round(mouse.X / 64) *  64</param>
+                            <param id="1" name="Y">round(mouse.Y / 64) *  64</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Adiciona uma nova torre se estiver posicionada no local correto (acima da grid e não em cima de outra torre)</comment>
+                <event-block sid="700155178780061">
+                    <conditions>
+                        <condition id="0" name="On click" sid="238640570338021" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="644886697456948" type="Mouse">
+                            <param id="0" name="Object">TiledBackground</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="923447312086747" type="Torre">
+                            <param id="0" name="Object">Torre</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="980823868102652" type="Torre">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="740194881199219" type="Torre">
+                            <param id="0" name="Instance variable">Floating</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="254534954022493" type="System">
+                            <param id="0" name="Variable">CurrentCash</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="896801775452535" type="System">
+                            <param id="0" name="Variable">InHand</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Cancela a construção da torre</comment>
+                <event-block sid="649165299070398">
+                    <conditions>
+                        <condition id="0" name="On click" sid="863172170914430" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="794601822031898" type="Torre">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="314505834364853" type="Torre" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
