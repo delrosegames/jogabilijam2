@@ -10,6 +10,14 @@
         <variable constant="0" name="CurrentWave" sid="621447858659797" static="0" type="number">0</variable>
         <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
         <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
+        <event-group description="" sid="594688692398007" title="Debug">
+            <sub-events>
+                <event-block sid="144370509794921">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="511951437666883" title="Inicialização">
             <sub-events>
                 <event-block sid="187012771341267">
@@ -18,6 +26,20 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="659793515511725" type="Torre" />
+                    </actions>
+                </event-block>
+                <event-block sid="481072421821242">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="574683615385708" type="txtVidas">
+                            <param id="0" name="Text">&quot;Vidas: &quot; &amp; Lives</param>
+                        </action>
+                        <action id="0" name="Set text" sid="177310736975976" type="txtOnda">
+                            <param id="0" name="Text">&quot;Onda: &quot; &amp; CurrentWave</param>
+                        </action>
+                        <action id="0" name="Set text" sid="494830300481354" type="txtDinheiro">
+                            <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; CurrentCash</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -75,10 +97,40 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="308480826924656" type="Torre">
-                            <param id="0" name="X">round(mouse.X / 64) *  64</param>
-                            <param id="1" name="Y">round(mouse.Y / 64) *  64</param>
+                            <param id="0" name="X">(round((mouse.X - 5)  / 30) * 30) + 5</param>
+                            <param id="1" name="Y">(round((mouse.Y - 15) / 30) * 30) + 15</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="442256127035809" type="Torre">
+                            <param id="0" name="Opacity">80</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="909792222427579" type="txtDebug">
+                            <param id="0" name="Text">&quot;Mouse: &quot; &amp; Mouse.X &amp; &quot;x&quot; &amp; Mouse.Y&#x0D;&#x0A;&amp; &quot;Torre: &quot; &amp; Torre.X &amp; &quot;x&quot; &amp; Torre.Y</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="991633743883588">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="744264215656067" type="Mouse">
+                                    <param id="0" name="Object">TiledBackground</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="308411649768798" type="Torre">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="233986147148753">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="583670283399412" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="692386833988178" type="Torre">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Adiciona uma nova torre se estiver posicionada no local correto (acima da grid e não em cima de outra torre)</comment>
                 <event-block sid="700155178780061">

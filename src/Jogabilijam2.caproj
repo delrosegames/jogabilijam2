@@ -2,7 +2,7 @@
 <c2project>
     <name>Jogabilijam2</name>
     <description></description>
-    <version>1.0.0.0</version>
+    <version>0.1.0.0</version>
     <author>Del Rose Game Studio</author>
     <author-email></author-email>
     <author-website>https://github.com/delrosegames/jogabilijam2</author-website>
@@ -26,26 +26,26 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>854</width>
-        <height>480</height>
+        <width>640</width>
+        <height>360</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
-        <prop name="Clear background">Yes</prop>
+        <prop name="Clear background">No</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
-        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
-        <prop name="Orientations">Any</prop>
+        <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
-        <prop name="Use high-DPI display">Yes</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">No</prop>
     </configuration-settings>
     <object-folder>
         <object-type name="Torre" sid="982098852941829">
@@ -150,6 +150,9 @@
             <plugin id="Text" />
         </object-type>
         <object-type name="btnPronto" sid="679580239706214">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtDebug" sid="883647146697454">
             <plugin id="Text" />
         </object-type>
     </object-folder>
