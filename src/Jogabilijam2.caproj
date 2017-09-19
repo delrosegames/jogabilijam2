@@ -10,7 +10,6 @@
     <unique-id>19h5e6iiz1hif</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -101,12 +100,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="btnPronto" sid="687779603834311">
-            <plugin id="Button" />
-        </object-type>
-        <object-type name="btnTorre" sid="858037176280526">
-            <plugin id="Button" />
-        </object-type>
         <object-type name="txtOnda" sid="653972415933431">
             <plugin id="Text" />
         </object-type>
@@ -152,6 +145,12 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="btnTorre" sid="967490691625453">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btnPronto" sid="679580239706214">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

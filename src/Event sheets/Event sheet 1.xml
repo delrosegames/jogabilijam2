@@ -10,12 +10,24 @@
         <variable constant="0" name="CurrentWave" sid="621447858659797" static="0" type="number">0</variable>
         <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
         <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
+        <event-group description="" sid="511951437666883" title="Inicialização">
+            <sub-events>
+                <event-block sid="187012771341267">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="856982768515304" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="659793515511725" type="Torre" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="151515409627195" title="Construção da Torre">
             <sub-events>
                 <comment>Spawn a new tower to be placed</comment>
                 <event-block any="1" sid="347986029819191">
                     <conditions>
-                        <condition id="6" name="On object clicked" sid="489082550060844" type="Mouse">
+                        <condition id="6" name="On object clicked" sid="991846562555755" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">btnTorre</param>
@@ -117,68 +129,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="212760558417889" title="Timer">
-            <sub-events>
-                <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
-                <event-block any="1" sid="719823273303887">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="739050924716530" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">btnPronto</param>
-                        </condition>
-                        <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
-                            <param id="0" name="Key">13 (Return)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="971314478371408">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="460687596966669" type="System">
-                                    <param id="0" name="First value">Inimigo.Count</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="991946828535790" type="System">
-                                    <param id="0" name="Variable">Timer</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="392217073960283" type="System">
-                                    <param id="0" name="Variable">CurrentEnemies</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="122560760405938" type="System">
-                                    <param id="0" name="Variable">CurrentWave</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Inicia o Timer artificial</comment>
-                <event-block sid="790830225865745">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="278633144268187" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="341511226190070" type="System">
-                            <param id="0" name="Variable">Timer</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="714605096918984" type="System">
-                            <param id="0" name="Variable">Timer</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="217458358523251" title="Enemy spawning and movement">
             <sub-events>
                 <event-block sid="867015701702931">
@@ -276,6 +226,129 @@
                         <action id="-11" name="Subtract from" sid="683204540666977" type="System">
                             <param id="0" name="Variable">Lives</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="212760558417889" title="Timer">
+            <sub-events>
+                <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
+                <event-block any="1" sid="719823273303887">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="233243161357255" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btnPronto</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="971314478371408">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="460687596966669" type="System">
+                                    <param id="0" name="First value">Inimigo.Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="991946828535790" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="392217073960283" type="System">
+                                    <param id="0" name="Variable">CurrentEnemies</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="122560760405938" type="System">
+                                    <param id="0" name="Variable">CurrentWave</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Inicia o Timer artificial</comment>
+                <event-block sid="790830225865745">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="278633144268187" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="341511226190070" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="714605096918984" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="503950269978368" title="Tower attacking">
+            <sub-events>
+                <event-block sid="320970842132964">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="410498073327688" type="Torre">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="678165630398334" type="Torre">
+                            <param id="0" name="Target">Inimigo</param>
+                        </action>
+                        <action behavior="Turret" id="5" name="Set enabled" sid="246204543080317" type="Torre">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="669579245571878">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="987988875456783" type="Torre" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="510456709970480" type="Torre">
+                            <param id="0" name="Object">Tiro</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="219531707335217">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="968315138224338" type="Tiro">
+                            <param id="0" name="Object">Inimigo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="348640198504062" type="Inimigo">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Value">Tiro.Damage</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="957996607970245" type="Tiro" />
+                    </actions>
+                </event-block>
+                <event-block sid="787857905529714">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="255481674379277" type="Inimigo">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="949719614434019" type="Inimigo" />
+                        <action id="-10" name="Add to" sid="566428504537795" type="System">
+                            <param id="0" name="Variable">CurrentCash</param>
+                            <param id="1" name="Value">2*CurrentWave</param>
                         </action>
                     </actions>
                 </event-block>
