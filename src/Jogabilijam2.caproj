@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
@@ -124,7 +125,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Destination" sid="300076170929547">
+        <object-type name="PontoMovimento" sid="300076170929547">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221535068442910" speed="5">
@@ -154,6 +155,18 @@
         </object-type>
         <object-type name="txtDebug" sid="883647146697454">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="SpriteFont" sid="229763420160320">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="FundoGUI" sid="878652979657616">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737176356470673" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

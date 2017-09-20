@@ -97,7 +97,7 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="308480826924656" type="Torre">
-                            <param id="0" name="X">(round((mouse.X - 5)  / 30) * 30) + 5</param>
+                            <param id="0" name="X">(round((mouse.X - 15)  / 30) * 30) + 15</param>
                             <param id="1" name="Y">(round((mouse.Y - 15) / 30) * 30) + 15</param>
                         </action>
                         <action id="-16" name="Set opacity" sid="442256127035809" type="Torre">
@@ -232,15 +232,43 @@
                 <event-block sid="489960502354249">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="320347672768116" type="Inimigo">
-                            <param id="0" name="Object">Destination</param>
+                            <param id="0" name="Object">PontoMovimento</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="947666206045139" type="Inimigo">
                             <param id="0" name="Instance variable">CurrentDestination</param>
-                            <param id="1" name="Value">Destination.IID+1</param>
+                            <param id="1" name="Value">PontoMovimento.IID+1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block disabled="1" sid="263365998713662">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="269284591998096" type="Inimigo">
+                            <param id="0" name="Object">PontoMovimento</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="510389210194400">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="757029993462212" type="Inimigo">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">PontoMovimento.X</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="262484234679211" type="Inimigo">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">PontoMovimento.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="168405807141496" type="Inimigo">
+                                    <param id="0" name="Instance variable">CurrentDestination</param>
+                                    <param id="1" name="Value">PontoMovimento.IID+1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="946767151775685">
                     <conditions>
@@ -254,14 +282,14 @@
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="745054720626265" type="System" />
                                 <condition id="-13" name="Pick nth instance" sid="915890042774652" type="System">
-                                    <param id="0" name="Object">Destination</param>
+                                    <param id="0" name="Object">PontoMovimento</param>
                                     <param id="1" name="Instance">Inimigo.CurrentDestination</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-22" name="Set angle toward position" sid="630561997828868" type="Inimigo">
-                                    <param id="0" name="X">Destination.X</param>
-                                    <param id="1" name="Y">Destination.Y</param>
+                                    <param id="0" name="X">PontoMovimento.X</param>
+                                    <param id="1" name="Y">PontoMovimento.Y</param>
                                 </action>
                             </actions>
                         </event-block>
