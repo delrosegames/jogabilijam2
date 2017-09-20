@@ -113,7 +113,7 @@
         <object-type name="txtFalhou" sid="309002550746601">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TiledBackground" sid="941024211247901">
+        <object-type name="ZonaConstrucao" sid="941024211247901">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -165,6 +165,14 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737176356470673" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cenario" sid="230111928141287">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508295869701976" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Downloads\01.jpg" />
                 </animation>
             </animation-folder>
         </object-type>

@@ -111,7 +111,7 @@
                         <event-block sid="991633743883588">
                             <conditions>
                                 <condition id="7" name="Cursor is over object" sid="744264215656067" type="Mouse">
-                                    <param id="0" name="Object">TiledBackground</param>
+                                    <param id="0" name="Object">ZonaConstrucao</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -140,7 +140,7 @@
                             <param id="1" name="Click type">0</param>
                         </condition>
                         <condition id="7" name="Cursor is over object" sid="644886697456948" type="Mouse">
-                            <param id="0" name="Object">TiledBackground</param>
+                            <param id="0" name="Object">ZonaConstrucao</param>
                         </condition>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="923447312086747" type="Torre">
                             <param id="0" name="Object">Torre</param>
