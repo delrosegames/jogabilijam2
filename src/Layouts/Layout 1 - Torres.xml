@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
-    <sid>260400252803821</sid>
+    <name>Layout 1 - Torres</name>
+    <sid>915399447265774</sid>
     <event-sheet>Event sheet 1</event-sheet>
     <size>
         <width>640</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Fundo" sid="268752649183020">
+        <layer name="Fundo" sid="199673928267613">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Cenario" uid="20">
+                <instance type="Cenario" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpawnPoint" uid="10">
+                <instance type="SpawnPoint" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -76,7 +76,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Jogo - Frente" sid="771188489044174">
+        <layer name="Jogo - Frente" sid="591104438798560">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -92,9 +92,9 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TorreSaciBase" uid="0">
+                <instance type="TorreSaciBase" uid="34">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -105,7 +105,7 @@
                     <behavior-instances>
                         <behavior-instance type="Turret">
                             <properties>
-                                <range>90</range>
+                                <range>60</range>
                                 <rate-of-fire>1</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>999999</rotate-speed>
@@ -128,11 +128,11 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiroBase" uid="1">
+                <instance type="TiroBase" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -140,7 +140,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Damage>2</Damage>
+                        <Damage>1</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -149,7 +149,7 @@
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
+                                <set-angle>No</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -167,10 +167,10 @@
                         <hotspotX>0.521739125</hotspotX>
                         <hotspotY>0.592592597</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Inimigo" uid="2">
+                <instance type="Inimigo" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -185,7 +185,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>150</speed>
+                                <speed>200</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -197,9 +197,9 @@
                     <effect-instances>
                         <effect-instance type="Tint">
                             <parameters>
-                                <blue>2.55</blue>
-                                <green>2</green>
-                                <red>0</red>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -218,10 +218,35 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Tiro" uid="63">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>420</y>
+                        <z>0</z>
+                        <width>23</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.521739125</hotspotX>
+                        <hotspotY>0.518518507</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="GUI" sid="350938919586397">
+        <layer name="GUI" sid="222845547193777">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -237,7 +262,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="FundoGUI" uid="19">
+                <instance type="FundoGUI" uid="37">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -259,7 +284,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtOnda" uid="5">
+                <instance type="txtOnda" uid="38">
                     <properties>
                         <text>Onda 1</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -286,7 +311,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtVidas" uid="7">
+                <instance type="txtVidas" uid="39">
                     <properties>
                         <text>Vidas: X</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -313,7 +338,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtFalhou" uid="8">
+                <instance type="txtFalhou" uid="40">
                     <properties>
                         <text>FALHOU</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -340,7 +365,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnPronto" uid="3">
+                <instance type="btnPronto" uid="41">
                     <properties>
                         <text>Pronto</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -367,7 +392,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtDinheiro" uid="6">
+                <instance type="txtDinheiro" uid="42">
                     <properties>
                         <text>Dinheiros: $xxx</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -394,7 +419,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnTorre" uid="4">
+                <instance type="btnTorre" uid="43">
                     <properties>
                         <text>[$30] [A] Torre</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -421,7 +446,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtDebug" uid="15">
+                <instance type="txtDebug" uid="44">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -451,7 +476,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Guias" sid="638374927161118">
+        <layer name="Guias" sid="499006227530500">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -467,7 +492,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ZonaConstrucao" uid="9">
+                <instance type="ZonaConstrucao" uid="45">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -487,7 +512,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemyGoal" uid="18">
+                <instance type="EnemyGoal" uid="46">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -509,7 +534,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="22">
+                <instance type="ZonaConstrucao" uid="47">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -529,7 +554,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="23">
+                <instance type="ZonaConstrucao" uid="48">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -549,7 +574,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="24">
+                <instance type="ZonaConstrucao" uid="49">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -569,7 +594,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="25">
+                <instance type="ZonaConstrucao" uid="50">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -589,7 +614,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="26">
+                <instance type="ZonaConstrucao" uid="51">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -609,7 +634,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="27">
+                <instance type="ZonaConstrucao" uid="52">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -629,7 +654,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="28">
+                <instance type="ZonaConstrucao" uid="53">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -649,7 +674,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="29">
+                <instance type="ZonaConstrucao" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -669,7 +694,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="30">
+                <instance type="ZonaConstrucao" uid="55">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -689,7 +714,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="31">
+                <instance type="ZonaConstrucao" uid="56">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -709,7 +734,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="11">
+                <instance type="PontoMovimento" uid="57">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -719,19 +744,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>300</x>
-                        <y>270</y>
+                        <x>314</x>
+                        <y>285</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>30</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.03125</hotspotX>
-                        <hotspotY>0.03125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="14">
+                <instance type="PontoMovimento" uid="58">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -741,19 +766,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>270</x>
-                        <y>150</y>
+                        <x>285</x>
+                        <y>166</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>30</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.03125</hotspotX>
-                        <hotspotY>0.03125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="16">
+                <instance type="PontoMovimento" uid="59">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -763,19 +788,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>60</x>
-                        <y>180</y>
+                        <x>76</x>
+                        <y>195</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>30</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.03125</hotspotX>
-                        <hotspotY>0.03125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="17">
+                <instance type="PontoMovimento" uid="60">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -785,19 +810,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>90</x>
-                        <y>30</y>
+                        <x>105</x>
+                        <y>46</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>30</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.03125</hotspotX>
-                        <hotspotY>0.03125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="21">
+                <instance type="PontoMovimento" uid="61">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -807,14 +832,42 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>390</x>
-                        <y>60</y>
+                        <x>405</x>
+                        <y>75</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>30</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.03125</hotspotX>
-                        <hotspotY>0.03125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TorreSaci" uid="62">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>ParadoFrente</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Atacando>false</Atacando>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-60</x>
+                        <y>84</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>60</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.75</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

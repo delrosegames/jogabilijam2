@@ -3,10 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>TorreSaci</include>
         <variable constant="0" name="InHand" sid="508071098799263" static="0" type="number">0</variable>
         <variable constant="0" name="Lives" sid="737657344023187" static="0" type="number">20</variable>
         <variable constant="0" name="Timer" sid="746709797750586" static="0" type="number">-1</variable>
-        <variable constant="0" name="CurrentCash" sid="147354329828043" static="0" type="number">100</variable>
+        <variable constant="0" name="CurrentCash" sid="147354329828043" static="0" type="number">10000</variable>
         <variable constant="0" name="CurrentWave" sid="621447858659797" static="0" type="number">0</variable>
         <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
         <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
@@ -25,7 +26,7 @@
                         <condition id="-2" name="On start of layout" sid="856982768515304" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="659793515511725" type="Torre" />
+                        <action id="-9" name="Destroy" sid="659793515511725" type="TorreSaciBase" />
                     </actions>
                 </event-block>
                 <event-block sid="481072421821242">
@@ -75,7 +76,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="933994160082759" type="System">
-                                    <param id="0" name="Object to create">Torre</param>
+                                    <param id="0" name="Object to create">TorreSaciBase</param>
                                     <param id="1" name="Layer">1</param>
                                     <param id="2" name="X">Mouse.X</param>
                                     <param id="3" name="Y">Mouse.Y</param>
@@ -84,6 +85,9 @@
                                     <param id="0" name="Variable">InHand</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-8" name="Set angle" sid="558080202368444" type="TorreSaciBase">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -91,20 +95,20 @@
                 <comment>Always set the tower in hand to snap to the grid</comment>
                 <event-block sid="159002158328114">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="608737569731522" type="Torre">
+                        <condition id="-8" name="Is boolean instance variable set" sid="608737569731522" type="TorreSaciBase">
                             <param id="0" name="Instance variable">Floating</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="308480826924656" type="Torre">
+                        <action id="-3" name="Set position" sid="308480826924656" type="TorreSaciBase">
                             <param id="0" name="X">(round((mouse.X - 15)  / 30) * 30) + 15</param>
                             <param id="1" name="Y">(round((mouse.Y - 15) / 30) * 30) + 15</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="442256127035809" type="Torre">
-                            <param id="0" name="Opacity">80</param>
+                        <action id="-16" name="Set opacity" sid="442256127035809" type="TorreSaci">
+                            <param id="0" name="Opacity">70</param>
                         </action>
                         <action disabled="1" id="0" name="Set text" sid="909792222427579" type="txtDebug">
-                            <param id="0" name="Text">&quot;Mouse: &quot; &amp; Mouse.X &amp; &quot;x&quot; &amp; Mouse.Y&#x0D;&#x0A;&amp; &quot;Torre: &quot; &amp; Torre.X &amp; &quot;x&quot; &amp; Torre.Y</param>
+                            <param id="0" name="Text">&quot;Mouse: &quot; &amp; Mouse.X &amp; &quot;x&quot; &amp; Mouse.Y&#x0D;&#x0A;&amp; &quot;Torre: &quot; &amp; TorreSaciBase.X &amp; &quot;x&quot; &amp; TorreSaciBase.Y</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -115,7 +119,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="308411649768798" type="Torre">
+                                <action disabled="1" id="-15" name="Set visible" sid="308411649768798" type="TorreSaciBase">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -125,7 +129,7 @@
                                 <condition id="-22" name="Else" sid="583670283399412" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="692386833988178" type="Torre">
+                                <action disabled="1" id="-15" name="Set visible" sid="692386833988178" type="TorreSaciBase">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
@@ -142,15 +146,15 @@
                         <condition id="7" name="Cursor is over object" sid="644886697456948" type="Mouse">
                             <param id="0" name="Object">ZonaConstrucao</param>
                         </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="923447312086747" type="Torre">
-                            <param id="0" name="Object">Torre</param>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="923447312086747" type="TorreSaciBase">
+                            <param id="0" name="Object">TorreSaciBase</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="980823868102652" type="Torre">
+                        <condition id="-8" name="Is boolean instance variable set" sid="980823868102652" type="TorreSaciBase">
                             <param id="0" name="Instance variable">Floating</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="740194881199219" type="Torre">
+                        <action id="-13" name="Set boolean" sid="740194881199219" type="TorreSaciBase">
                             <param id="0" name="Instance variable">Floating</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -162,6 +166,27 @@
                             <param id="0" name="Variable">InHand</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action behavior="Turret" id="6" name="Set range" sid="363638214766435" type="TorreSaciBase">
+                            <param id="0" name="Range">90</param>
+                        </action>
+                        <action behavior="Turret" id="9" name="Set rotate speed" sid="850779664725911" type="TorreSaciBase">
+                            <param id="0" name="Rotate speed">999999</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="965894842045376" type="TorreSaci">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="790066545522208">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="222743496576838" type="System">
+                            <param id="0" name="Object">TorreSaci</param>
+                            <param id="1" name="Expression">TorreSaci.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="569489234395060" type="TorreSaci" />
                     </actions>
                 </event-block>
                 <comment>Cancela a construção da torre</comment>
@@ -171,12 +196,12 @@
                             <param id="0" name="Mouse button">2</param>
                             <param id="1" name="Click type">0</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="794601822031898" type="Torre">
+                        <condition id="-8" name="Is boolean instance variable set" sid="794601822031898" type="TorreSaciBase">
                             <param id="0" name="Instance variable">Floating</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="314505834364853" type="Torre" />
+                        <action id="-9" name="Destroy" sid="314505834364853" type="TorreSaciBase" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -349,41 +374,52 @@
             <sub-events>
                 <event-block sid="320970842132964">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="410498073327688" type="Torre">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="410498073327688" type="TorreSaciBase">
                             <param id="0" name="Instance variable">Floating</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Turret" id="1" name="Add object to target" sid="678165630398334" type="Torre">
+                        <action behavior="Turret" id="1" name="Add object to target" sid="678165630398334" type="TorreSaciBase">
                             <param id="0" name="Target">InimigoCarinhaBase</param>
                         </action>
-                        <action behavior="Turret" id="5" name="Set enabled" sid="246204543080317" type="Torre">
+                        <action behavior="Turret" id="5" name="Set enabled" sid="246204543080317" type="TorreSaciBase">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="669579245571878">
                     <conditions>
-                        <condition behavior="Turret" id="1" name="On shoot" sid="987988875456783" type="Torre" />
+                        <condition behavior="Turret" id="1" name="On shoot" sid="987988875456783" type="TorreSaciBase" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="649398175218175" type="TorreSaci">
+                            <param id="0" name="Instance variable">Atacando</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="510456709970480" type="Torre">
-                            <param id="0" name="Object">Tiro</param>
+                        <action id="0" name="Spawn another object" sid="510456709970480" type="TorreSaciBase">
+                            <param id="0" name="Object">TiroBase</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="144551070717125" type="TorreSaci">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="700311307896599" type="Tiro">
+                            <param id="0" name="Pin to">TiroBase</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="219531707335217">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="968315138224338" type="Tiro">
-                            <param id="0" name="Object">InimigoCarinhaBase</param>
+                            <param id="0" name="Object">Inimigo</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="348640198504062" type="InimigoCarinhaBase">
+                        <action id="-12" name="Subtract from" sid="348640198504062" type="Inimigo">
                             <param id="0" name="Instance variable">HitPoints</param>
-                            <param id="1" name="Value">Tiro.Damage</param>
+                            <param id="1" name="Value">TiroBase.Damage</param>
                         </action>
                         <action id="-9" name="Destroy" sid="957996607970245" type="Tiro" />
                     </actions>
@@ -406,6 +442,17 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="916909556351583">
+            <conditions>
+                <condition id="-18" name="On created" sid="603091526546572" type="Inimigo" />
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="411001953113992" type="Inimigo">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="320834891715971" title="Inimigos">
             <sub-events>
                 <include>InimigoCarinha</include>

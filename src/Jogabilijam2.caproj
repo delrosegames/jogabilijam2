@@ -23,7 +23,9 @@
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -51,7 +53,7 @@
         <prop name="Use high-DPI display">No</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Torre" sid="982098852941829">
+        <object-type name="TorreSaciBase" sid="982098852941829">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Floating" sid="264057170557532" type="boolean" />
@@ -61,13 +63,17 @@
                     <behavior id="Turret" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>TorreSaci</type>
+                <type>TorreSaciBase</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259355335699946" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tiro" sid="752742269701277">
+        <object-type name="TiroBase" sid="752742269701277">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Damage" sid="711586793846316" type="number" />
@@ -80,9 +86,13 @@
                     <behavior id="destroy" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>Tiro</type>
+                <type>TiroBase</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983054233126207" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.592593" original-source="C:\Users\patri\Desktop\Sem título.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -91,12 +101,18 @@
             <instance-variables>
                 <instance-variable name="CurrentDestination" sid="861662585701697" type="number" />
                 <instance-variable name="HitPoints" sid="679263425231402" type="number" />
+                <instance-variable name="Devagar" sid="836656717558147" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="281412106680753">
                     <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568657784837430" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -186,6 +202,106 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TorreSaci" sid="752739541981003">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Atacando" sid="298457145089132" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="345315112363939">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>TorreSaci</type>
+                <type>TorreSaciBase</type>
+            </container>
+            <animation-folder>
+                <animation framecount="12" loop="1" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="815419691204387" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_12.png" />
+                </animation>
+                <animation framecount="12" loop="1" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="938046008266509" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_12.png" />
+                </animation>
+                <animation framecount="12" loop="1" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="532324764684136" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_12.png" />
+                </animation>
+                <animation framecount="12" loop="1" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="774086498757237" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_12.png" />
+                </animation>
+                <animation framecount="8" loop="0" name="Ataque" pingpong="0" repeatcount="1" repeatto="0" sid="356570942641086" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_08.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tiro" sid="439400308196992">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="647205347520814">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Tiro</type>
+                <type>TiroBase</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228335031458295" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.518519" original-source="C:\Users\patri\Desktop\Sem título.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="InimigoCarinhaBase" sid="544221638466681">
             <plugin id="Sprite" />
             <instance-variables>
@@ -249,10 +365,12 @@
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
+        <layout>Layout 1 - Torres.xml</layout>
         <layout>Layout para objetos.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>TorreSaci.xml</event-sheet>
         <event-sheet>InimigoCarinha.xml</event-sheet>
     </event-folder>
     <global-instances>
