@@ -206,7 +206,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="457934856402363" type="SpawnPoint">
-                                    <param id="0" name="Object">Inimigo</param>
+                                    <param id="0" name="Object">InimigoCarinha</param>
                                     <param id="1" name="Layer">1</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
@@ -355,7 +355,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Turret" id="1" name="Add object to target" sid="678165630398334" type="Torre">
-                            <param id="0" name="Target">Inimigo</param>
+                            <param id="0" name="Target">InimigoCarinhaBase</param>
                         </action>
                         <action behavior="Turret" id="5" name="Set enabled" sid="246204543080317" type="Torre">
                             <param id="0" name="State">1</param>
@@ -377,11 +377,11 @@
                 <event-block sid="219531707335217">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="968315138224338" type="Tiro">
-                            <param id="0" name="Object">Inimigo</param>
+                            <param id="0" name="Object">InimigoCarinhaBase</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="348640198504062" type="Inimigo">
+                        <action id="-12" name="Subtract from" sid="348640198504062" type="InimigoCarinhaBase">
                             <param id="0" name="Instance variable">HitPoints</param>
                             <param id="1" name="Value">Tiro.Damage</param>
                         </action>
@@ -404,6 +404,11 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="320834891715971" title="Inimigos">
+            <sub-events>
+                <include>InimigoCarinha</include>
             </sub-events>
         </event-group>
     </events>

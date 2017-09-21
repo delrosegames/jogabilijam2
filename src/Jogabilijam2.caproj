@@ -19,6 +19,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
     </used-behaviors>
@@ -32,6 +33,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -184,13 +186,74 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="InimigoCarinhaBase" sid="544221638466681">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="CurrentDestination" sid="359204365668651" type="number" />
+                <instance-variable name="HitPoints" sid="654981187348216" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="868691841172279">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>InimigoCarinhaBase</type>
+                <type>InimigoCarinha</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719245256027553" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InimigoCarinha" sid="536442448283577">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="246474290500375">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>InimigoCarinhaBase</type>
+                <type>InimigoCarinha</type>
+            </container>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Frente" pingpong="0" repeatcount="1" repeatto="0" sid="468872427935376" speed="10">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_04.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Costas" pingpong="0" repeatcount="1" repeatto="0" sid="475024259743528" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_04.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Direita" pingpong="0" repeatcount="1" repeatto="0" sid="480352682269851" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_04.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Esquerda" pingpong="0" repeatcount="1" repeatto="0" sid="880390987237274" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
+        <layout>Layout para objetos.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>InimigoCarinha.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="12" />

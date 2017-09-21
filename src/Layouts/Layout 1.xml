@@ -105,10 +105,10 @@
                     <behavior-instances>
                         <behavior-instance type="Turret">
                             <properties>
-                                <range>300</range>
+                                <range>90</range>
                                 <rate-of-fire>1</rate-of-fire>
                                 <rotate>Yes</rotate>
-                                <rotate-speed>180</rotate-speed>
+                                <rotate-speed>999999</rotate-speed>
                                 <target-mode>First in range</target-mode>
                                 <predictive-aim>Yes</predictive-aim>
                                 <projectile-speed>500</projectile-speed>
@@ -184,7 +184,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>200</speed>
+                                <speed>150</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>

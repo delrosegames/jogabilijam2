@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>InimigoCarinha</name>
+    <events>
+        <event-block disabled="1" sid="760609857812241">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="654233635130652" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="634364076680718" type="InimigoCarinha" />
+            </actions>
+        </event-block>
+        <event-block sid="452106485874531">
+            <conditions>
+                <condition id="-18" name="On created" sid="862760534543767" type="InimigoCarinha" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="396454856612591" type="InimigoCarinha">
+                    <param id="0" name="Pin to">InimigoCarinhaBase</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="396705606790675" type="InimigoCarinhaBase">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Value">CurrentWave*5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="269827266879050">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="680218049729246" type="InimigoCarinhaBase">
+                    <param id="0" name="Object">PontoMovimento</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="548604558235020" type="InimigoCarinhaBase">
+                    <param id="0" name="Instance variable">CurrentDestination</param>
+                    <param id="1" name="Value">PontoMovimento.IID+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="967390911316186">
+            <conditions>
+                <condition id="-11" name="For Each" sid="947350158839464" type="System">
+                    <param id="0" name="Object">InimigoCarinhaBase</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="951644318464481">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="313206227869740" type="System" />
+                        <condition id="-13" name="Pick nth instance" sid="383681595120874" type="System">
+                            <param id="0" name="Object">PontoMovimento</param>
+                            <param id="1" name="Instance">InimigoCarinhaBase.CurrentDestination</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="556515130501144" type="InimigoCarinhaBase">
+                            <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
+                            <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="580077237622810">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="384520987873014" type="InimigoCarinhaBase">
+                    <param id="0" name="Object">EnemyGoal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="772221202387867" type="InimigoCarinhaBase" />
+                <action id="-11" name="Subtract from" sid="434971595620994" type="System">
+                    <param id="0" name="Variable">Lives</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="378564797738253">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="305160777681754" type="InimigoCarinhaBase">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="369429204019795" type="InimigoCarinha" />
+                <action id="-10" name="Add to" sid="489021851363339" type="System">
+                    <param id="0" name="Variable">CurrentCash</param>
+                    <param id="1" name="Value">2*CurrentWave</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
