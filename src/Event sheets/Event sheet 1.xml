@@ -267,34 +267,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="263365998713662">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="269284591998096" type="Inimigo">
-                            <param id="0" name="Object">PontoMovimento</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="510389210194400">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="757029993462212" type="Inimigo">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="X co-ordinate">PontoMovimento.X</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="262484234679211" type="Inimigo">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Y co-ordinate">PontoMovimento.Y</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="168405807141496" type="Inimigo">
-                                    <param id="0" name="Instance variable">CurrentDestination</param>
-                                    <param id="1" name="Value">PontoMovimento.IID+1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="946767151775685">
                     <conditions>
                         <condition id="-11" name="For Each" sid="118178874920411" type="System">
@@ -313,8 +285,8 @@
                             </conditions>
                             <actions>
                                 <action id="-22" name="Set angle toward position" sid="630561997828868" type="Inimigo">
-                                    <param id="0" name="X">PontoMovimento.X</param>
-                                    <param id="1" name="Y">PontoMovimento.Y</param>
+                                    <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
+                                    <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
                                 </action>
                             </actions>
                         </event-block>
