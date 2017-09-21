@@ -1,11 +1,11 @@
 ﻿CACHE MANIFEST
-#1505875519
+#1505967041
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
 offlineClient.js
-images/torre-sheet0.png
-images/tiro-sheet0.png
+images/torresacibase-sheet0.png
+images/tirobase-sheet0.png
 images/inimigo-sheet0.png
 images/zonaconstrucao.png
 images/spawnpoint-sheet0.png
@@ -14,6 +14,11 @@ images/enemygoal-sheet0.png
 images/spritefont.png
 images/fundogui-sheet0.png
 images/cenario-sheet0.png
+images/torresaci-sheet0.png
+images/torresaci-sheet1.png
+images/tiro-sheet0.png
+images/inimigocarinha-sheet0.png
+images/inimigocarinha-sheet1.png
 icon-16.png
 icon-32.png
 icon-114.png
