@@ -243,7 +243,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="310310986462860">
+                <event-block disabled="1" sid="310310986462860">
                     <conditions>
                         <condition id="-18" name="On created" sid="233337185233846" type="Inimigo" />
                     </conditions>
@@ -254,7 +254,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="489960502354249">
+                <event-block disabled="1" sid="489960502354249">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="320347672768116" type="Inimigo">
                             <param id="0" name="Object">PontoMovimento</param>
@@ -267,7 +267,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="946767151775685">
+                <event-block disabled="1" sid="946767151775685">
                     <conditions>
                         <condition id="-11" name="For Each" sid="118178874920411" type="System">
                             <param id="0" name="Object">Inimigo</param>
@@ -275,7 +275,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="215032534678978">
+                        <event-block disabled="1" sid="215032534678978">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="745054720626265" type="System" />
                                 <condition id="-13" name="Pick nth instance" sid="915890042774652" type="System">
@@ -410,21 +410,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="219531707335217">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="968315138224338" type="Tiro">
-                            <param id="0" name="Object">Inimigo</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="348640198504062" type="Inimigo">
-                            <param id="0" name="Instance variable">HitPoints</param>
-                            <param id="1" name="Value">TiroBase.Damage</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="957996607970245" type="Tiro" />
-                    </actions>
-                </event-block>
-                <event-block sid="787857905529714">
+                <event-block disabled="1" sid="787857905529714">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="255481674379277" type="Inimigo">
                             <param id="0" name="Instance variable">HitPoints</param>
@@ -442,7 +428,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="916909556351583">
+        <event-block disabled="1" sid="916909556351583">
             <conditions>
                 <condition id="-18" name="On created" sid="603091526546572" type="Inimigo" />
             </conditions>

@@ -133,16 +133,16 @@
         <event-block sid="666718887019200">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="804470080057489" type="TiroBase">
-                    <param id="0" name="Object">Inimigo</param>
+                    <param id="0" name="Object">InimigoCarinhaBase</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="448033029058017" type="Inimigo">
+                <action id="-12" name="Subtract from" sid="448033029058017" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">HitPoints</param>
                     <param id="1" name="Value">TiroBase.Damage</param>
                 </action>
                 <action id="-9" name="Destroy" sid="208930540151598" type="TiroBase" />
-                <action id="-13" name="Set boolean" sid="969445735531377" type="Inimigo">
+                <action id="-13" name="Set boolean" sid="969445735531377" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">Devagar</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -153,12 +153,12 @@
                 <condition id="-6" name="Every X seconds" sid="306742712749295" type="System">
                     <param id="0" name="Interval (seconds)">5</param>
                 </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="589849304767950" type="Inimigo">
+                <condition id="-8" name="Is boolean instance variable set" sid="589849304767950" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">Devagar</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="736149490707244" type="Inimigo">
+                <action id="-13" name="Set boolean" sid="736149490707244" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">Devagar</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -166,15 +166,15 @@
         </event-block>
         <event-block sid="865555325659704">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="862427335464024" type="Inimigo">
+                <condition id="-8" name="Is boolean instance variable set" sid="862427335464024" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">Devagar</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="0" name="Set speed" sid="921542130944215" type="Inimigo">
+                <action behavior="Bullet" id="0" name="Set speed" sid="921542130944215" type="InimigoCarinhaBase">
                     <param id="0" name="Speed">75</param>
                 </action>
-                <action id="-27" name="Set effect enabled" sid="111078034030398" type="Inimigo">
+                <action id="-27" name="Set effect enabled" sid="785385271551418" type="InimigoCarinha">
                     <param id="0" name="Mode">1</param>
                     <param id="1" name="Effect">&quot;Tint&quot;</param>
                 </action>

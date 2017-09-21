@@ -20,6 +20,10 @@
                     <param id="0" name="Pin to">InimigoCarinhaBase</param>
                     <param id="1" name="Mode">1</param>
                 </action>
+                <action id="-27" name="Set effect enabled" sid="325552660212080" type="InimigoCarinha">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                </action>
                 <action id="-10" name="Set value" sid="396705606790675" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">HitPoints</param>
                     <param id="1" name="Value">CurrentWave*5</param>
@@ -28,39 +32,46 @@
         </event-block>
         <event-block sid="269827266879050">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="680218049729246" type="InimigoCarinhaBase">
+                <condition id="0" name="On collision with another object" sid="680218049729246" type="InimigoCarinhaBase">
                     <param id="0" name="Object">PontoMovimento</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="548604558235020" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">CurrentDestination</param>
-                    <param id="1" name="Value">PontoMovimento.IID+1</param>
+                    <param id="1" name="Value">PontoMovimento.Ordem+1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="967390911316186">
+        <event-block sid="749803275806575">
             <conditions>
-                <condition id="-11" name="For Each" sid="947350158839464" type="System">
-                    <param id="0" name="Object">InimigoCarinhaBase</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="924724638509517" type="System" />
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="951644318464481">
+                <event-block sid="967390911316186">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="313206227869740" type="System" />
-                        <condition id="-13" name="Pick nth instance" sid="383681595120874" type="System">
-                            <param id="0" name="Object">PontoMovimento</param>
-                            <param id="1" name="Instance">InimigoCarinhaBase.CurrentDestination</param>
+                        <condition id="-11" name="For Each" sid="947350158839464" type="System">
+                            <param id="0" name="Object">InimigoCarinhaBase</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-22" name="Set angle toward position" sid="556515130501144" type="InimigoCarinhaBase">
-                            <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
-                            <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="951644318464481">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="383681595120874" type="System">
+                                    <param id="0" name="Object">PontoMovimento</param>
+                                    <param id="1" name="Expression">PontoMovimento.Ordem = InimigoCarinhaBase.CurrentDestination</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="556515130501144" type="InimigoCarinhaBase">
+                                    <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
+                                    <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

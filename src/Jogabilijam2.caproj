@@ -145,6 +145,9 @@
         </object-type>
         <object-type name="PontoMovimento" sid="300076170929547">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Ordem" sid="852596438408217" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221535068442910" speed="5">
                     <frame duration="1" hotspotX="0.03125" hotspotY="0.03125">
@@ -307,6 +310,7 @@
             <instance-variables>
                 <instance-variable name="CurrentDestination" sid="359204365668651" type="number" />
                 <instance-variable name="HitPoints" sid="654981187348216" type="number" />
+                <instance-variable name="Devagar" sid="629366207504151" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="868691841172279">
@@ -330,6 +334,11 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
             <container>
                 <type>InimigoCarinhaBase</type>
                 <type>InimigoCarinha</type>
@@ -365,7 +374,6 @@
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
-        <layout>Layout 1 - Torres.xml</layout>
         <layout>Layout para objetos.xml</layout>
     </layout-folder>
     <event-folder>
@@ -374,8 +382,8 @@
         <event-sheet>InimigoCarinha.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="12" />
-        <global-instance type="Keyboard" uid="13" />
+        <global-instance type="Mouse" uid="64" />
+        <global-instance type="Keyboard" uid="65" />
     </global-instances>
     <sounds-folder />
     <music-folder />
