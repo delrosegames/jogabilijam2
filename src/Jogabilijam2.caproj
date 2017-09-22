@@ -69,7 +69,18 @@
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259355335699946" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci_Frente_01.png">
+                        <collision-poly>
+                            <point x="0.633333" y="0.133333" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.433333" y="0.0666667" />
+                            <point x="0.833333" y="0.5" />
+                            <point x="0.8" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.2" y="1" />
+                            <point x="0.266667" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -92,7 +103,16 @@
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983054233126207" speed="5">
-                    <frame duration="1" hotspotX="0.521739" hotspotY="0.592593" original-source="C:\Users\patri\Desktop\Sem título.png" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png">
+                        <collision-poly>
+                            <point x="0.466667" y="0.4" />
+                            <point x="1" y="0.466667" />
+                            <point x="0.6" y="1" />
+                            <point x="0.466667" y="1" />
+                            <point x="0.4" y="1" />
+                            <point x="0" y="0.466667" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -300,8 +320,15 @@
                 <type>TorreSaciTiroBase</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228335031458295" speed="5">
-                    <frame duration="1" hotspotX="0.521739" hotspotY="0.518519" original-source="C:\Users\patri\Desktop\Sem título.png" />
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228335031458295" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0002_Quadro-6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0003_Quadro-5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0004_Quadro-4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0005_Quadro-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0006_Quadro-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0007_Quadro-1.png" />
                 </animation>
             </animation-folder>
         </object-type>
