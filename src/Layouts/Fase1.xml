@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>Fase1</name>
     <sid>260400252803821</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Jogo</event-sheet>
     <size>
         <width>640</width>
         <height>360</height>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Cenario" uid="20">
+                <instance type="Fase1_Fundo" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -91,86 +91,7 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="TorreSaciBase" uid="0">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Floating>true</Floating>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Turret">
-                            <properties>
-                                <range>90</range>
-                                <rate-of-fire>1</rate-of-fire>
-                                <rotate>Yes</rotate>
-                                <rotate-speed>999999</rotate-speed>
-                                <target-mode>First in range</target-mode>
-                                <predictive-aim>Yes</predictive-aim>
-                                <projectile-speed>500</projectile-speed>
-                                <initial-state>Disabled</initial-state>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-49</x>
-                        <y>224</y>
-                        <z>0</z>
-                        <width>28</width>
-                        <height>28</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TiroBase" uid="1">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Damage>2</Damage>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-56</x>
-                        <y>189</y>
-                        <z>0</z>
-                        <width>23</width>
-                        <height>27</height>
-                        <depth>0</depth>
-                        <hotspotX>0.521739125</hotspotX>
-                        <hotspotY>0.592592597</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="GUI" sid="350938919586397">
@@ -346,11 +267,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnTorre" uid="4">
+                <instance type="TorreSaciBotao" uid="4">
                     <properties>
-                        <text>[$30] [A] Torre</text>
+                        <text>[$30] [A] Saci</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-13,400,0</font>
                         <color>0,0,102</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>

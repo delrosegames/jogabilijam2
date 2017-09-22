@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Jogo</name>
+    <events>
+        <variable constant="0" name="InHand" sid="508071098799263" static="0" type="number">0</variable>
+        <variable constant="0" name="Lives" sid="737657344023187" static="0" type="number">20</variable>
+        <variable constant="0" name="Timer" sid="746709797750586" static="0" type="number">-1</variable>
+        <variable constant="0" name="CurrentCash" sid="147354329828043" static="0" type="number">10000</variable>
+        <variable constant="0" name="CurrentWave" sid="621447858659797" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
+        <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
+        <event-group description="" sid="511951437666883" title="Inicialização">
+            <sub-events>
+                <event-block sid="481072421821242">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="574683615385708" type="txtVidas">
+                            <param id="0" name="Text">&quot;Vidas: &quot; &amp; Lives</param>
+                        </action>
+                        <action id="0" name="Set text" sid="177310736975976" type="txtOnda">
+                            <param id="0" name="Text">&quot;Onda: &quot; &amp; CurrentWave</param>
+                        </action>
+                        <action id="0" name="Set text" sid="494830300481354" type="txtDinheiro">
+                            <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; CurrentCash</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="217458358523251" title="Enemy spawning and movement">
+            <sub-events>
+                <event-block sid="867015701702931">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="370313944984104" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="742475490052887">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="481483151217900" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="755514663872233" type="System">
+                                    <param id="0" name="Variable">CurrentEnemies</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">TotalEnemies</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="457934856402363" type="SpawnPoint">
+                                    <param id="0" name="Object">InimigoCarinha</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="750729167659018" type="System">
+                                    <param id="0" name="Variable">CurrentEnemies</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="212760558417889" title="Timer">
+            <sub-events>
+                <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
+                <event-block any="1" sid="719823273303887">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="233243161357255" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btnPronto</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="971314478371408">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="460687596966669" type="System">
+                                    <param id="0" name="First value">Inimigo.Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="991946828535790" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="392217073960283" type="System">
+                                    <param id="0" name="Variable">CurrentEnemies</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="122560760405938" type="System">
+                                    <param id="0" name="Variable">CurrentWave</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Inicia o Timer artificial</comment>
+                <event-block sid="790830225865745">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="278633144268187" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="341511226190070" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="714605096918984" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="343672578460015" title="Torres">
+            <sub-events>
+                <include>TorreSaci</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="320834891715971" title="Inimigos">
+            <sub-events>
+                <include>InimigoCarinha</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="392492720024306" title="Torres X Inimigos">
+            <sub-events>
+                <include>TorreSaci_x_InimigoCarinha</include>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

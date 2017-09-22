@@ -3,37 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TorreSaci</name>
     <events>
-        <event-block sid="179865831182024">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="803114879553490" type="TorreSaciBase">
-                    <param id="0" name="Instance variable">Floating</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="207779521104854" type="TorreSaci">
-                    <param id="0" name="Pin to">TorreSaciBase</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="523453796741728" type="TorreSaci">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="235710741747653">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="238227430530769" type="TorreSaciBase">
-                    <param id="0" name="Instance variable">Floating</param>
-                </condition>
-                <condition id="7" inverted="1" name="Cursor is over object" sid="355431558861004" type="Mouse">
-                    <param id="0" name="Object">ZonaConstrucao</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="943979102637881" type="TorreSaci">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="695807719181846">
             <conditions>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="500125461381469" type="TorreSaci">
@@ -130,55 +99,164 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="666718887019200">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="804470080057489" type="TiroBase">
-                    <param id="0" name="Object">InimigoCarinhaBase</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="448033029058017" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">HitPoints</param>
-                    <param id="1" name="Value">TiroBase.Damage</param>
-                </action>
-                <action id="-9" name="Destroy" sid="208930540151598" type="TiroBase" />
-                <action id="-13" name="Set boolean" sid="969445735531377" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">Devagar</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="743424485042230">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="306742712749295" type="System">
-                    <param id="0" name="Interval (seconds)">5</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="589849304767950" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">Devagar</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="736149490707244" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">Devagar</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="865555325659704">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="862427335464024" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">Devagar</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Bullet" id="0" name="Set speed" sid="921542130944215" type="InimigoCarinhaBase">
-                    <param id="0" name="Speed">75</param>
-                </action>
-                <action id="-27" name="Set effect enabled" sid="785385271551418" type="InimigoCarinha">
-                    <param id="0" name="Mode">1</param>
-                    <param id="1" name="Effect">&quot;Tint&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="695601010302246" title="Construção da Torre">
+            <sub-events>
+                <comment>Spawn a new tower to be placed</comment>
+                <event-block any="1" sid="857560062326518">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="894567438127097" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">TorreSaciBotao</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="805034347495785" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="332496282513364">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="339797414928259" type="System">
+                                    <param id="0" name="Variable">CurrentCash</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="441975419633130" type="System">
+                                    <param id="0" name="Variable">InHand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="603215867841836" type="System">
+                                    <param id="0" name="Object to create">TorreSaciBase</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="587714459924511" type="TorreSaciBase">
+                                    <param id="0" name="Instance variable">Floating</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="607592095534708" type="System">
+                                    <param id="0" name="Variable">InHand</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="911523165733005" type="TorreSaciBase">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="959395347867099" type="TorreSaci">
+                                    <param id="0" name="Pin to">TorreSaciBase</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Quando a torre estiver sendo construída, posiciona a torre sempre na grade.&#x0D;&#x0A;Além disso, somente é exibida (e semi-transparente) caso esteja sobre a zona de construção.</comment>
+                <event-block sid="179865831182024">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="803114879553490" type="TorreSaciBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="450277023053122" type="TorreSaciBase">
+                            <param id="0" name="X">(round((mouse.X - 15)  / 30) * 30) + 15</param>
+                            <param id="1" name="Y">(round((mouse.Y - 15) / 30) * 30) + 15</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="523453796741728" type="TorreSaci">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="193590421905026" type="TorreSaci">
+                            <param id="0" name="Opacity">70</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="347044507047424">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="355431558861004" type="Mouse">
+                                    <param id="0" name="Object">ZonaConstrucao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="943979102637881" type="TorreSaci">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Adiciona uma nova torre se estiver posicionada no local correto (acima da grid e não em cima de outra torre)</comment>
+                <event-block sid="735247653490165">
+                    <conditions>
+                        <condition id="0" name="On click" sid="142613485752783" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="233367836860836" type="Mouse">
+                            <param id="0" name="Object">ZonaConstrucao</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="684236586688768" type="TorreSaciBase">
+                            <param id="0" name="Object">TorreSaciBase</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="644441872585226" type="TorreSaciBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="387875319930406" type="TorreSaciBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="245087218011654" type="System">
+                            <param id="0" name="Variable">CurrentCash</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="963662896779731" type="System">
+                            <param id="0" name="Variable">InHand</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Turret" id="6" name="Set range" sid="637767100963851" type="TorreSaciBase">
+                            <param id="0" name="Range">90</param>
+                        </action>
+                        <action behavior="Turret" id="9" name="Set rotate speed" sid="260244050405435" type="TorreSaciBase">
+                            <param id="0" name="Rotate speed">999999</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="661298772713820" type="TorreSaci">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="354935318246810">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="378000315838762" type="System">
+                            <param id="0" name="Object">TorreSaci</param>
+                            <param id="1" name="Expression">TorreSaci.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="325022535112842" type="TorreSaci" />
+                    </actions>
+                </event-block>
+                <comment>Cancela a construção da torre</comment>
+                <event-block sid="868519532657495">
+                    <conditions>
+                        <condition id="0" name="On click" sid="815834327331282" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="819069319825198" type="TorreSaciBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="132180199343531" type="TorreSaciBase" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

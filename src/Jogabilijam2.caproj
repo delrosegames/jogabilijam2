@@ -35,7 +35,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Layout 1</first-layout>
+    <first-layout>Fase1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -73,7 +73,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiroBase" sid="752742269701277">
+        <object-type name="TorreSaciTiroBase" sid="752742269701277">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Damage" sid="711586793846316" type="number" />
@@ -87,8 +87,8 @@
                 </behavior-type>
             </behaviors>
             <container>
-                <type>Tiro</type>
-                <type>TiroBase</type>
+                <type>TorreSaciTiro</type>
+                <type>TorreSaciTiroBase</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983054233126207" speed="5">
@@ -176,7 +176,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="btnTorre" sid="967490691625453">
+        <object-type name="TorreSaciBotao" sid="967490691625453">
             <plugin id="Text" />
         </object-type>
         <object-type name="btnPronto" sid="679580239706214">
@@ -197,7 +197,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Cenario" sid="230111928141287">
+        <object-type name="Fase1_Fundo" sid="230111928141287">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508295869701976" speed="5">
@@ -288,7 +288,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tiro" sid="439400308196992">
+        <object-type name="TorreSaciTiro" sid="439400308196992">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="647205347520814">
@@ -296,8 +296,8 @@
                 </behavior-type>
             </behaviors>
             <container>
-                <type>Tiro</type>
-                <type>TiroBase</type>
+                <type>TorreSaciTiro</type>
+                <type>TorreSaciTiroBase</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228335031458295" speed="5">
@@ -373,13 +373,14 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Fase1.xml</layout>
         <layout>Layout para objetos.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Jogo.xml</event-sheet>
         <event-sheet>TorreSaci.xml</event-sheet>
         <event-sheet>InimigoCarinha.xml</event-sheet>
+        <event-sheet>TorreSaci_x_InimigoCarinha.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="64" />

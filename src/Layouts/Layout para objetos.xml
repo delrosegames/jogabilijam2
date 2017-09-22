@@ -150,7 +150,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiroBase" uid="2">
+                <instance type="TorreSaciTiroBase" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -188,7 +188,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="Tiro" uid="32">
+                <instance type="TorreSaciTiro" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

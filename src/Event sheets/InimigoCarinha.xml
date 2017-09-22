@@ -3,14 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>InimigoCarinha</name>
     <events>
-        <event-block disabled="1" sid="760609857812241">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="654233635130652" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="634364076680718" type="InimigoCarinha" />
-            </actions>
-        </event-block>
         <event-block sid="452106485874531">
             <conditions>
                 <condition id="-18" name="On created" sid="862760534543767" type="InimigoCarinha" />
@@ -105,5 +97,41 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="305892856718957" title="Efeito - Devagar">
+            <sub-events>
+                <event-block sid="798608113692711">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="334079250884517" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="125590316783024" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">Devagar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="773810949108506" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">Devagar</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="880227277276500">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="918702696539859" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">Devagar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="143955018430874" type="InimigoCarinhaBase">
+                            <param id="0" name="Speed">75</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="319986565905254" type="InimigoCarinha">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
