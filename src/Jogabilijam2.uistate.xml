@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Fase1</layout>
-        <layout order="0">Layout para objetos</layout>
-        <event-sheet order="3">Jogo</event-sheet>
-        <event-sheet order="2">InimigoCarinha</event-sheet>
-        <event-sheet order="4">TorreSaci</event-sheet>
-        <event-sheet order="5">TorreSaci_x_InimigoCarinha</event-sheet>
+        <layout order="0">Fase1</layout>
+        <layout order="5">Layout para objetos</layout>
+        <event-sheet active="1" order="2">InimigoCarinha</event-sheet>
+        <event-sheet order="1">Jogo</event-sheet>
+        <event-sheet order="3">TorreSaci</event-sheet>
+        <event-sheet order="4">TorreSaci_x_InimigoCarinha</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,7 +28,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
@@ -44,5 +44,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TorreSaciTiro/" />
         <folder expanded="1" path="animation-folder/InimigoCarinhaBase/" />
         <folder expanded="1" path="animation-folder/InimigoCarinha/" />
+        <folder expanded="1" path="animation-folder/InimigoCarinhaDevagar/" />
     </folders-expanded>
 </c2uistate>

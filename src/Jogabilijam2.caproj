@@ -338,6 +338,7 @@
                 <instance-variable name="CurrentDestination" sid="359204365668651" type="number" />
                 <instance-variable name="HitPoints" sid="654981187348216" type="number" />
                 <instance-variable name="Devagar" sid="629366207504151" type="boolean" />
+                <instance-variable name="TempoDevagar" sid="230921125575469" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="868691841172279">
@@ -347,6 +348,7 @@
             <container>
                 <type>InimigoCarinhaBase</type>
                 <type>InimigoCarinha</type>
+                <type>InimigoCarinhaDevagar</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719245256027553" speed="5">
@@ -361,14 +363,10 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
-            <effects>
-                <effect-type name="Tint">
-                    <effect id="tint" />
-                </effect-type>
-            </effects>
             <container>
                 <type>InimigoCarinhaBase</type>
                 <type>InimigoCarinha</type>
+                <type>InimigoCarinhaDevagar</type>
             </container>
             <animation-folder>
                 <animation framecount="4" loop="1" name="Frente" pingpong="0" repeatcount="1" repeatto="0" sid="468872427935376" speed="10">
@@ -394,6 +392,32 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_02.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_03.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InimigoCarinhaDevagar" sid="206732560330135">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="963201553321813">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>InimigoCarinhaBase</type>
+                <type>InimigoCarinha</type>
+                <type>InimigoCarinhaDevagar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930979629543030" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

@@ -3,22 +3,26 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>InimigoCarinha</name>
     <events>
+        <variable constant="1" name="INIMIGO_CARINHA_VELOCIDADE" sid="368365106531972" static="0" type="number">100</variable>
         <event-block sid="452106485874531">
             <conditions>
-                <condition id="-18" name="On created" sid="862760534543767" type="InimigoCarinha" />
+                <condition id="-18" name="On created" sid="862760534543767" type="InimigoCarinhaBase" />
             </conditions>
             <actions>
+                <action id="-10" name="Set value" sid="396705606790675" type="InimigoCarinhaBase">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Value">CurrentWave*5</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="396454856612591" type="InimigoCarinha">
                     <param id="0" name="Pin to">InimigoCarinhaBase</param>
                     <param id="1" name="Mode">1</param>
                 </action>
-                <action id="-27" name="Set effect enabled" sid="325552660212080" type="InimigoCarinha">
-                    <param id="0" name="Mode">0</param>
-                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="534997722615497" type="InimigoCarinhaDevagar">
+                    <param id="0" name="Pin to">InimigoCarinha</param>
+                    <param id="1" name="Mode">1</param>
                 </action>
-                <action id="-10" name="Set value" sid="396705606790675" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">HitPoints</param>
-                    <param id="1" name="Value">CurrentWave*5</param>
+                <action id="-15" name="Set visible" sid="887122771947611" type="InimigoCarinhaDevagar">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -94,32 +98,116 @@
                 <event-block sid="798608113692711">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="334079250884517" type="System">
-                            <param id="0" name="Interval (seconds)">5</param>
+                            <param id="0" name="Interval (seconds)">1</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="125590316783024" type="InimigoCarinhaBase">
-                            <param id="0" name="Instance variable">Devagar</param>
+                        <condition id="-7" name="Compare instance variable" sid="164080900689913" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">TempoDevagar</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="773810949108506" type="InimigoCarinhaBase">
-                            <param id="0" name="Instance variable">Devagar</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="-10" name="Set value" sid="857117974897122" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">TempoDevagar</param>
+                            <param id="1" name="Value">InimigoCarinhaBase.TempoDevagar - 1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="880227277276500">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="918702696539859" type="InimigoCarinhaBase">
-                            <param id="0" name="Instance variable">Devagar</param>
+                        <condition id="-7" name="Compare instance variable" sid="218215897243949" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">TempoDevagar</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="143955018430874" type="InimigoCarinhaBase">
-                            <param id="0" name="Speed">75</param>
+                            <param id="0" name="Speed">INIMIGO_CARINHA_VELOCIDADE / 2</param>
                         </action>
-                        <action id="-27" name="Set effect enabled" sid="319986565905254" type="InimigoCarinha">
-                            <param id="0" name="Mode">1</param>
-                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                        <action id="-15" name="Set visible" sid="702383073434345" type="InimigoCarinhaDevagar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="246154516460209">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="532340516197534" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">TempoDevagar</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="264518921457482" type="InimigoCarinhaBase">
+                            <param id="0" name="Speed">INIMIGO_CARINHA_VELOCIDADE</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="981849243193847" type="InimigoCarinhaDevagar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="108200162256977" title="Seleciona a animação">
+            <sub-events>
+                <event-block any="1" sid="426492180647390">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="747827830181339" type="InimigoCarinhaBase">
+                            <param id="0" name="First angle">0</param>
+                            <param id="1" name="Second angle">45</param>
+                        </condition>
+                        <condition id="-13" name="Is between angles" sid="252009855261565" type="InimigoCarinhaBase">
+                            <param id="0" name="First angle">315.01</param>
+                            <param id="1" name="Second angle">360</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="895069267123860" type="InimigoCarinha">
+                            <param id="0" name="Animation">&quot;Direita&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="120988151298774">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="980327386190540" type="InimigoCarinhaBase">
+                            <param id="0" name="First angle">45.01</param>
+                            <param id="1" name="Second angle">135</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="556404855550565" type="InimigoCarinha">
+                            <param id="0" name="Animation">&quot;Frente&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="458768744390449">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="501532221430375" type="InimigoCarinhaBase">
+                            <param id="0" name="First angle">135.01</param>
+                            <param id="1" name="Second angle">225</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="730714101912281" type="InimigoCarinha">
+                            <param id="0" name="Animation">&quot;Esquerda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="766592990550294">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="468747035809442" type="InimigoCarinhaBase">
+                            <param id="0" name="First angle">225.01</param>
+                            <param id="1" name="Second angle">315</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="326203827578783" type="InimigoCarinha">
+                            <param id="0" name="Animation">&quot;Costas&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

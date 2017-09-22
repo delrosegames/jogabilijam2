@@ -55,9 +55,9 @@
                             <param id="1" name="Value">TorreSaciTiroBase.Damage</param>
                         </action>
                         <action id="-9" name="Destroy" sid="612446129560856" type="TorreSaciTiroBase" />
-                        <action id="-13" name="Set boolean" sid="844937081215211" type="InimigoCarinhaBase">
-                            <param id="0" name="Instance variable">Devagar</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-10" name="Set value" sid="844937081215211" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">TempoDevagar</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                     </actions>
                 </event-block>
