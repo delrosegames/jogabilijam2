@@ -3,105 +3,115 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TorreSaci</name>
     <events>
-        <event-block sid="695807719181846">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="500125461381469" type="TorreSaci">
-                    <param id="0" name="Instance variable">Atacando</param>
-                </condition>
-            </conditions>
-            <actions />
+        <variable constant="1" name="TORRE_SACI_CUSTO" sid="545133342831364" static="0" type="number">30</variable>
+        <event-group description="" sid="664920853499071" title="Rotação da Torre Saci">
             <sub-events>
-                <event-block any="1" sid="464069072877496">
+                <comment>Verifica a rotação da base para seleção do sprite a ser utilizado</comment>
+                <event-block sid="695807719181846">
                     <conditions>
-                        <condition id="-13" name="Is between angles" sid="183807106181681" type="TorreSaciBase">
-                            <param id="0" name="First angle">0</param>
-                            <param id="1" name="Second angle">45</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="500125461381469" type="TorreSaci">
+                            <param id="0" name="Instance variable">Atacando</param>
                         </condition>
-                        <condition id="-13" name="Is between angles" sid="902929908885252" type="TorreSaciBase">
-                            <param id="0" name="First angle">315.01</param>
-                            <param id="1" name="Second angle">360</param>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="464069072877496">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="183807106181681" type="TorreSaciBase">
+                                    <param id="0" name="First angle">0</param>
+                                    <param id="1" name="Second angle">45</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="902929908885252" type="TorreSaciBase">
+                                    <param id="0" name="First angle">315.01</param>
+                                    <param id="1" name="Second angle">360</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="266228427061038" type="TorreSaci">
+                                    <param id="0" name="Animation">&quot;ParadoDireita&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="416922744325715">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="518332137398376" type="TorreSaciBase">
+                                    <param id="0" name="First angle">45.01</param>
+                                    <param id="1" name="Second angle">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="113021790217844" type="TorreSaci">
+                                    <param id="0" name="Animation">&quot;ParadoFrente&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="922343444673430">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="460915741226840" type="TorreSaciBase">
+                                    <param id="0" name="First angle">135.01</param>
+                                    <param id="1" name="Second angle">225</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="179446629640272" type="TorreSaci">
+                                    <param id="0" name="Animation">&quot;ParadoEsquerda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="872376779897578">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="852428905208322" type="TorreSaciBase">
+                                    <param id="0" name="First angle">225.01</param>
+                                    <param id="1" name="Second angle">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="754562158033947" type="TorreSaci">
+                                    <param id="0" name="Animation">&quot;ParadoCostas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="522051929215816" title="Ataque Torre Saci">
+            <sub-events>
+                <event-block sid="619855424006444">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="105936603293420" type="TorreSaci">
+                            <param id="0" name="Animation">&quot;Ataque&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="266228427061038" type="TorreSaci">
-                            <param id="0" name="Animation">&quot;ParadoDireita&quot;</param>
-                            <param id="1" name="From">1</param>
+                        <action id="-13" name="Set boolean" sid="780493840692164" type="TorreSaci">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="416922744325715">
+                <event-block sid="616615829463430">
                     <conditions>
-                        <condition id="-13" name="Is between angles" sid="518332137398376" type="TorreSaciBase">
-                            <param id="0" name="First angle">45.01</param>
-                            <param id="1" name="Second angle">135</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="833364529069745" type="TorreSaci">
+                            <param id="0" name="Instance variable">Atacando</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="113021790217844" type="TorreSaci">
-                            <param id="0" name="Animation">&quot;ParadoFrente&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="922343444673430">
-                    <conditions>
-                        <condition id="-13" name="Is between angles" sid="460915741226840" type="TorreSaciBase">
-                            <param id="0" name="First angle">135.01</param>
-                            <param id="1" name="Second angle">225</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="179446629640272" type="TorreSaci">
-                            <param id="0" name="Animation">&quot;ParadoEsquerda&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="872376779897578">
-                    <conditions>
-                        <condition id="-13" name="Is between angles" sid="852428905208322" type="TorreSaciBase">
-                            <param id="0" name="First angle">225.01</param>
-                            <param id="1" name="Second angle">315</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="754562158033947" type="TorreSaci">
-                            <param id="0" name="Animation">&quot;ParadoCostas&quot;</param>
+                        <action id="4" name="Set animation" sid="624018272130511" type="TorreSaci">
+                            <param id="0" name="Animation">&quot;Ataque&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="619855424006444">
-            <conditions>
-                <condition id="4" name="On finished" sid="105936603293420" type="TorreSaci">
-                    <param id="0" name="Animation">&quot;Ataque&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="780493840692164" type="TorreSaci">
-                    <param id="0" name="Instance variable">Atacando</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="616615829463430">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="833364529069745" type="TorreSaci">
-                    <param id="0" name="Instance variable">Atacando</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="624018272130511" type="TorreSaci">
-                    <param id="0" name="Animation">&quot;Ataque&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="695601010302246" title="Construção da Torre">
+        </event-group>
+        <event-group description="" sid="695601010302246" title="Construção da Torre Saci">
             <sub-events>
-                <comment>Spawn a new tower to be placed</comment>
+                <comment>Gera uma nova torre para ser posicionada</comment>
                 <event-block any="1" sid="857560062326518">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="894567438127097" type="Mouse">
@@ -120,7 +130,7 @@
                                 <condition id="-14" name="Compare variable" sid="339797414928259" type="System">
                                     <param id="0" name="Variable">CurrentCash</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">30</param>
+                                    <param id="2" name="Value">TORRE_SACI_CUSTO</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="441975419633130" type="System">
                                     <param id="0" name="Variable">InHand</param>
@@ -212,7 +222,7 @@
                         </action>
                         <action id="-11" name="Subtract from" sid="245087218011654" type="System">
                             <param id="0" name="Variable">CurrentCash</param>
-                            <param id="1" name="Value">30</param>
+                            <param id="1" name="Value">TORRE_SACI_CUSTO</param>
                         </action>
                         <action id="-9" name="Set value" sid="963662896779731" type="System">
                             <param id="0" name="Variable">InHand</param>
@@ -254,6 +264,10 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="132180199343531" type="TorreSaciBase" />
+                        <action id="-9" name="Set value" sid="356095454941898" type="System">
+                            <param id="0" name="Variable">InHand</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

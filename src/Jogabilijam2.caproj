@@ -397,6 +397,56 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TorreCuca" sid="867839164798438">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PosicaoAlvo" sid="539454425746408" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="420528069633436">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>TorreCuca</type>
+                <type>TorreCucaBase</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559722650189998" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TorreCucaBase" sid="964836554070788">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Floating" sid="348975476863213" type="boolean" />
+            </instance-variables>
+            <container>
+                <type>TorreCuca</type>
+                <type>TorreCucaBase</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491770412996273" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TorreCucaBotao" sid="265664531374312">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ZonaCaminho" sid="698927114105597">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TorreCucaPocao" sid="367024058535472">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -408,6 +458,7 @@
         <event-sheet>TorreSaci.xml</event-sheet>
         <event-sheet>InimigoCarinha.xml</event-sheet>
         <event-sheet>TorreSaci_x_InimigoCarinha.xml</event-sheet>
+        <event-sheet>TorreCuca.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="64" />

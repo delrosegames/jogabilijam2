@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TorreCuca</name>
+    <events>
+        <variable constant="1" name="TORRE_CUCA_CUSTO" sid="756668379883790" static="0" type="number">50</variable>
+        <event-group description="" sid="496447630493579" title="Construção da Torre Cuca">
+            <sub-events>
+                <comment>Gera uma nova torre para ser posicionada</comment>
+                <event-block any="1" sid="489025451625818">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="647453050158571" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">TorreCucaBotao</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="711821099174423" type="Keyboard">
+                            <param id="0" name="Key">66 (B)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="690111881333723">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="665066874452888" type="System">
+                                    <param id="0" name="Variable">CurrentCash</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">TORRE_CUCA_CUSTO</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="596214650689169" type="System">
+                                    <param id="0" name="Variable">InHand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="266157451486556" type="System">
+                                    <param id="0" name="Object to create">TorreCucaBase</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="131661808037232" type="TorreCucaBase">
+                                    <param id="0" name="Instance variable">Floating</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="318787168603457" type="System">
+                                    <param id="0" name="Variable">InHand</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="243494423158746" type="TorreCuca">
+                                    <param id="0" name="Pin to">TorreCucaBase</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Quando a torre estiver sendo construída, posiciona a torre sempre na grade.&#x0D;&#x0A;Além disso, somente é exibida (e semi-transparente) caso esteja sobre a zona de construção.</comment>
+                <event-block sid="406922373452033">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="999877176057691" type="TorreCucaBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="948187524396109" type="TorreCucaBase">
+                            <param id="0" name="X">(round((mouse.X - 15)  / 30) * 30) + 15</param>
+                            <param id="1" name="Y">(round((mouse.Y - 15) / 30) * 30) + 15</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="193965019693032" type="TorreCuca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="506150260037053" type="TorreCuca">
+                            <param id="0" name="Opacity">70</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="116773173957332">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="679872475095352" type="Mouse">
+                                    <param id="0" name="Object">ZonaConstrucao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="264481042868064" type="TorreCuca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Adiciona uma nova torre se estiver posicionada no local correto (acima da grid e não em cima de outra torre)</comment>
+                <event-block sid="955846717151464">
+                    <conditions>
+                        <condition id="0" name="On click" sid="410653858799842" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="415284448940987" type="Mouse">
+                            <param id="0" name="Object">ZonaConstrucao</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="203135964465821" type="TorreCucaBase">
+                            <param id="0" name="Object">TorreCucaBase</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="397452447580296" type="TorreCucaBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="821851241526024" type="TorreCucaBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="325989666904471" type="System">
+                            <param id="0" name="Variable">CurrentCash</param>
+                            <param id="1" name="Value">TORRE_CUCA_CUSTO</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="979892006530400" type="System">
+                            <param id="0" name="Variable">InHand</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="108874315891213" type="TorreCuca">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="262142437559973">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="360462347282180" type="System">
+                            <param id="0" name="Object">TorreCuca</param>
+                            <param id="1" name="Expression">TorreCuca.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="604240437378781" type="TorreCuca" />
+                    </actions>
+                </event-block>
+                <comment>Cancela a construção da torre</comment>
+                <event-block sid="332472568223569">
+                    <conditions>
+                        <condition id="0" name="On click" sid="164197003569128" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="988611220665805" type="TorreCucaBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="962264855890151" type="TorreCucaBase" />
+                        <action id="-9" name="Set value" sid="236629712507346" type="System">
+                            <param id="0" name="Variable">InHand</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="144970434342464" title="Ataque Torre Cuca">
+            <sub-events>
+                <event-block sid="670183885529024">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="828160981855910" type="TorreCucaBase">
+                            <param id="0" name="Instance variable">Floating</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="171539254875062" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="395761129307442" type="TorreCuca">
+                            <param id="0" name="Instance variable">PosicaoAlvo</param>
+                            <param id="1" name="Value">round(random(1, 8))</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="788898077961412" type="btnPronto">
+                            <param id="0" name="Text">TorreCuca.IID &amp; &quot; | &quot; &amp; TorreCuca.PosicaoAlvo</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="775161277804879">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="447635443144736" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="944045553536857" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y - 30</param>
+                                    <param id="2" name="Y">TorreCuca.X - 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="410044305356046" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="279351591517911" type="TorreCucaBotao">
+                                    <param id="0" name="Text">TorreCucaPocao.IID &amp; &quot; | &quot; &amp; TorreCucaPocao.X &amp; &quot;|&quot; &amp; TorreCucaPocao.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="424647917239760">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="593416647710938" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="267486128885126" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y - 30</param>
+                                    <param id="2" name="Y">TorreCuca.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="351523988448880" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="906528021330568">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="895880449690794" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="240790225165032" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y - 30</param>
+                                    <param id="2" name="Y">TorreCuca.X + 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="883731265667539" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="301138969395643">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="504695705245917" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="611036033176374" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y</param>
+                                    <param id="2" name="Y">TorreCuca.X + 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="370269724412499" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="494202069818562">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="148153262146838" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="760921992713722" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y + 30</param>
+                                    <param id="2" name="Y">TorreCuca.X + 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="547476976150417" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="967587941423923">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="509528884089917" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="885079484856981" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y + 30</param>
+                                    <param id="2" name="Y">TorreCuca.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="207435386424217" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="957188701861683">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="802485468235458" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="727571802658429" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y + 30</param>
+                                    <param id="2" name="Y">TorreCuca.X - 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="433592900167475" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="741174323899707">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="406739371046901" type="TorreCuca">
+                                    <param id="0" name="Instance variable">PosicaoAlvo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                                <condition id="-36" name="Pick overlapping point" sid="579149343432642" type="System">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="X">TorreCuca.Y</param>
+                                    <param id="2" name="Y">TorreCuca.X - 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="113889229980564" type="System">
+                                    <param id="0" name="Object to create">TorreCucaPocao</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ZonaCaminho.X</param>
+                                    <param id="3" name="Y">ZonaCaminho.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
