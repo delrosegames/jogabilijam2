@@ -90,13 +90,7 @@
                     <actions />
                     <sub-events>
                         <event-block sid="971314478371408">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="460687596966669" type="System">
-                                    <param id="0" name="First value">Inimigo.Count</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="991946828535790" type="System">
                                     <param id="0" name="Variable">Timer</param>

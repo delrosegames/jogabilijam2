@@ -13,7 +13,6 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
@@ -24,9 +23,7 @@
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
-    <used-effects>
-        <effect author="Scirra" id="tint">Tint</effect>
-    </used-effects>
+    <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -54,466 +51,454 @@
         <prop name="Use high-DPI display">No</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="TorreSaciBase" sid="982098852941829">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Floating" sid="264057170557532" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Turret" sid="993364112708820">
-                    <behavior id="Turret" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>TorreSaci</type>
-                <type>TorreSaciBase</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259355335699946" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci_Frente_01.png">
-                        <collision-poly>
-                            <point x="0.633333" y="0.133333" />
-                            <point x="0.5" y="0.1" />
-                            <point x="0.433333" y="0.0666667" />
-                            <point x="0.833333" y="0.5" />
-                            <point x="0.8" y="1" />
-                            <point x="0.5" y="1" />
-                            <point x="0.2" y="1" />
-                            <point x="0.266667" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TorreSaciTiroBase" sid="752742269701277">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Damage" sid="711586793846316" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Bullet" sid="278874839627376">
-                    <behavior id="Bullet" />
-                </behavior-type>
-                <behavior-type name="DestroyOutsideLayout" sid="258159188746283">
-                    <behavior id="destroy" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>TorreSaciTiro</type>
-                <type>TorreSaciTiroBase</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983054233126207" speed="5">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png">
-                        <collision-poly>
-                            <point x="0.466667" y="0.4" />
-                            <point x="1" y="0.466667" />
-                            <point x="0.6" y="1" />
-                            <point x="0.466667" y="1" />
-                            <point x="0.4" y="1" />
-                            <point x="0" y="0.466667" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Inimigo" sid="841004437916550">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="CurrentDestination" sid="861662585701697" type="number" />
-                <instance-variable name="HitPoints" sid="679263425231402" type="number" />
-                <instance-variable name="Devagar" sid="836656717558147" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Bullet" sid="281412106680753">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <effects>
-                <effect-type name="Tint">
-                    <effect id="tint" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568657784837430" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="txtOnda" sid="653972415933431">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="txtDinheiro" sid="714195652183497">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="txtVidas" sid="645772860270992">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="txtFalhou" sid="309002550746601">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="ZonaConstrucao" sid="941024211247901">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="SpawnPoint" sid="533936856541509">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175769218504405" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="PontoMovimento" sid="300076170929547">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Ordem" sid="852596438408217" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221535068442910" speed="5">
-                    <frame duration="1" hotspotX="0.03125" hotspotY="0.03125">
-                        <image-point name="Centro" x="0.5" y="0.5" />
-                        <collision-poly>
-                            <point x="0.03125" y="0.03125" />
-                            <point x="0.96875" y="0.03125" />
-                            <point x="0.96875" y="0.96875" />
-                            <point x="0.03125" y="0.96875" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="MenuPrincipal">
+            <object-type name="MenuPrincipalBotaoIniciar" sid="884690350423376">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="MenuPrincipalCamera" sid="932019502104224">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="556638605628758">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820093743463925" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuPrincipalFase1Texto" sid="356625225665043">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="MenuPrincipalFundo" sid="318572454003810">
+                <plugin id="TiledBg" />
+                <texture original-source="D:\Downloads\exemplo menu.jpg" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Torres">
+            <object-type name="TorreCuca" sid="867839164798438">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PosicaoAlvo" sid="539454425746408" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="420528069633436">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreCuca</type>
+                    <type>TorreCucaBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559722650189998" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCucaBase" sid="964836554070788">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Floating" sid="348975476863213" type="boolean" />
+                </instance-variables>
+                <container>
+                    <type>TorreCuca</type>
+                    <type>TorreCucaBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491770412996273" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCucaBotao" sid="265664531374312">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TorreCucaPocao" sid="367024058535472">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Contador" sid="902523396424583" type="number" />
+                    <instance-variable name="Damage" sid="710449381458903" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreSaci" sid="752739541981003">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Atacando" sid="298457145089132" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="345315112363939">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreSaci</type>
+                    <type>TorreSaciBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="12" loop="1" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="815419691204387" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_09.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_12.png" />
+                    </animation>
+                    <animation framecount="12" loop="1" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="938046008266509" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_09.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_12.png" />
+                    </animation>
+                    <animation framecount="12" loop="1" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="532324764684136" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_09.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_12.png" />
+                    </animation>
+                    <animation framecount="12" loop="1" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="774086498757237" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_09.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_12.png" />
+                    </animation>
+                    <animation framecount="8" loop="0" name="Ataque" pingpong="0" repeatcount="1" repeatto="0" sid="356570942641086" speed="20">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_08.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreSaciBase" sid="982098852941829">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Floating" sid="264057170557532" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Turret" sid="993364112708820">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreSaci</type>
+                    <type>TorreSaciBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259355335699946" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci_Frente_01.png">
+                            <collision-poly>
+                                <point x="0.633333" y="0.133333" />
+                                <point x="0.5" y="0.1" />
+                                <point x="0.433333" y="0.0666667" />
+                                <point x="0.833333" y="0.5" />
+                                <point x="0.8" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0.2" y="1" />
+                                <point x="0.266667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreSaciBotao" sid="967490691625453">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TorreSaciTiro" sid="439400308196992">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="647205347520814">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreSaciTiro</type>
+                    <type>TorreSaciTiroBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228335031458295" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0002_Quadro-6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0003_Quadro-5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0004_Quadro-4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0005_Quadro-3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0006_Quadro-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0007_Quadro-1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreSaciTiroBase" sid="752742269701277">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Damage" sid="711586793846316" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="278874839627376">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="258159188746283">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreSaciTiro</type>
+                    <type>TorreSaciTiroBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983054233126207" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png">
+                            <collision-poly>
+                                <point x="0.466667" y="0.4" />
+                                <point x="1" y="0.466667" />
+                                <point x="0.6" y="1" />
+                                <point x="0.466667" y="1" />
+                                <point x="0.4" y="1" />
+                                <point x="0" y="0.466667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Inimigos">
+            <object-type name="InimigoCarinha" sid="536442448283577">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="246474290500375">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>InimigoCarinhaBase</type>
+                    <type>InimigoCarinha</type>
+                    <type>InimigoCarinhaDevagar</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Frente" pingpong="0" repeatcount="1" repeatto="0" sid="468872427935376" speed="10">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_04.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="Costas" pingpong="0" repeatcount="1" repeatto="0" sid="475024259743528" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_04.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="Direita" pingpong="0" repeatcount="1" repeatto="0" sid="480352682269851" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_04.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="Esquerda" pingpong="0" repeatcount="1" repeatto="0" sid="880390987237274" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_04.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InimigoCarinhaBase" sid="544221638466681">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CurrentDestination" sid="359204365668651" type="number" />
+                    <instance-variable name="HitPoints" sid="654981187348216" type="number" />
+                    <instance-variable name="Devagar" sid="629366207504151" type="boolean" />
+                    <instance-variable name="TempoDevagar" sid="230921125575469" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="868691841172279">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>InimigoCarinhaBase</type>
+                    <type>InimigoCarinha</type>
+                    <type>InimigoCarinhaDevagar</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719245256027553" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InimigoCarinhaDevagar" sid="206732560330135">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="963201553321813">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>InimigoCarinhaBase</type>
+                    <type>InimigoCarinha</type>
+                    <type>InimigoCarinhaDevagar</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930979629543030" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Jogo">
+            <object-type name="btnPronto" sid="679580239706214">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="EnemyGoal" sid="692816703787875">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="968163514580144" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoGUI" sid="878652979657616">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737176356470673" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PontoMovimento" sid="300076170929547">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Ordem" sid="852596438408217" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221535068442910" speed="5">
+                        <frame duration="1" hotspotX="0.03125" hotspotY="0.03125">
+                            <image-point name="Centro" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.03125" y="0.03125" />
+                                <point x="0.96875" y="0.03125" />
+                                <point x="0.96875" y="0.96875" />
+                                <point x="0.03125" y="0.96875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpawnPoint" sid="533936856541509">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175769218504405" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtDinheiro" sid="714195652183497">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtFalhou" sid="309002550746601">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtOnda" sid="653972415933431">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtVidas" sid="645772860270992">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ZonaCaminho" sid="698927114105597">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="ZonaConstrucao" sid="941024211247901">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Fases">
+            <object-type name="Fase1_Fundo" sid="230111928141287">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508295869701976" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Downloads\01.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="565626247793604">
             <plugin id="Mouse" />
         </object-type>
         <object-type name="Keyboard" sid="315499532680391">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="EnemyGoal" sid="692816703787875">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="968163514580144" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TorreSaciBotao" sid="967490691625453">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="btnPronto" sid="679580239706214">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="txtDebug" sid="883647146697454">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="SpriteFont" sid="229763420160320">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="FundoGUI" sid="878652979657616">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737176356470673" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Fase1_Fundo" sid="230111928141287">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508295869701976" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Downloads\01.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TorreSaci" sid="752739541981003">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Atacando" sid="298457145089132" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Pin" sid="345315112363939">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>TorreSaci</type>
-                <type>TorreSaciBase</type>
-            </container>
-            <animation-folder>
-                <animation framecount="12" loop="1" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="815419691204387" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_06.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_08.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_09.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_10.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_11.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Frente_12.png" />
-                </animation>
-                <animation framecount="12" loop="1" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="938046008266509" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_06.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_08.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_09.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_10.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_11.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Direita_12.png" />
-                </animation>
-                <animation framecount="12" loop="1" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="532324764684136" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_06.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_08.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_09.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_10.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_11.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Olhando_Esquerda_12.png" />
-                </animation>
-                <animation framecount="12" loop="1" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="774086498757237" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_06.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_08.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_09.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_10.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_11.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Costas_12.png" />
-                </animation>
-                <animation framecount="8" loop="0" name="Ataque" pingpong="0" repeatcount="1" repeatto="0" sid="356570942641086" speed="20">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_06.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Saci_Ataque_08.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TorreSaciTiro" sid="439400308196992">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="647205347520814">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>TorreSaciTiro</type>
-                <type>TorreSaciTiroBase</type>
-            </container>
-            <animation-folder>
-                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228335031458295" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0002_Quadro-6.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0003_Quadro-5.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0004_Quadro-4.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0005_Quadro-3.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0006_Quadro-2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0007_Quadro-1.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="InimigoCarinhaBase" sid="544221638466681">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="CurrentDestination" sid="359204365668651" type="number" />
-                <instance-variable name="HitPoints" sid="654981187348216" type="number" />
-                <instance-variable name="Devagar" sid="629366207504151" type="boolean" />
-                <instance-variable name="TempoDevagar" sid="230921125575469" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Bullet" sid="868691841172279">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>InimigoCarinhaBase</type>
-                <type>InimigoCarinha</type>
-                <type>InimigoCarinhaDevagar</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719245256027553" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="InimigoCarinha" sid="536442448283577">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="246474290500375">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>InimigoCarinhaBase</type>
-                <type>InimigoCarinha</type>
-                <type>InimigoCarinhaDevagar</type>
-            </container>
-            <animation-folder>
-                <animation framecount="4" loop="1" name="Frente" pingpong="0" repeatcount="1" repeatto="0" sid="468872427935376" speed="10">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\fRENTE\Carinha LV1_Frente_04.png" />
-                </animation>
-                <animation framecount="4" loop="1" name="Costas" pingpong="0" repeatcount="1" repeatto="0" sid="475024259743528" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\Carinha LV1_Costas_04.png" />
-                </animation>
-                <animation framecount="4" loop="1" name="Direita" pingpong="0" repeatcount="1" repeatto="0" sid="480352682269851" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Direita\CarinhaLv1_Olhando_Direita_04.png" />
-                </animation>
-                <animation framecount="4" loop="1" name="Esquerda" pingpong="0" repeatcount="1" repeatto="0" sid="880390987237274" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 1\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Esquerda\CarinhaLv1_OlhandoEsquerd_04.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="InimigoCarinhaDevagar" sid="206732560330135">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="963201553321813">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>InimigoCarinhaBase</type>
-                <type>InimigoCarinha</type>
-                <type>InimigoCarinhaDevagar</type>
-            </container>
-            <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930979629543030" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TorreCuca" sid="867839164798438">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="PosicaoAlvo" sid="539454425746408" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Pin" sid="420528069633436">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>TorreCuca</type>
-                <type>TorreCucaBase</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559722650189998" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TorreCucaBase" sid="964836554070788">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Floating" sid="348975476863213" type="boolean" />
-            </instance-variables>
-            <container>
-                <type>TorreCuca</type>
-                <type>TorreCucaBase</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491770412996273" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TorreCucaBotao" sid="265664531374312">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="ZonaCaminho" sid="698927114105597">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="TorreCucaPocao" sid="367024058535472">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Contador" sid="902523396424583" type="number" />
-                <instance-variable name="Damage" sid="710449381458903" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="MenuPrincipalFundo" sid="318572454003810">
-            <plugin id="TiledBg" />
-            <texture original-source="D:\Downloads\exemplo menu.jpg" />
-        </object-type>
-        <object-type name="MenuPrincipalBotaoIniciar" sid="884690350423376">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="MenuPrincipalFase1Texto" sid="356625225665043">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="MenuPrincipalCamera" sid="932019502104224">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="556638605628758">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820093743463925" speed="5">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Fase1.xml</layout>
-        <layout>Layout para objetos.xml</layout>
+        <layout-folder name="Fases">
+            <layout>Fase1.xml</layout>
+        </layout-folder>
         <layout>MenuPrincipal.xml</layout>
+        <layout>Layout para objetos.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-folder name="Torres">
+            <event-sheet>TorreCuca.xml</event-sheet>
+            <event-sheet>TorreSaci.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Inimigos">
+            <event-sheet>InimigoCarinha.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Torres_x_Inimigos">
+            <event-sheet>TorreSaci_x_InimigoCarinha.xml</event-sheet>
+            <event-sheet>TorreCuca_x_InimigoCarinha.xml</event-sheet>
+        </event-folder>
         <event-sheet>Jogo.xml</event-sheet>
-        <event-sheet>TorreSaci.xml</event-sheet>
-        <event-sheet>InimigoCarinha.xml</event-sheet>
-        <event-sheet>TorreSaci_x_InimigoCarinha.xml</event-sheet>
-        <event-sheet>TorreCuca.xml</event-sheet>
-        <event-sheet>TorreCuca_x_InimigoCarinha.xml</event-sheet>
-        <event-sheet>MenuPrincipalEventos.xml</event-sheet>
+        <event-sheet>MenuPrincipal.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="64" />
@@ -521,7 +506,9 @@
     </global-instances>
     <sounds-folder />
     <music-folder>
-        <file name="MusicaMenuPrincipal.m4a" />
+        <music-folder name="MenuPrincipal">
+            <file name="MenuPrincipalMusica.m4a" />
+        </music-folder>
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
