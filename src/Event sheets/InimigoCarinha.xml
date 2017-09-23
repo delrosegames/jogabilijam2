@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>InimigoCarinha</name>
     <events>
-        <variable constant="1" name="INIMIGO_CARINHA_VELOCIDADE" sid="368365106531972" static="0" type="number">100</variable>
+        <variable constant="1" name="INIMIGO_CARINHA_VELOCIDADE" sid="368365106531972" static="0" type="number">70</variable>
         <event-block sid="452106485874531">
             <conditions>
                 <condition id="-18" name="On created" sid="862760534543767" type="InimigoCarinhaBase" />

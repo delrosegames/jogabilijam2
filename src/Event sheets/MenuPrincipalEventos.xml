@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuPrincipalEventos</name>
+    <events>
+        <event-block sid="503880196780472">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="803729536252366" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MenuPrincipalBotaoIniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="675923080966027" type="MenuPrincipalCamera">
+                    <param id="0" name="X">MenuPrincipalCamera.X + 640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="182220487055297">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="796317999961683" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MenuPrincipalFase1Texto</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="576766777881772" type="System">
+                    <param id="0" name="Layout">Fase1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

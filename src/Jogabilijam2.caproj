@@ -22,6 +22,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="tint">Tint</effect>
@@ -35,7 +36,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Fase1</first-layout>
+    <first-layout>MenuPrincipal</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -471,11 +472,35 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="MenuPrincipalFundo" sid="318572454003810">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Downloads\exemplo menu.jpg" />
+        </object-type>
+        <object-type name="MenuPrincipalBotaoIniciar" sid="884690350423376">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="MenuPrincipalFase1Texto" sid="356625225665043">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="MenuPrincipalCamera" sid="932019502104224">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="556638605628758">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820093743463925" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Fase1.xml</layout>
         <layout>Layout para objetos.xml</layout>
+        <layout>MenuPrincipal.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Jogo.xml</event-sheet>
@@ -483,13 +508,16 @@
         <event-sheet>InimigoCarinha.xml</event-sheet>
         <event-sheet>TorreSaci_x_InimigoCarinha.xml</event-sheet>
         <event-sheet>TorreCuca.xml</event-sheet>
+        <event-sheet>MenuPrincipalEventos.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="64" />
         <global-instance type="Keyboard" uid="65" />
     </global-instances>
     <sounds-folder />
-    <music-folder />
+    <music-folder>
+        <file name="MusicaMenuPrincipal.m4a" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
