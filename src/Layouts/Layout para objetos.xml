@@ -298,7 +298,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TorreCuca" uid="0">
+                <instance type="TorreCuca" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -326,7 +326,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TorreCucaBase" uid="1">
+                <instance type="TorreCucaBase" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -351,21 +351,25 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="TorreCucaPocao" uid="41">
+                <instance type="TorreCucaPocao" uid="42">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Contador>0</Contador>
+                        <Damage>0.5</Damage>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>78</x>
                         <y>130</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
+                        <width>28</width>
+                        <height>28</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
