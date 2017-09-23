@@ -358,14 +358,18 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Contador>0</Contador>
+                        <Damage>0.5</Damage>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>78</x>
                         <y>130</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
+                        <width>28</width>
+                        <height>28</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
