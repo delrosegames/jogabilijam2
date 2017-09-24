@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FTorresInimigos</name>
+    <events>
+        <event-group description="" sid="548587247467680" title="Posicionamento de objetos">
+            <sub-events>
+                <event-block sid="100129094426134">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="579199623780598" type="System">
+                            <param id="0" name="Object">FTorresInimigos</param>
+                            <param id="1" name="Expression">FTorresInimigos.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="624673500440025" type="FTorresInimigos" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -36,7 +36,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="266157451486556" type="System">
                                     <param id="0" name="Object to create">TorreCucaBase</param>
-                                    <param id="1" name="Layer">1</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">Mouse.X</param>
                                     <param id="3" name="Y">Mouse.Y</param>
                                 </action>
@@ -125,18 +125,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="262142437559973">
-                    <conditions>
-                        <condition id="-24" name="For Each (ordered)" sid="360462347282180" type="System">
-                            <param id="0" name="Object">TorreCuca</param>
-                            <param id="1" name="Expression">TorreCuca.Y</param>
-                            <param id="2" name="Order">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-24" name="Move to top" sid="604240437378781" type="TorreCuca" />
-                    </actions>
-                </event-block>
                 <comment>Cancela a construção da torre</comment>
                 <event-block sid="332472568223569">
                     <conditions>
@@ -195,7 +183,7 @@
                         <action id="-9" name="Destroy" sid="725880006977166" type="TorreCucaPocao" />
                         <action id="-3" name="Create object" sid="442980798119867" type="System">
                             <param id="0" name="Object to create">TorreCucaPocao</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                             <param id="2" name="X">TorreCucaPocao.X</param>
                             <param id="3" name="Y">TorreCucaPocao.Y</param>
                         </action>
@@ -204,7 +192,7 @@
                 <event-block sid="670183885529024">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="171539254875062" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
+                            <param id="0" name="Interval (seconds)">1</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -238,7 +226,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="410044305356046" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X - 30</param>
                                     <param id="3" name="Y">TorreCuca.Y - 30</param>
                                 </action>
@@ -260,7 +248,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="351523988448880" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X</param>
                                     <param id="3" name="Y">TorreCuca.Y - 30</param>
                                 </action>
@@ -282,7 +270,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="883731265667539" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X + 30</param>
                                     <param id="3" name="Y">TorreCuca.Y - 30</param>
                                 </action>
@@ -304,7 +292,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="370269724412499" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X + 30</param>
                                     <param id="3" name="Y">TorreCuca.Y</param>
                                 </action>
@@ -326,7 +314,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="547476976150417" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X + 30</param>
                                     <param id="3" name="Y">TorreCuca.Y + 30</param>
                                 </action>
@@ -348,7 +336,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="207435386424217" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X</param>
                                     <param id="3" name="Y">TorreCuca.Y + 30</param>
                                 </action>
@@ -370,7 +358,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="433592900167475" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X - 30</param>
                                     <param id="3" name="Y">TorreCuca.Y + 30</param>
                                 </action>
@@ -392,7 +380,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="113889229980564" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X - 30</param>
                                     <param id="3" name="Y">TorreCuca.Y</param>
                                 </action>

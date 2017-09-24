@@ -24,6 +24,10 @@
                 <action id="-15" name="Set visible" sid="887122771947611" type="InimigoCarinhaDevagar">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="479708935022218" type="InimigoCarinhaHP">
+                    <param id="0" name="Pin to">InimigoCarinha</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="269827266879050">
@@ -91,6 +95,17 @@
                     <param id="0" name="Variable">CurrentCash</param>
                     <param id="1" name="Value">2*CurrentWave</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="884465212408120">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="945006766098445" type="InimigoCarinhaHP" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="414223159770690" type="InimigoCarinhaHP">
+                    <param id="0" name="Text">InimigoCarinhaBase.HitPoints</param>
+                </action>
+                <action id="-24" name="Move to top" sid="184050003503892" type="InimigoCarinhaHP" />
             </actions>
         </event-block>
         <event-group description="" sid="305892856718957" title="Efeito - Devagar">

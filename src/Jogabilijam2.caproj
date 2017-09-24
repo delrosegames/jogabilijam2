@@ -314,6 +314,7 @@
                     <type>InimigoCarinhaBase</type>
                     <type>InimigoCarinha</type>
                     <type>InimigoCarinhaDevagar</type>
+                    <type>InimigoCarinhaHP</type>
                 </container>
                 <animation-folder>
                     <animation framecount="4" loop="1" name="Frente" pingpong="0" repeatcount="1" repeatto="0" sid="468872427935376" speed="10">
@@ -359,6 +360,7 @@
                     <type>InimigoCarinhaBase</type>
                     <type>InimigoCarinha</type>
                     <type>InimigoCarinhaDevagar</type>
+                    <type>InimigoCarinhaHP</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719245256027553" speed="5">
@@ -377,6 +379,7 @@
                     <type>InimigoCarinhaBase</type>
                     <type>InimigoCarinha</type>
                     <type>InimigoCarinhaDevagar</type>
+                    <type>InimigoCarinhaHP</type>
                 </container>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930979629543030" speed="5">
@@ -391,6 +394,20 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="InimigoCarinhaHP" sid="387779364942023">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="840400236775586">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>InimigoCarinhaBase</type>
+                    <type>InimigoCarinha</type>
+                    <type>InimigoCarinhaDevagar</type>
+                    <type>InimigoCarinhaHP</type>
+                </container>
             </object-type>
         </object-folder>
         <object-folder name="Jogo">
@@ -481,7 +498,21 @@
             <plugin id="Audio" />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="FTorreBase" plugin-id="Sprite" sid="544994410967895">
+            <members>
+                <member>TorreCucaBase</member>
+                <member>TorreSaciBase</member>
+            </members>
+        </family>
+        <family name="FTorresInimigos" plugin-id="Sprite" sid="731597994609272">
+            <members>
+                <member>InimigoCarinha</member>
+                <member>TorreCuca</member>
+                <member>TorreSaci</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout-folder name="Fases">
             <layout>Fase1.xml</layout>
@@ -500,6 +531,9 @@
         <event-folder name="Torres_x_Inimigos">
             <event-sheet>TorreSaci_x_InimigoCarinha.xml</event-sheet>
             <event-sheet>TorreCuca_x_InimigoCarinha.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Families">
+            <event-sheet>FTorresInimigos.xml</event-sheet>
         </event-folder>
         <event-sheet>Jogo.xml</event-sheet>
         <event-sheet>MenuPrincipal.xml</event-sheet>

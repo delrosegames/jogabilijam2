@@ -60,7 +60,7 @@
                             <actions>
                                 <action id="0" name="Spawn another object" sid="457934856402363" type="SpawnPoint">
                                     <param id="0" name="Object">InimigoCarinha</param>
-                                    <param id="1" name="Layer">1</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="750729167659018" type="System">
@@ -129,6 +129,11 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="781464800196903" title="Families">
+            <sub-events>
+                <include>FTorresInimigos</include>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="343672578460015" title="Torres">
             <sub-events>
                 <include>TorreSaci</include>
@@ -143,6 +148,7 @@
         <event-group description="" sid="392492720024306" title="Torres X Inimigos">
             <sub-events>
                 <include>TorreSaci_x_InimigoCarinha</include>
+                <include>TorreCuca_x_InimigoCarinha</include>
             </sub-events>
         </event-group>
     </events>

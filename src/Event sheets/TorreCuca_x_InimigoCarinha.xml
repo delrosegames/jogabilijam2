@@ -8,7 +8,7 @@
                 <event-block sid="238302900804194">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="832383613974980" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
+                            <param id="0" name="Interval (seconds)">0.1</param>
                         </condition>
                     </conditions>
                     <actions />
