@@ -341,6 +341,30 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Enquanto um inimigo estiver passando sobre a poção da Torre Cuca, ele recebe de dano.</comment>
+                <event-block sid="547912351281388">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="378649626820036" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="379313099913068">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="787552944881052" type="FInimigoBase">
+                                    <param id="0" name="Object">TorreCucaPocao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="600061423977208" type="FInimigoBase">
+                                    <param id="0" name="Instance variable">HitPoints</param>
+                                    <param id="1" name="Value">TorreCucaPocao.Damage</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

@@ -14,6 +14,29 @@
         <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
         <event-group description="" sid="511951437666883" title="Inicialização">
             <sub-events>
+                <event-block sid="200644767437486">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="435726034710935" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="182754547520353" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 3</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;MusicaJogo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="883179539520529">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="790365161098629" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="188839250578348" type="Audio">
+                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="481072421821242">
                     <conditions />
                     <actions>
@@ -234,11 +257,6 @@
                 <include>InimigoCarinha</include>
             </sub-events>
         </event-group>
-        <event-group description="" sid="392492720024306" title="Torres X Inimigos">
-            <sub-events>
-                <include>TorreSaci_x_InimigoCarinha</include>
-                <include>TorreCuca_x_InimigoCarinha</include>
-            </sub-events>
-        </event-group>
+        <event-group description="" sid="392492720024306" title="Torres X Inimigos" />
     </events>
 </c2eventsheet>

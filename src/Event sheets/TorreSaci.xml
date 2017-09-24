@@ -81,6 +81,72 @@
         </event-group>
         <event-group description="" sid="522051929215816" title="Ataque Torre Saci">
             <sub-events>
+                <event-block sid="533515755890228">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="415480893783007" type="TorreSaciBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="460499211395345" type="TorreSaciBase">
+                            <param id="0" name="Target">FInimigoBase</param>
+                        </action>
+                        <action behavior="Turret" id="5" name="Set enabled" sid="902461153270808" type="TorreSaciBase">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="850133636251607">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="944195160389870" type="TorreSaciBase" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="809801973254143" type="TorreSaci">
+                            <param id="0" name="Instance variable">Atacando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="894136042259381" type="TorreSaciBase">
+                            <param id="0" name="Object">TorreSaciTiroBase</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="710607805546546" type="TorreSaci">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="963720756311609" type="TorreSaciTiro">
+                            <param id="0" name="Pin to">TorreSaciTiroBase</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="25" name="Play at object" sid="679792762901537" type="Audio">
+                            <param id="0" name="Audio file">Airshot2</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-10</param>
+                            <param id="3" name="Object">TorreSaciTiroBase</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="913166400699767">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="264600926168223" type="TorreSaciTiroBase">
+                            <param id="0" name="Object">FInimigoBase</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="628083055581867" type="FInimigoBase">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Value">TorreSaciTiroBase.Damage</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="238491272547370" type="TorreSaciTiroBase" />
+                        <action id="-10" name="Set value" sid="777383172867417" type="FInimigoBase">
+                            <param id="0" name="Instance variable">TempoDevagar</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="619855424006444">
                     <conditions>
                         <condition id="4" name="On finished" sid="105936603293420" type="TorreSaci">
@@ -214,5 +280,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="549385808237379" title="Ataque" />
     </events>
 </c2eventsheet>

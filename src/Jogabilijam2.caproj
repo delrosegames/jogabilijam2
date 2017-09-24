@@ -340,17 +340,6 @@
             </object-type>
             <object-type name="InimigoCarinhaBase" sid="544221638466681">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="CurrentDestination" sid="359204365668651" type="number" />
-                    <instance-variable name="HitPoints" sid="654981187348216" type="number" />
-                    <instance-variable name="Devagar" sid="629366207504151" type="boolean" />
-                    <instance-variable name="TempoDevagar" sid="230921125575469" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Bullet" sid="868691841172279">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                </behaviors>
                 <container>
                     <type>InimigoCarinhaBase</type>
                     <type>InimigoCarinha</type>
@@ -511,6 +500,7 @@
         <family name="FTorresInimigos" plugin-id="Sprite" sid="731597994609272">
             <members>
                 <member>InimigoCarinha</member>
+                <member>InimigoCarinhaDevagar</member>
                 <member>TorreCuca</member>
                 <member>TorreSaci</member>
             </members>
@@ -520,6 +510,22 @@
                 <member>TorreCuca</member>
                 <member>TorreSaci</member>
             </members>
+        </family>
+        <family name="FInimigoBase" plugin-id="Sprite" sid="743101874488053">
+            <members>
+                <member>InimigoCarinhaBase</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="CurrentDestination" sid="579954931039944" type="number" />
+                <instance-variable name="HitPoints" sid="656203848556588" type="number" />
+                <instance-variable name="Devagar" sid="770219774247519" type="boolean" />
+                <instance-variable name="TempoDevagar" sid="328320004728456" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="801531281151296">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
@@ -536,10 +542,6 @@
         </event-folder>
         <event-folder name="Inimigos">
             <event-sheet>InimigoCarinha.xml</event-sheet>
-        </event-folder>
-        <event-folder name="Torres_x_Inimigos">
-            <event-sheet>TorreSaci_x_InimigoCarinha.xml</event-sheet>
-            <event-sheet>TorreCuca_x_InimigoCarinha.xml</event-sheet>
         </event-folder>
         <event-folder name="Families">
             <event-sheet>FTorresInimigos.xml</event-sheet>
@@ -565,11 +567,20 @@
             </properties>
         </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Airshot2.m4a" />
+        <file name="Airshot2.ogg" />
+        <file name="Hit4.m4a" />
+        <file name="Hit4.ogg" />
+    </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">
             <file name="MenuPrincipalMusica.m4a" />
             <file name="MenuPrincipalMusica.ogg" />
+        </music-folder>
+        <music-folder name="Fases">
+            <file name="MattOglseby - 3.m4a" />
+            <file name="MattOglseby - 3.ogg" />
         </music-folder>
     </music-folder>
     <files-folder>
