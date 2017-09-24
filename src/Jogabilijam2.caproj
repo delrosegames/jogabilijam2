@@ -10,6 +10,7 @@
     <unique-id>19h5e6iiz1hif</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -41,7 +42,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">Low quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -476,6 +477,9 @@
         <object-type name="Keyboard" sid="315499532680391">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="Audio" sid="593220963414015">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -503,11 +507,26 @@
     <global-instances>
         <global-instance type="Mouse" uid="64" />
         <global-instance type="Keyboard" uid="65" />
+        <global-instance type="Audio" uid="15">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder>
         <music-folder name="MenuPrincipal">
             <file name="MenuPrincipalMusica.m4a" />
+            <file name="MenuPrincipalMusica.ogg" />
         </music-folder>
     </music-folder>
     <files-folder>
