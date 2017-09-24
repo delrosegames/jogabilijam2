@@ -11,6 +11,7 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -84,11 +85,6 @@
                 <instance-variables>
                     <instance-variable name="PosicaoAlvo" sid="539454425746408" type="number" />
                 </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="420528069633436">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
                 <container>
                     <type>TorreCuca</type>
                     <type>TorreCucaBase</type>
@@ -107,7 +103,14 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491770412996273" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -131,11 +134,6 @@
                 <instance-variables>
                     <instance-variable name="Atacando" sid="298457145089132" type="boolean" />
                 </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="345315112363939">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
                 <container>
                     <type>TorreSaci</type>
                     <type>TorreSaciBase</type>
@@ -224,14 +222,10 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259355335699946" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci_Frente_01.png">
                             <collision-poly>
-                                <point x="0.633333" y="0.133333" />
-                                <point x="0.5" y="0.1" />
-                                <point x="0.433333" y="0.0666667" />
-                                <point x="0.833333" y="0.5" />
-                                <point x="0.8" y="1" />
+                                <point x="1" y="0.5" />
                                 <point x="0.5" y="1" />
-                                <point x="0.2" y="1" />
-                                <point x="0.266667" y="0.5" />
+                                <point x="0" y="0.5" />
+                                <point x="0.5" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -253,14 +247,63 @@
                 </container>
                 <animation-folder>
                     <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228335031458295" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0002_Quadro-6.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0003_Quadro-5.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0004_Quadro-4.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0005_Quadro-3.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0006_Quadro-2.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0007_Quadro-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.583333" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.166667" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0002_Quadro-6.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.583333" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.166667" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0003_Quadro-5.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.583333" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.166667" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0004_Quadro-4.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.583333" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.166667" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0005_Quadro-3.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.583333" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.166667" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0006_Quadro-2.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.583333" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.166667" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0007_Quadro-1.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.583333" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.166667" y="0.75" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -285,12 +328,176 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983054233126207" speed="5">
                         <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png">
                             <collision-poly>
-                                <point x="0.466667" y="0.4" />
-                                <point x="1" y="0.466667" />
-                                <point x="0.6" y="1" />
-                                <point x="0.466667" y="1" />
-                                <point x="0.4" y="1" />
-                                <point x="0" y="0.466667" />
+                                <point x="0.5" y="0.0666667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCurupiraBase" sid="328756609082466">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Turret" sid="188406816709630">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreCurupiraBase</type>
+                    <type>TorreCurupira</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989955887109971" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\Curupira - Baixo.png">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="0.995536" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCurupira" sid="643040012714223">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Atacando" sid="936949439749660" type="boolean" />
+                    <instance-variable comment="Indica se está atacando, mas voltando à posição inicial." name="Voltando" sid="908997712624935" type="boolean" />
+                </instance-variables>
+                <container>
+                    <type>TorreCurupiraBase</type>
+                    <type>TorreCurupira</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="727034480058777" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Baixo.png">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.166667" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.866667" y="0.933333" />
+                                <point x="0.133333" y="0.933333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="857029419567858" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Cima.png">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.166667" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.866667" y="0.933333" />
+                                <point x="0.133333" y="0.933333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="436392862812323" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Direita.png">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.183333" />
+                                <point x="0.666667" y="0.166667" />
+                                <point x="0.6" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.133333" y="0.933333" />
+                                <point x="0.2" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="262501260379765" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Esquerda.png">
+                            <collision-poly>
+                                <point x="0.333333" y="0.166667" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.8" y="0.5" />
+                                <point x="0.866667" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.4" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="AtacandoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="321906504016849" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.166667" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.866667" y="0.933333" />
+                                <point x="0.133333" y="0.933333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="AtacandoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="103124138742675" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.166667" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.866667" y="0.933333" />
+                                <point x="0.133333" y="0.933333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="AtacandoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="290074953984426" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.183333" />
+                                <point x="0.666667" y="0.166667" />
+                                <point x="0.6" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.133333" y="0.933333" />
+                                <point x="0.2" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="AtacandoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="630421638073500" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <collision-poly>
+                                <point x="0.333333" y="0.166667" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.8" y="0.5" />
+                                <point x="0.866667" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.4" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCurupiraBotao" sid="446706724316902">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TorreCurupiraTiroBase" sid="593391073379878">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Damage" sid="770076367741525" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="926005998211033">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="381826904219632">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="122784444168374" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png">
+                            <collision-poly>
+                                <point x="0.142857" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.857143" y="0.142857" />
+                                <point x="1" y="0.5" />
+                                <point x="0.857143" y="0.857143" />
+                                <point x="0.5" y="1" />
+                                <point x="0.142857" y="0.857143" />
+                                <point x="0" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -348,7 +555,18 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719245256027553" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="0.0666667" />
+                                <point x="0.816667" y="0.183333" />
+                                <point x="0.933333" y="0.5" />
+                                <point x="0.816667" y="0.816667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.183333" y="0.816667" />
+                                <point x="0.0666667" y="0.5" />
+                                <point x="0.183333" y="0.183333" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -481,11 +699,15 @@
         <object-type name="Audio" sid="593220963414015">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="Function" sid="437304036268360">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families>
         <family name="FTorreBase" plugin-id="Sprite" sid="544994410967895">
             <members>
                 <member>TorreCucaBase</member>
+                <member>TorreCurupiraBase</member>
                 <member>TorreSaciBase</member>
             </members>
             <instance-variables>
@@ -502,14 +724,22 @@
                 <member>InimigoCarinha</member>
                 <member>InimigoCarinhaDevagar</member>
                 <member>TorreCuca</member>
+                <member>TorreCurupira</member>
                 <member>TorreSaci</member>
+                <member>TorreSaciTiro</member>
             </members>
         </family>
         <family name="FTorre" plugin-id="Sprite" sid="942186669925552">
             <members>
                 <member>TorreCuca</member>
+                <member>TorreCurupira</member>
                 <member>TorreSaci</member>
             </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="131600857454686">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </family>
         <family name="FInimigoBase" plugin-id="Sprite" sid="743101874488053">
             <members>
@@ -539,6 +769,7 @@
         <event-folder name="Torres">
             <event-sheet>TorreCuca.xml</event-sheet>
             <event-sheet>TorreSaci.xml</event-sheet>
+            <event-sheet>TorreCurupira.xml</event-sheet>
         </event-folder>
         <event-folder name="Inimigos">
             <event-sheet>InimigoCarinha.xml</event-sheet>
@@ -566,6 +797,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="53" />
     </global-instances>
     <sounds-folder>
         <file name="Airshot2.m4a" />

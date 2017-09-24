@@ -11,9 +11,13 @@
                         <condition id="-18" name="On created" sid="413290038657319" type="TorreCucaBase" />
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="243494423158746" type="TorreCuca">
+                        <action behavior="Pin" id="0" name="Pin to object" sid="645377350229155" type="TorreCuca">
                             <param id="0" name="Pin to">TorreCucaBase</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="836364671209097" type="System">
+                            <param id="0" name="Variable">CustoTorreConstruindo</param>
+                            <param id="1" name="Value">TORRE_CUCA_CUSTO</param>
                         </action>
                     </actions>
                 </event-block>

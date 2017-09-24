@@ -50,10 +50,13 @@
                             <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; DinheiroAtual</param>
                         </action>
                         <action id="0" name="Set text" sid="986280678697568" type="TorreSaciBotao">
-                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_SACI_CUSTO &amp; &quot;] [A] Saci&quot;</param>
+                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_SACI_CUSTO &amp; &quot;] [Q] Saci&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="572532322244708" type="TorreCucaBotao">
-                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CUCA_CUSTO &amp; &quot;] [B] Cuca&quot;</param>
+                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CUCA_CUSTO &amp; &quot;] [W] Cuca&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="769297257102359" type="TorreCurupiraBotao">
+                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CURUPIRA_CUSTO &amp; &quot;] [E] Curupira&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -250,6 +253,7 @@
             <sub-events>
                 <include>TorreSaci</include>
                 <include>TorreCuca</include>
+                <include>TorreCurupira</include>
             </sub-events>
         </event-group>
         <event-group description="" sid="320834891715971" title="Inimigos">
