@@ -10,10 +10,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="3">MenuPrincipal</layout>
-        <event-sheet order="1">Jogo</event-sheet>
-        <event-sheet order="2">InimigoCarinha</event-sheet>
-        <event-sheet order="4">MenuPrincipal</event-sheet>
+        <layout active="1" order="1">Fase1</layout>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,25 +18,31 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="1" name="FTorreBase" />
+        <family expanded="1" name="FTorresInimigos" />
+        <family expanded="1" name="FTorre" />
+        <family expanded="1" name="FInimigoBase" />
+    </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/MenuPrincipal/" />
+        <folder expanded="0" path="object-folder/MenuPrincipal/" />
         <folder expanded="0" path="object-folder/Torres/" />
-        <folder expanded="0" path="object-folder/Inimigos/" />
-        <folder expanded="1" path="object-folder/Jogo/" />
+        <folder expanded="1" path="object-folder/Inimigos/" />
+        <folder expanded="0" path="object-folder/Jogo/" />
         <folder expanded="0" path="object-folder/Fases/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="0" path="layout-folder/Fases/" />
-        <folder expanded="0" path="event-folder/" />
-        <folder expanded="0" path="event-folder/Torres/" />
+        <folder expanded="1" path="layout-folder/Fases/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/Torres/" />
         <folder expanded="0" path="event-folder/Inimigos/" />
-        <folder expanded="0" path="event-folder/Torres_x_Inimigos/" />
+        <folder expanded="1" path="event-folder/Families/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="music-folder/MenuPrincipal/" />
+        <folder expanded="1" path="music-folder/Fases/" />
         <folder expanded="1" path="animation-folder/MenuPrincipalCamera/" />
         <folder expanded="1" path="animation-folder/TorreCuca/" />
         <folder expanded="1" path="animation-folder/TorreCucaBase/" />
