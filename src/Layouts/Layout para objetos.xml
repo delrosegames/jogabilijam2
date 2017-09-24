@@ -157,9 +157,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Floating>true</Floating>
+                        <Flutuando>true</Flutuando>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Flash" />
                         <behavior-instance type="Turret">
                             <properties>
                                 <range>90</range>
@@ -288,8 +289,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Floating>true</Floating>
+                        <Flutuando>true</Flutuando>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -342,7 +346,7 @@
                     </properties>
                     <instance-variables>
                         <Contador>0</Contador>
-                        <Damage>0.1</Damage>
+                        <Damage>0.2</Damage>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

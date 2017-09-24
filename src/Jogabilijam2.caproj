@@ -19,6 +19,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -100,9 +101,6 @@
             </object-type>
             <object-type name="TorreCucaBase" sid="964836554070788">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="Floating" sid="348975476863213" type="boolean" />
-                </instance-variables>
                 <container>
                     <type>TorreCuca</type>
                     <type>TorreCucaBase</type>
@@ -213,9 +211,6 @@
             </object-type>
             <object-type name="TorreSaciBase" sid="982098852941829">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="Floating" sid="264057170557532" type="boolean" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="Turret" sid="993364112708820">
                         <behavior id="Turret" />
@@ -504,10 +499,24 @@
                 <member>TorreCucaBase</member>
                 <member>TorreSaciBase</member>
             </members>
+            <instance-variables>
+                <instance-variable comment="A torre está flutuando quando foi iniciado seu processo de construção, mas ainda não foi posicionada no cenário." name="Flutuando" sid="813130973833554" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="884383650577656">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
         </family>
         <family name="FTorresInimigos" plugin-id="Sprite" sid="731597994609272">
             <members>
                 <member>InimigoCarinha</member>
+                <member>TorreCuca</member>
+                <member>TorreSaci</member>
+            </members>
+        </family>
+        <family name="FTorre" plugin-id="Sprite" sid="942186669925552">
+            <members>
                 <member>TorreCuca</member>
                 <member>TorreSaci</member>
             </members>

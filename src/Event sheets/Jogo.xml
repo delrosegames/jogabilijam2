@@ -3,11 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Jogo</name>
     <events>
-        <variable constant="0" name="InHand" sid="508071098799263" static="0" type="number">0</variable>
-        <variable constant="0" name="Lives" sid="737657344023187" static="0" type="number">20</variable>
+        <variable constant="0" name="TORRE_CONSTRUINDO_OPACITY" sid="775097329495963" static="0" type="number">50</variable>
+        <variable constant="0" name="CustoTorreConstruindo" sid="667912732975726" static="0" type="number">0</variable>
+        <variable constant="0" name="ConstruindoTorre" sid="508071098799263" static="0" type="number">0</variable>
+        <variable constant="0" name="Vidas" sid="737657344023187" static="0" type="number">20</variable>
         <variable constant="0" name="Timer" sid="746709797750586" static="0" type="number">-1</variable>
-        <variable constant="0" name="CurrentCash" sid="147354329828043" static="0" type="number">10000</variable>
-        <variable constant="0" name="CurrentWave" sid="621447858659797" static="0" type="number">0</variable>
+        <variable constant="0" name="DinheiroAtual" sid="147354329828043" static="0" type="number">10000</variable>
+        <variable constant="0" name="OndaAtual" sid="621447858659797" static="0" type="number">0</variable>
         <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
         <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
         <event-group description="" sid="511951437666883" title="Inicialização">
@@ -16,19 +18,106 @@
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="574683615385708" type="txtVidas">
-                            <param id="0" name="Text">&quot;Vidas: &quot; &amp; Lives</param>
+                            <param id="0" name="Text">&quot;Vidas: &quot; &amp; Vidas</param>
                         </action>
                         <action id="0" name="Set text" sid="177310736975976" type="txtOnda">
-                            <param id="0" name="Text">&quot;Onda: &quot; &amp; CurrentWave</param>
+                            <param id="0" name="Text">&quot;Onda: &quot; &amp; OndaAtual</param>
                         </action>
                         <action id="0" name="Set text" sid="494830300481354" type="txtDinheiro">
-                            <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; CurrentCash</param>
+                            <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; DinheiroAtual</param>
                         </action>
                         <action id="0" name="Set text" sid="986280678697568" type="TorreSaciBotao">
                             <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_SACI_CUSTO &amp; &quot;] [A] Saci&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="572532322244708" type="TorreCucaBotao">
                             <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CUCA_CUSTO &amp; &quot;] [B] Cuca&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="704710194366276" title="Construção de Torre">
+            <sub-events>
+                <event-block sid="633365430292957">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="277273589563136" type="FTorreBase" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="663739946767332" type="System">
+                            <param id="0" name="Variable">ConstruindoTorre</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="449825519159888" type="FTorreBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="915529571192758" type="FTorreBase">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Quando a torre estiver sendo construída, posiciona a torre sempre na grade.</comment>
+                <event-block sid="143133478034487">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="584393634526280" type="FTorreBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="281211507430414" type="FTorreBase">
+                            <param id="0" name="X">(round((mouse.X - 15)  / 30) * 30) + 15</param>
+                            <param id="1" name="Y">(round((mouse.Y - 15) / 30) * 30) + 15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Adiciona uma nova torre se estiver posicionada no local correto (acima da grid e não em cima de outra torre)</comment>
+                <event-block sid="625675113873365">
+                    <conditions>
+                        <condition id="0" name="On click" sid="274450886098240" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="296298313918321" type="Mouse">
+                            <param id="0" name="Object">ZonaConstrucao</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="141031152810510" type="FTorreBase">
+                            <param id="0" name="Object">FTorreBase</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="289756406763134" type="FTorreBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="649649668132514" type="System">
+                            <param id="0" name="Variable">ConstruindoTorre</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="418368896900184" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Value">CustoTorreConstruindo</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="401709314752690" type="FTorreBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Cancela a construção da torre</comment>
+                <event-block sid="509750731387337">
+                    <conditions>
+                        <condition id="0" name="On click" sid="604958484894845" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="524128926290073" type="FTorreBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="188396013204339" type="FTorreBase" />
+                        <action id="-9" name="Set value" sid="839161127787733" type="System">
+                            <param id="0" name="Variable">ConstruindoTorre</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -101,7 +190,7 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="122560760405938" type="System">
-                                    <param id="0" name="Variable">CurrentWave</param>
+                                    <param id="0" name="Variable">OndaAtual</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>

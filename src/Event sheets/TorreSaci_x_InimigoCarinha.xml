@@ -8,7 +8,7 @@
                 <event-block sid="294814861583331">
                     <conditions>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="719284343027193" type="TorreSaciBase">
-                            <param id="0" name="Instance variable">Floating</param>
+                            <param id="0" name="Instance variable">Flutuando</param>
                         </condition>
                     </conditions>
                     <actions>

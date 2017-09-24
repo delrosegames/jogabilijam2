@@ -6,6 +6,17 @@
         <variable constant="1" name="TORRE_CUCA_CUSTO" sid="756668379883790" static="0" type="number">50</variable>
         <event-group description="" sid="496447630493579" title="Construção da Torre Cuca">
             <sub-events>
+                <event-block sid="605572345987257">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="413290038657319" type="TorreCucaBase" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="243494423158746" type="TorreCuca">
+                            <param id="0" name="Pin to">TorreCucaBase</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Gera uma nova torre para ser posicionada</comment>
                 <event-block any="1" sid="489025451625818">
                     <conditions>
@@ -23,12 +34,12 @@
                         <event-block sid="690111881333723">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="665066874452888" type="System">
-                                    <param id="0" name="Variable">CurrentCash</param>
+                                    <param id="0" name="Variable">DinheiroAtual</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">TORRE_CUCA_CUSTO</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="596214650689169" type="System">
-                                    <param id="0" name="Variable">InHand</param>
+                                    <param id="0" name="Variable">ConstruindoTorre</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -40,34 +51,18 @@
                                     <param id="2" name="X">Mouse.X</param>
                                     <param id="3" name="Y">Mouse.Y</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="131661808037232" type="TorreCucaBase">
-                                    <param id="0" name="Instance variable">Floating</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="318787168603457" type="System">
-                                    <param id="0" name="Variable">InHand</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="243494423158746" type="TorreCuca">
-                                    <param id="0" name="Pin to">TorreCucaBase</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Quando a torre estiver sendo construída, posiciona a torre sempre na grade.&#x0D;&#x0A;Além disso, somente é exibida (e semi-transparente) caso esteja sobre a zona de construção.</comment>
+                <comment>Além disso, somente é exibida (e semi-transparente) caso esteja sobre a zona de construção.</comment>
                 <event-block sid="406922373452033">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="999877176057691" type="TorreCucaBase">
-                            <param id="0" name="Instance variable">Floating</param>
+                            <param id="0" name="Instance variable">Flutuando</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="948187524396109" type="TorreCucaBase">
-                            <param id="0" name="X">(round((mouse.X - 15)  / 30) * 30) + 15</param>
-                            <param id="1" name="Y">(round((mouse.Y - 15) / 30) * 30) + 15</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="193965019693032" type="TorreCuca">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -90,57 +85,15 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Adiciona uma nova torre se estiver posicionada no local correto (acima da grid e não em cima de outra torre)</comment>
-                <event-block sid="955846717151464">
+                <event-block sid="720740212720348">
                     <conditions>
-                        <condition id="0" name="On click" sid="410653858799842" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                        </condition>
-                        <condition id="7" name="Cursor is over object" sid="415284448940987" type="Mouse">
-                            <param id="0" name="Object">ZonaConstrucao</param>
-                        </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="203135964465821" type="TorreCucaBase">
-                            <param id="0" name="Object">TorreCucaBase</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="397452447580296" type="TorreCucaBase">
-                            <param id="0" name="Instance variable">Floating</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="907417320151671" type="TorreCucaBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="821851241526024" type="TorreCucaBase">
-                            <param id="0" name="Instance variable">Floating</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="325989666904471" type="System">
-                            <param id="0" name="Variable">CurrentCash</param>
-                            <param id="1" name="Value">TORRE_CUCA_CUSTO</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="979892006530400" type="System">
-                            <param id="0" name="Variable">InHand</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="108874315891213" type="TorreCuca">
+                        <action id="-16" name="Set opacity" sid="866081056947810" type="TorreCuca">
                             <param id="0" name="Opacity">100</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Cancela a construção da torre</comment>
-                <event-block sid="332472568223569">
-                    <conditions>
-                        <condition id="0" name="On click" sid="164197003569128" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                            <param id="1" name="Click type">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="988611220665805" type="TorreCucaBase">
-                            <param id="0" name="Instance variable">Floating</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="962264855890151" type="TorreCucaBase" />
-                        <action id="-9" name="Set value" sid="236629712507346" type="System">
-                            <param id="0" name="Variable">InHand</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -200,7 +153,7 @@
                         <event-block sid="863483090248807">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="589093791735376" type="TorreCucaBase">
-                                    <param id="0" name="Instance variable">Floating</param>
+                                    <param id="0" name="Instance variable">Flutuando</param>
                                 </condition>
                             </conditions>
                             <actions>

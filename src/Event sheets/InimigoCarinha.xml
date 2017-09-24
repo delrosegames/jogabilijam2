@@ -11,7 +11,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="396705606790675" type="InimigoCarinhaBase">
                     <param id="0" name="Instance variable">HitPoints</param>
-                    <param id="1" name="Value">CurrentWave*5</param>
+                    <param id="1" name="Value">OndaAtual*5</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="396454856612591" type="InimigoCarinha">
                     <param id="0" name="Pin to">InimigoCarinhaBase</param>
@@ -76,7 +76,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="772221202387867" type="InimigoCarinhaBase" />
                 <action id="-11" name="Subtract from" sid="434971595620994" type="System">
-                    <param id="0" name="Variable">Lives</param>
+                    <param id="0" name="Variable">Vidas</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
@@ -92,8 +92,8 @@
             <actions>
                 <action id="-9" name="Destroy" sid="369429204019795" type="InimigoCarinha" />
                 <action id="-10" name="Add to" sid="489021851363339" type="System">
-                    <param id="0" name="Variable">CurrentCash</param>
-                    <param id="1" name="Value">2*CurrentWave</param>
+                    <param id="0" name="Variable">DinheiroAtual</param>
+                    <param id="1" name="Value">2*OndaAtual</param>
                 </action>
             </actions>
         </event-block>
