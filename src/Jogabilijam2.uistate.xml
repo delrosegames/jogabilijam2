@@ -27,7 +27,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/MenuPrincipal/" />
-        <folder expanded="0" path="object-folder/Torres/" />
+        <folder expanded="1" path="object-folder/Torres/" />
         <folder expanded="1" path="object-folder/Inimigos/" />
         <folder expanded="0" path="object-folder/Jogo/" />
         <folder expanded="0" path="object-folder/Fases/" />
