@@ -131,21 +131,31 @@
                 <comment>Cancela a construção da torre</comment>
                 <event-block sid="509750731387337">
                     <conditions>
-                        <condition id="0" name="On click" sid="604958484894845" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                            <param id="1" name="Click type">0</param>
-                        </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="524128926290073" type="FTorreBase">
                             <param id="0" name="Instance variable">Flutuando</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="188396013204339" type="FTorreBase" />
-                        <action id="-9" name="Set value" sid="839161127787733" type="System">
-                            <param id="0" name="Variable">ConstruindoTorre</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="483401126796454">
+                            <conditions>
+                                <condition id="0" name="On click" sid="604958484894845" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="905590690903887" type="Keyboard">
+                                    <param id="0" name="Key">27 (Esc)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="188396013204339" type="FTorreBase" />
+                                <action id="-9" name="Set value" sid="839161127787733" type="System">
+                                    <param id="0" name="Variable">ConstruindoTorre</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

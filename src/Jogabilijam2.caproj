@@ -347,6 +347,7 @@
                 <container>
                     <type>TorreCurupiraBase</type>
                     <type>TorreCurupira</type>
+                    <type>TorreCurupiraTiroBase</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989955887109971" speed="5">
@@ -370,6 +371,7 @@
                 <container>
                     <type>TorreCurupiraBase</type>
                     <type>TorreCurupira</type>
+                    <type>TorreCurupiraTiroBase</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="727034480058777" speed="5">
@@ -482,10 +484,15 @@
                     <behavior-type name="Bullet" sid="926005998211033">
                         <behavior id="Bullet" />
                     </behavior-type>
-                    <behavior-type name="DestroyOutsideLayout" sid="381826904219632">
-                        <behavior id="destroy" />
+                    <behavior-type name="Pin" sid="678300391868752">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>TorreCurupiraBase</type>
+                    <type>TorreCurupira</type>
+                    <type>TorreCurupiraTiroBase</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="122784444168374" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0001_Quadro-7.png">

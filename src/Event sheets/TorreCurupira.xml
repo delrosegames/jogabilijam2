@@ -19,6 +19,10 @@
                             <param id="0" name="Pin to">TorreCurupiraBase</param>
                             <param id="1" name="Mode">1</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="271082097912304" type="TorreCurupiraTiroBase">
+                            <param id="0" name="Pin to">TorreCurupiraBase</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Gera uma nova torre para ser posicionada</comment>
@@ -114,81 +118,73 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="167724447666145">
+                        <event-block any="1" sid="481994752534339">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="267041840822444" type="TorreCurupiraTiroBase">
-                                    <param id="0" name="Unique ID">TorreCurupira.Pin.PinnedUID</param>
+                                <condition id="-13" name="Is between angles" sid="394244480574113" type="TorreCurupiraTiroBase">
+                                    <param id="0" name="First angle">0</param>
+                                    <param id="1" name="Second angle">45</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="921363837641392" type="TorreCurupiraTiroBase">
+                                    <param id="0" name="First angle">315.01</param>
+                                    <param id="1" name="Second angle">360</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block any="1" sid="481994752534339">
-                                    <conditions>
-                                        <condition id="-13" name="Is between angles" sid="394244480574113" type="TorreCurupiraTiroBase">
-                                            <param id="0" name="First angle">0</param>
-                                            <param id="1" name="Second angle">45</param>
-                                        </condition>
-                                        <condition id="-13" name="Is between angles" sid="921363837641392" type="TorreCurupiraTiroBase">
-                                            <param id="0" name="First angle">315.01</param>
-                                            <param id="1" name="Second angle">360</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="947207831785498" type="TorreCurupira">
-                                            <param id="0" name="Animation">&quot;AtacandoDireita&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="765972422687461">
-                                    <conditions>
-                                        <condition id="-13" name="Is between angles" sid="365544015066284" type="TorreCurupiraTiroBase">
-                                            <param id="0" name="First angle">45.01</param>
-                                            <param id="1" name="Second angle">135</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="178911308463047" type="TorreCurupira">
-                                            <param id="0" name="Animation">&quot;AtacandoFrente&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="359707762446515">
-                                    <conditions>
-                                        <condition id="-13" name="Is between angles" sid="753482775644695" type="TorreCurupiraTiroBase">
-                                            <param id="0" name="First angle">135.01</param>
-                                            <param id="1" name="Second angle">225</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="704132835023012" type="TorreCurupira">
-                                            <param id="0" name="Animation">&quot;AtacandoEsquerda&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="825896023308566">
-                                    <conditions>
-                                        <condition id="-13" name="Is between angles" sid="743978650438971" type="TorreCurupiraTiroBase">
-                                            <param id="0" name="First angle">225.01</param>
-                                            <param id="1" name="Second angle">315</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="731864688186193" type="TorreCurupira">
-                                            <param id="0" name="Animation">&quot;AtacandoCostas&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="4" name="Set animation" sid="947207831785498" type="TorreCurupira">
+                                    <param id="0" name="Animation">&quot;AtacandoDireita&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="765972422687461">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="365544015066284" type="TorreCurupiraTiroBase">
+                                    <param id="0" name="First angle">45.01</param>
+                                    <param id="1" name="Second angle">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="178911308463047" type="TorreCurupira">
+                                    <param id="0" name="Animation">&quot;AtacandoFrente&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="359707762446515">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="753482775644695" type="TorreCurupiraTiroBase">
+                                    <param id="0" name="First angle">135.01</param>
+                                    <param id="1" name="Second angle">225</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="704132835023012" type="TorreCurupira">
+                                    <param id="0" name="Animation">&quot;AtacandoEsquerda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="825896023308566">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="743978650438971" type="TorreCurupiraTiroBase">
+                                    <param id="0" name="First angle">225.01</param>
+                                    <param id="1" name="Second angle">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="731864688186193" type="TorreCurupira">
+                                    <param id="0" name="Animation">&quot;AtacandoCostas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="994603127427445">
                     <conditions>
-                        <condition id="-22" name="Else" sid="392843769214920" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="461862328206849" type="TorreCurupira">
+                            <param id="0" name="Instance variable">Atacando</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -280,12 +276,7 @@
                             <param id="0" name="Instance variable">Atacando</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="-13" name="Set boolean" sid="287825219752393" type="TorreCurupira">
-                            <param id="0" name="Instance variable">Atacando</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block any="1" sid="894913889365078">
                             <conditions>
@@ -386,13 +377,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-8" name="Set angle" sid="479318140806887" type="TorreCurupiraBase">
+                        <action behavior="Pin" id="1" name="Unpin" sid="826300755761998" type="TorreCurupiraTiroBase" />
+                        <action id="-8" name="Set angle" sid="738182783441409" type="TorreCurupiraTiroBase">
                             <param id="0" name="Angle">Function.Param(1)</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="819208341696473" type="TorreCurupiraBase">
-                            <param id="0" name="Object">TorreCurupiraTiroBase</param>
-                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
-                            <param id="2" name="Image point">0</param>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="666857479228052" type="TorreCurupiraTiroBase">
+                            <param id="0" name="State">1</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="946068686916958" type="TorreCurupira">
                             <param id="0" name="Pin to">TorreCurupiraTiroBase</param>
@@ -422,93 +412,180 @@
                         <action id="-9" name="Destroy" sid="129520155597861" type="TorreSaciTiroBase" />
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="848691959577023">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="879837599005394" type="TorreCurupira">
-                    <param id="0" name="Instance variable">Atacando</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="889559121241294">
+                <event-block sid="848691959577023">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="212190579464369" type="TorreCurupira">
-                            <param id="0" name="Instance variable">Voltando</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="879837599005394" type="TorreCurupira">
+                            <param id="0" name="Instance variable">Atacando</param>
                         </condition>
                     </conditions>
                     <actions />
-                </event-block>
-                <event-block sid="905207230722232">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="562660865466107" type="System" />
-                    </conditions>
-                    <actions />
                     <sub-events>
-                        <event-block sid="180723384284352">
+                        <event-block sid="889559121241294">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="594911262549711" type="TorreCurupiraTiroBase">
-                                    <param id="0" name="Unique ID">TorreCurupira.Pin.PinnedUID</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="212190579464369" type="TorreCurupira">
+                                    <param id="0" name="Instance variable">Voltando</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set font color" sid="725006797976444" type="txtDinheiro">
-                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="652219314405369">
+                                <event-block sid="967801128379092">
                                     <conditions>
-                                        <condition id="-13" name="Is between angles" sid="549210517575758" type="TorreCurupiraTiroBase">
-                                            <param id="0" name="First angle">89</param>
-                                            <param id="1" name="Second angle">91</param>
+                                        <condition id="0" name="On collision with another object" sid="200464044128558" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="Object">TorreCurupiraBase</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set font color" sid="251204643992041" type="txtDinheiro">
-                                            <param id="0" name="Color">rgb(255, 0, 255)</param>
+                                        <action id="-4" name="Set position to another object" sid="686984620530617" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="Object">TorreCurupiraBase</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="530158424260094" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="Pin to">TorreCurupiraBase</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="889286545906659" type="TorreCurupira">
+                                            <param id="0" name="Object">TorreCurupiraBase</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="230275925476010" type="TorreCurupira">
+                                            <param id="0" name="Pin to">TorreCurupiraBase</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="823526832501697" type="TorreCurupira">
+                                            <param id="0" name="Instance variable">Atacando</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="228213028390817" type="TorreCurupira">
+                                            <param id="0" name="Instance variable">Voltando</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="905207230722232">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="403459283234797" type="TorreCurupira">
+                                    <param id="0" name="Instance variable">Voltando</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="652219314405369">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="549210517575758" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="First angle">359</param>
+                                            <param id="1" name="Second angle">361</param>
+                                        </condition>
+                                        <condition id="-13" name="Is between angles" sid="249319246011845" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="First angle">-1</param>
+                                            <param id="1" name="Second angle">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="288774104711860">
+                                        <event-block sid="591386102394697">
                                             <conditions>
                                                 <condition id="9" inverted="1" name="Is overlapping at offset" sid="343459504048709" type="TorreCurupiraTiroBase">
                                                     <param id="0" name="Object">ZonaCaminho</param>
-                                                    <param id="1" name="Offset X">0</param>
-                                                    <param id="2" name="Offset Y">15</param>
+                                                    <param id="1" name="Offset X">15</param>
+                                                    <param id="2" name="Offset Y">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="4" name="Set font color" sid="897274975907776" type="txtDinheiro">
-                                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
-                                                </action>
-                                                <action id="-18" name="Rotate clockwise" sid="461029417454581" type="TorreCurupiraTiroBase">
-                                                    <param id="0" name="Degrees">180</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="109479512215563" type="TorreCurupira">
-                                                    <param id="0" name="Instance variable">Voltando</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="581797868466296">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="433831214775386" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set font color" sid="415275347971101" type="txtDinheiro">
-                                                    <param id="0" name="Color">rgb(0, 0, 255)</param>
+                                                <action id="0" name="Call function" sid="574205391212971" type="Function">
+                                                    <param id="0" name="Name">&quot;TorreCurupiraVoltar&quot;</param>
+                                                    <param id="1" name="Parameter {n}">TorreCurupiraTiroBase.UID{###}TorreCurupira.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="898113193025553">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="200706350128135" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="First angle">89</param>
+                                            <param id="1" name="Second angle">91</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="723816811978448" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="Object">ZonaCaminho</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">15</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="383738448972256" type="Function">
+                                            <param id="0" name="Name">&quot;TorreCurupiraVoltar&quot;</param>
+                                            <param id="1" name="Parameter {n}">TorreCurupiraTiroBase.UID{###}TorreCurupira.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="980638120955829">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="567515082066263" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="First angle">179</param>
+                                            <param id="1" name="Second angle">181</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="829588303761986" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="Object">ZonaCaminho</param>
+                                            <param id="1" name="Offset X">-15</param>
+                                            <param id="2" name="Offset Y">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="438739283177337" type="Function">
+                                            <param id="0" name="Name">&quot;TorreCurupiraVoltar&quot;</param>
+                                            <param id="1" name="Parameter {n}">TorreCurupiraTiroBase.UID{###}TorreCurupira.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="432202733364279">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="575995241931334" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="First angle">269</param>
+                                            <param id="1" name="Second angle">271</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="870031638798821" type="TorreCurupiraTiroBase">
+                                            <param id="0" name="Object">ZonaCaminho</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">-15</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="181627098850403" type="Function">
+                                            <param id="0" name="Name">&quot;TorreCurupiraVoltar&quot;</param>
+                                            <param id="1" name="Parameter {n}">TorreCurupiraTiroBase.UID{###}TorreCurupira.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Faz com que o Curupira volte para a se movimentar à posição inicial (a base).</comment>
+                <event-block sid="532049381323452">
+                    <conditions>
+                        <condition id="0" name="On function" sid="691084418367416" type="Function">
+                            <param id="0" name="Name">&quot;TorreCurupiraVoltar&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="391305210417994" type="TorreCurupiraTiroBase">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="597322945533632" type="TorreCurupira">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="730919095273820" type="TorreCurupiraTiroBase">
+                            <param id="0" name="Degrees">180</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="182866250176917" type="TorreCurupira">
+                            <param id="0" name="Instance variable">Voltando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -365,7 +365,7 @@
                 </instance>
                 <instance type="TorreCurupiraBase" uid="49">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -378,7 +378,7 @@
                         <behavior-instance type="Turret">
                             <properties>
                                 <range>360</range>
-                                <rate-of-fire>0.1</rate-of-fire>
+                                <rate-of-fire>0.01</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>999999</rotate-speed>
                                 <target-mode>Nearest</target-mode>
@@ -435,7 +435,7 @@
                 </instance>
                 <instance type="TorreCurupiraTiroBase" uid="52">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -451,10 +451,10 @@
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

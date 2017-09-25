@@ -30,7 +30,7 @@
                             <param id="2" name="Object clicked">TorreCucaBotao</param>
                         </condition>
                         <condition id="0" name="On key pressed" sid="711821099174423" type="Keyboard">
-                            <param id="0" name="Key">66 (B)</param>
+                            <param id="0" name="Key">87 (W)</param>
                         </condition>
                     </conditions>
                     <actions />
