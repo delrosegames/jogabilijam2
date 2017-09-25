@@ -242,13 +242,23 @@
                     </conditions>
                     <actions>
                         <action id="-12" name="Subtract from" sid="628083055581867" type="FInimigoBase">
-                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="0" name="Instance variable">PontosVida</param>
                             <param id="1" name="Value">TorreSaciTiroBase.Damage</param>
                         </action>
                         <action id="-9" name="Destroy" sid="238491272547370" type="TorreSaciTiroBase" />
                         <action id="-10" name="Set value" sid="777383172867417" type="FInimigoBase">
                             <param id="0" name="Instance variable">TempoDevagar</param>
                             <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="25" name="Play at object" sid="471935355543453" type="Audio">
+                            <param id="0" name="Audio file">Scratch2</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-5</param>
+                            <param id="3" name="Object">FInimigoBase</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>

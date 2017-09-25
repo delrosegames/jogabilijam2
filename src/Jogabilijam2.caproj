@@ -514,11 +514,6 @@
         <object-folder name="Inimigos">
             <object-type name="InimigoCarinha" sid="536442448283577">
                 <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="246474290500375">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
                 <container>
                     <type>InimigoCarinhaBase</type>
                     <type>InimigoCarinha</type>
@@ -769,13 +764,26 @@
             </members>
             <instance-variables>
                 <instance-variable name="CurrentDestination" sid="579954931039944" type="number" />
-                <instance-variable name="HitPoints" sid="656203848556588" type="number" />
-                <instance-variable name="Devagar" sid="770219774247519" type="boolean" />
+                <instance-variable name="PontosVida" sid="656203848556588" type="number" />
                 <instance-variable name="TempoDevagar" sid="328320004728456" type="number" />
+                <instance-variable name="PontosVidaAnterior" sid="802792394524518" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="801531281151296">
                     <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="FInimigo" plugin-id="Sprite" sid="943919387176437">
+            <members>
+                <member>InimigoCarinha</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="513419487031924">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="691334519058115">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -826,6 +834,10 @@
         <file name="Airshot2.ogg" />
         <file name="Hit4.m4a" />
         <file name="Hit4.ogg" />
+        <file name="Bump2.m4a" />
+        <file name="Bump2.ogg" />
+        <file name="Scratch2.m4a" />
+        <file name="Scratch2.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">

@@ -362,7 +362,7 @@
                             </conditions>
                             <actions>
                                 <action id="-12" name="Subtract from" sid="600061423977208" type="FInimigoBase">
-                                    <param id="0" name="Instance variable">HitPoints</param>
+                                    <param id="0" name="Instance variable">PontosVida</param>
                                     <param id="1" name="Value">TorreCucaPocao.Damage</param>
                                 </action>
                             </actions>

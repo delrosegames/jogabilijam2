@@ -38,9 +38,9 @@
                     </properties>
                     <instance-variables>
                         <CurrentDestination>0</CurrentDestination>
-                        <HitPoints>0</HitPoints>
-                        <Devagar>false</Devagar>
+                        <PontosVida>0</PontosVida>
                         <TempoDevagar>0</TempoDevagar>
+                        <PontosVidaAnterior>0</PontosVidaAnterior>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -78,6 +78,7 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -10,7 +10,7 @@
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="396705606790675" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="0" name="Instance variable">PontosVida</param>
                     <param id="1" name="Value">OndaAtual*5</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="396454856612591" type="InimigoCarinha">
@@ -84,7 +84,7 @@
         <event-block sid="378564797738253">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="305160777681754" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="0" name="Instance variable">PontosVida</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -103,7 +103,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="414223159770690" type="InimigoCarinhaHP">
-                    <param id="0" name="Text">InimigoCarinhaBase.HitPoints</param>
+                    <param id="0" name="Text">InimigoCarinhaBase.PontosVida</param>
                 </action>
                 <action id="-24" name="Move to top" sid="184050003503892" type="InimigoCarinhaHP" />
             </actions>
@@ -223,6 +223,30 @@
                         <action id="4" name="Set animation" sid="326203827578783" type="InimigoCarinha">
                             <param id="0" name="Animation">&quot;Costas&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="566319009002124" title="InimigoCarinha - Alterações de variáveis">
+            <sub-events>
+                <event-block sid="844874846104174">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="824070071974684" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">PontosVidaAnterior</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">InimigoCarinhaBase.PontosVida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="697979394373950" type="InimigoCarinha">
+                            <param id="0" name="&apos;On&apos; time">0.005</param>
+                            <param id="1" name="&apos;Off&apos; time">0.005</param>
+                            <param id="2" name="Duration">0.1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="268307592458850" type="InimigoCarinhaBase">
+                            <param id="0" name="Instance variable">PontosVidaAnterior</param>
+                            <param id="1" name="Value">InimigoCarinhaBase.PontosVida</param>
                         </action>
                     </actions>
                 </event-block>
