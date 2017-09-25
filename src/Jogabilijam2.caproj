@@ -692,7 +692,22 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508295869701976" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Downloads\01.jpg" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\mapa 01 ok.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fase1_Arvore" sid="611425137300242">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651836103232763" speed="5">
+                        <frame duration="1" hotspotX="0.516667" hotspotY="0.5" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\arvore fase1.png">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>

@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Jogo - Fundo" sid="268752649183020">
+        <layer name="Jogo - Cenário - Fundo" sid="268752649183020">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -110,6 +110,47 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances />
+            <effects />
+        </layer>
+        <layer name="Jogo - Cenário - Topo" sid="535357823329195">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Fase1_Arvore" uid="54">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>330</x>
+                        <y>300</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>120</height>
+                        <depth>0</depth>
+                        <hotspotX>0.516666651</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="GUI - Fundo" sid="350938919586397">
@@ -457,7 +498,7 @@
                         <x>120</x>
                         <y>90</y>
                         <z>0</z>
-                        <width>240</width>
+                        <width>180</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -475,10 +516,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>60</x>
-                        <y>90</y>
+                        <y>60</y>
                         <z>0</z>
                         <width>30</width>
-                        <height>90</height>
+                        <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -537,8 +578,8 @@
                         <x>300</x>
                         <y>180</y>
                         <z>0</z>
-                        <width>60</width>
-                        <height>30</height>
+                        <width>30</width>
+                        <height>90</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -554,8 +595,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>300</x>
-                        <y>210</y>
+                        <x>330</x>
+                        <y>180</y>
                         <z>0</z>
                         <width>30</width>
                         <height>30</height>
@@ -840,10 +881,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>270</x>
-                        <y>208</y>
+                        <y>210</y>
                         <z>0</z>
                         <width>30</width>
-                        <height>94</height>
+                        <height>90</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -863,6 +904,26 @@
                         <y>270</y>
                         <z>0</z>
                         <width>270</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ZonaConstrucao" uid="55">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>330</x>
+                        <y>240</y>
+                        <z>0</z>
+                        <width>30</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
