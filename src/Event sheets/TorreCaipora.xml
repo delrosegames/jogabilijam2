@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TorreCaipora</name>
+    <events>
+        <variable constant="1" name="TORRE_CAIPORA_CUSTO" sid="182237493117931" static="0" type="number">15</variable>
+        <event-group description="" sid="668142446708656" title="Construção da Torre Caipora">
+            <sub-events>
+                <event-block sid="885928694353573">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="478689627617744" type="TorreCaiporaBase" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="6" name="Set range" sid="614124222630388" type="TorreCaiporaBase">
+                            <param id="0" name="Range">90</param>
+                        </action>
+                        <action behavior="Turret" id="9" name="Set rotate speed" sid="392348293630928" type="TorreCaiporaBase">
+                            <param id="0" name="Rotate speed">999999</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="566872721005540" type="TorreCaipora">
+                            <param id="0" name="Pin to">TorreCaiporaBase</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="740878322672219" type="System">
+                            <param id="0" name="Variable">CustoTorreConstruindo</param>
+                            <param id="1" name="Value">TORRE_CAIPORA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Gera uma nova torre para ser posicionada</comment>
+                <event-block any="1" sid="852245018156165">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="311172520558106" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">TorreCaiporaBotao</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="962368283935993" type="Keyboard">
+                            <param id="0" name="Key">82 (R)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="991978644601488">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="564418057595565" type="System">
+                                    <param id="0" name="Variable">DinheiroAtual</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">TORRE_CAIPORA_CUSTO</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="232799167724783" type="System">
+                                    <param id="0" name="Variable">ConstruindoTorre</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="773365247388646" type="System">
+                                    <param id="0" name="Object to create">TorreCaiporaBase</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Além disso, somente é exibida (e semi-transparente) caso esteja sobre a zona de construção.</comment>
+                <event-block sid="222290485010079">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="457622659383871" type="TorreCaiporaBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="479722133606185" type="TorreCaipora">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="706169078831604" type="TorreCaipora">
+                            <param id="0" name="Opacity">TORRE_CONSTRUINDO_OPACITY</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="399434706227958">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="652626739642675" type="Mouse">
+                                    <param id="0" name="Object">ZonaConstrucao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="152268932809128" type="TorreCaipora">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="640688018360218">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="526990102713419" type="TorreCaiporaBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="764095873369294" type="TorreCaipora">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="781494984604160" title="Rotação da Torre Caipora">
+            <sub-events>
+                <event-block sid="739047324161197">
+                    <conditions>
+                        <condition behavior="Turret" id="0" name="Has target" sid="126055821256904" type="TorreCaiporaBase" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="578757025512673">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="693486721146029" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">0</param>
+                                    <param id="1" name="Second angle">45</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="877629169751512" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">315.01</param>
+                                    <param id="1" name="Second angle">360</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="354718044161819" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;AtaqueDireita&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="309000397355149">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="975152781960757" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">45.01</param>
+                                    <param id="1" name="Second angle">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="283644266432687" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;AtaqueFrente&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="930156717556831">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="300411103175201" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">135.01</param>
+                                    <param id="1" name="Second angle">225</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="333026481587056" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;AtaqueEsquerda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="993021699545565">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="913089866419780" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">225.01</param>
+                                    <param id="1" name="Second angle">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="586232928865497" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;AtaqueCostas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Verifica a rotação da base para seleção do sprite a ser utilizado</comment>
+                <event-block sid="772064959558259">
+                    <conditions>
+                        <condition behavior="Turret" id="0" inverted="1" name="Has target" sid="713218640207284" type="TorreCaiporaBase" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="739614849470920">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="246762928277423" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">0</param>
+                                    <param id="1" name="Second angle">45</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="762337179289581" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">315.01</param>
+                                    <param id="1" name="Second angle">360</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="624332543485406" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;ParadoDireita&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="692751550175479">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="296646995702835" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">45.01</param>
+                                    <param id="1" name="Second angle">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="494103503796861" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;ParadoFrente&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="380282214594070">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="261975052211712" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">135.01</param>
+                                    <param id="1" name="Second angle">225</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="814884276393296" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;ParadoEsquerda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="988110155003190">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="271509556948475" type="TorreCaiporaBase">
+                                    <param id="0" name="First angle">225.01</param>
+                                    <param id="1" name="Second angle">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="740063822055929" type="TorreCaipora">
+                                    <param id="0" name="Animation">&quot;ParadoCostas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="897165726391490" title="Ataque Torre Caipora">
+            <sub-events>
+                <event-block sid="278282144039618">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="794061595683637" type="TorreCaiporaBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="320017646596589" type="TorreCaiporaBase">
+                            <param id="0" name="Target">FInimigoBase</param>
+                        </action>
+                        <action behavior="Turret" id="5" name="Set enabled" sid="560754241027688" type="TorreCaiporaBase">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="990220555148805">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="115856250353215" type="TorreCaiporaBase" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="206215845454907" type="TorreCaipora">
+                            <param id="0" name="Object">TorreCaiporaTiro</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="796221543918463" type="TorreCaiporaTiro">
+                            <param id="0" name="Angle">TorreCaiporaBase.Angle</param>
+                        </action>
+                        <action id="25" name="Play at object" sid="717589462288707" type="Audio">
+                            <param id="0" name="Audio file">Airshot2</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-10</param>
+                            <param id="3" name="Object">TorreCaiporaTiro</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="839735855872873">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="924042336599361" type="TorreCaiporaTiro">
+                            <param id="0" name="Object">FInimigoBase</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="706036319271466" type="FInimigoBase">
+                            <param id="0" name="Instance variable">PontosVida</param>
+                            <param id="1" name="Value">TorreCaiporaTiro.Damage</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="156532693443698" type="TorreCaiporaTiro" />
+                        <action id="25" name="Play at object" sid="470707715206956" type="Audio">
+                            <param id="0" name="Audio file">Scratch2</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-5</param>
+                            <param id="3" name="Object">FInimigoBase</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
