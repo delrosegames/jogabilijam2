@@ -76,7 +76,7 @@
             </object-type>
             <object-type name="MenuPrincipalFundo" sid="318572454003810">
                 <plugin id="TiledBg" />
-                <texture original-source="D:\Downloads\exemplo menu.jpg" />
+                <texture original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\menu- logo-icones\Menu nao pronto.png" />
             </object-type>
         </object-folder>
         <object-folder name="Torres">
@@ -90,13 +90,35 @@
                     <type>TorreCucaBase</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559722650189998" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Documents\Del Rose Game Studio\Assets\Cuca.png" />
+                    <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559722650189998" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\7.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\9.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Parada - frente e costas\PNG frame por frame Parado Girando CUCA 30x60px\Frente e Lado\12.png" />
+                    </animation>
+                    <animation framecount="6" loop="0" name="Ataque" pingpong="0" repeatcount="1" repeatto="0" sid="608452507674329" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Ataque - Poção Veneno\PNG frame por frame Cuca Atacando 30x60px\Cuca-atacando-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Ataque - Poção Veneno\PNG frame por frame Cuca Atacando 30x60px\Cuca-atacando-02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Ataque - Poção Veneno\PNG frame por frame Cuca Atacando 30x60px\Cuca-atacando-03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Ataque - Poção Veneno\PNG frame por frame Cuca Atacando 30x60px\Cuca-atacando-04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Ataque - Poção Veneno\PNG frame por frame Cuca Atacando 30x60px\Cuca-atacando-05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca - em andamento\Cuca Ataque - Poção Veneno\PNG frame por frame Cuca Atacando 30x60px\Cuca-atacando-06.png" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="TorreCucaBase" sid="964836554070788">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Utilizado para indicar que a animação de ataque da torre deve ser utilizada" name="Atacando" sid="153486521842477" type="boolean" />
+                </instance-variables>
                 <container>
                     <type>TorreCuca</type>
                     <type>TorreCucaBase</type>
@@ -124,8 +146,48 @@
                     <instance-variable name="Damage" sid="710449381458903" type="number" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="10">
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\1.png">
+                            <collision-poly>
+                                <point x="0.571429" y="0.266667" />
+                                <point x="0.5" y="0.316667" />
+                                <point x="0.821429" y="0.5" />
+                                <point x="0.464286" y="0.75" />
+                                <point x="0.5" y="0.866667" />
+                                <point x="0.321429" y="0.85" />
+                                <point x="0.178571" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\2.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.35" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.678571" y="0.85" />
+                                <point x="0.5" y="0.866667" />
+                                <point x="0.321429" y="0.85" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\3.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.383333" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.714286" y="0.866667" />
+                                <point x="0.285714" y="0.866667" />
+                                <point x="0.214286" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\4.png">
+                            <collision-poly>
+                                <point x="0.571429" y="0.266667" />
+                                <point x="0.5" y="0.316667" />
+                                <point x="0.785714" y="0.5" />
+                                <point x="0.678571" y="0.85" />
+                                <point x="0.5" y="0.866667" />
+                                <point x="0.321429" y="0.85" />
+                                <point x="0.214286" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -771,6 +833,29 @@
         <object-type name="Function" sid="437304036268360">
             <plugin id="Function" />
         </object-type>
+        <object-type name="PausarBotao" sid="786727025684785">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Pausado" sid="720576526329969" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="290332171472373" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AcelerarBotao" sid="317336911659000">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Acelerado" sid="504167370375517" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830611354774848" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="FTorreBase" plugin-id="Sprite" sid="544994410967895">
@@ -793,6 +878,7 @@
                 <member>InimigoCarinha</member>
                 <member>InimigoCarinhaDevagar</member>
                 <member>TorreCuca</member>
+                <member>TorreCucaPocao</member>
                 <member>TorreCurupira</member>
                 <member>TorreSaci</member>
                 <member>TorreSaciTiro</member>
@@ -894,6 +980,8 @@
         <file name="InimigoCarinhaAtacado.ogg" />
         <file name="InimigoGordaoAtacado.m4a" />
         <file name="InimigoGordaoAtacado.ogg" />
+        <file name="TorreCucaAtaque.m4a" />
+        <file name="TorreCucaAtaque.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">
