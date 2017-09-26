@@ -598,7 +598,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TorreCurupiraBotao" sid="446706724316902">
+            <object-type name="TorreCurrupiraBotao" sid="446706724316902">
                 <plugin id="Text" />
             </object-type>
             <object-type name="TorreCurupiraTiroBase" sid="593391073379878">
@@ -635,6 +635,302 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="TorreCaiporaBase" sid="272480311182922">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Turret" sid="636304715572948">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreCaiporaBase</type>
+                    <type>TorreCaipora</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="897386558246521" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Frente\1.png">
+                            <collision-poly>
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="0.5" />
+                                <point x="0.5" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCaipora" sid="768210081651547">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Atacando" sid="832152104856961" type="boolean" />
+                </instance-variables>
+                <container>
+                    <type>TorreCaiporaBase</type>
+                    <type>TorreCaipora</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="628300456697304" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Frente\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Frente\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Frente\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Frente\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="532854143489875" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\1.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\2.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\3.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\4.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="993328987435396" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Lado\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="831663051955662" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Costas\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Costas\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Costas\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora todos os lados PARADO girando 60x30px - Copia\Costas\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueFrente" pingpong="0" repeatcount="1" repeatto="0" sid="150635956636964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Frente\1.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Frente\2.png">
+                            <image-point name="Imagepoint 1" x="0.533333" y="0.766667" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Frente\3.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Frente\4.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.766667" />
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueDireita" pingpong="0" repeatcount="1" repeatto="0" sid="761010520030337" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Lado\1.png">
+                            <image-point name="Imagepoint 1" x="1" y="0.55" />
+                            <collision-poly>
+                                <point x="0.7" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.0666667" y="0.5" />
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.5" y="0.3" />
+                                <point x="0.466667" y="0.266667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Lado\2.png">
+                            <image-point name="Imagepoint 1" x="0.966667" y="0.566667" />
+                            <collision-poly>
+                                <point x="0.666667" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.0666667" y="0.5" />
+                                <point x="0.6" y="0.3" />
+                                <point x="0.5" y="0.316667" />
+                                <point x="0.4" y="0.3" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Lado\3.png">
+                            <image-point name="Imagepoint 1" x="1" y="0.55" />
+                            <collision-poly>
+                                <point x="0.733333" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.1" y="0.5" />
+                                <point x="0.633333" y="0.316667" />
+                                <point x="0.5" y="0.266667" />
+                                <point x="0.433333" y="0.283333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Lado\4.png">
+                            <image-point name="Imagepoint 1" x="1" y="0.566667" />
+                            <collision-poly>
+                                <point x="0.7" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.1" y="0.5" />
+                                <point x="0.6" y="0.3" />
+                                <point x="0.5" y="0.283333" />
+                                <point x="0.466667" y="0.266667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="814554272792930" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0" y="0.55" />
+                            <collision-poly>
+                                <point x="0.533333" y="0.266667" />
+                                <point x="0.5" y="0.3" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.933333" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.0333333" y="0.566667" />
+                            <collision-poly>
+                                <point x="0.6" y="0.3" />
+                                <point x="0.5" y="0.316667" />
+                                <point x="0.4" y="0.3" />
+                                <point x="0.933333" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0" y="0.55" />
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.5" y="0.266667" />
+                                <point x="0.366667" y="0.316667" />
+                                <point x="0.9" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.266667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0" y="0.566667" />
+                            <collision-poly>
+                                <point x="0.533333" y="0.266667" />
+                                <point x="0.5" y="0.283333" />
+                                <point x="0.4" y="0.3" />
+                                <point x="0.9" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueCostas" pingpong="0" repeatcount="1" repeatto="0" sid="989424237328343" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Costas\1.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.233333" />
+                            <collision-poly>
+                                <point x="0.533333" y="0.266667" />
+                                <point x="0.5" y="0.3" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.933333" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Costas\2.png">
+                            <image-point name="Imagepoint 1" x="0.533333" y="0.25" />
+                            <collision-poly>
+                                <point x="0.6" y="0.3" />
+                                <point x="0.5" y="0.316667" />
+                                <point x="0.4" y="0.3" />
+                                <point x="0.933333" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Costas\3.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.233333" />
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.5" y="0.266667" />
+                                <point x="0.366667" y="0.316667" />
+                                <point x="0.9" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.266667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\PNG frame por frame Caipora GIRANDO ATACANDO todos os lados 60x30px\Costas\4.png">
+                            <image-point name="Imagepoint 1" x="0.466667" y="0.25" />
+                            <collision-poly>
+                                <point x="0.533333" y="0.266667" />
+                                <point x="0.5" y="0.283333" />
+                                <point x="0.4" y="0.3" />
+                                <point x="0.9" y="0.5" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.166667" y="0.916667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCaiporaTiro" sid="583988109641674">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Damage" sid="835666448050376" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="241220890124951">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="726596511231830">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="133262378025120" speed="5">
+                        <frame duration="1" hotspotX="0.583333" hotspotY="0.571429" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Caipora\Dardo - ATAQUE CAIPORA\Dardo_Direita.png">
+                            <collision-poly>
+                                <point x="0.0833333" y="0.142857" />
+                                <point x="0.5" y="0.142857" />
+                                <point x="0.776042" y="0.142857" />
+                                <point x="0.921875" y="0.5" />
+                                <point x="0.760417" y="0.857143" />
+                                <point x="0.526042" y="0.857143" />
+                                <point x="0.0833333" y="0.857143" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreCaiporaBotao" sid="141408592875375">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="Inimigos">
@@ -880,6 +1176,7 @@
     <families>
         <family name="FTorreBase" plugin-id="Sprite" sid="544994410967895">
             <members>
+                <member>TorreCaiporaBase</member>
                 <member>TorreCucaBase</member>
                 <member>TorreCurupiraBase</member>
                 <member>TorreSaciBase</member>
@@ -897,6 +1194,7 @@
             <members>
                 <member>InimigoCarinha</member>
                 <member>InimigoCarinhaDevagar</member>
+                <member>TorreCaipora</member>
                 <member>TorreCuca</member>
                 <member>TorreCucaPocao</member>
                 <member>TorreCurupira</member>
@@ -906,6 +1204,7 @@
         </family>
         <family name="FTorre" plugin-id="Sprite" sid="942186669925552">
             <members>
+                <member>TorreCaipora</member>
                 <member>TorreCuca</member>
                 <member>TorreCurupira</member>
                 <member>TorreSaci</member>
@@ -958,6 +1257,7 @@
             <event-sheet>TorreCuca.xml</event-sheet>
             <event-sheet>TorreSaci.xml</event-sheet>
             <event-sheet>TorreCurupira.xml</event-sheet>
+            <event-sheet>TorreCaipora.xml</event-sheet>
         </event-folder>
         <event-folder name="Inimigos">
             <event-sheet>InimigoCarinha.xml</event-sheet>

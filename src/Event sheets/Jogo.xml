@@ -87,8 +87,11 @@
                         <action id="0" name="Set text" sid="572532322244708" type="TorreCucaBotao">
                             <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CUCA_CUSTO &amp; &quot;] [W] Cuca&quot;</param>
                         </action>
-                        <action id="0" name="Set text" sid="769297257102359" type="TorreCurupiraBotao">
+                        <action id="0" name="Set text" sid="769297257102359" type="TorreCurrupiraBotao">
                             <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CURUPIRA_CUSTO &amp; &quot;] [E] Curupira&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="286502498252931" type="TorreCaiporaBotao">
+                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CAIPORA_CUSTO &amp; &quot;] [R] Caipora&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -296,6 +299,7 @@
                 <include>TorreSaci</include>
                 <include>TorreCuca</include>
                 <include>TorreCurupira</include>
+                <include>TorreCaipora</include>
             </sub-events>
         </event-group>
         <event-group description="" sid="320834891715971" title="Inimigos">
