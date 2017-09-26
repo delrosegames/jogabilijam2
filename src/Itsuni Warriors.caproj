@@ -882,16 +882,18 @@
         <global-instance type="Function" uid="53" />
     </global-instances>
     <sounds-folder>
-        <file name="Airshot2.m4a" />
-        <file name="Airshot2.ogg" />
-        <file name="Hit4.m4a" />
-        <file name="Hit4.ogg" />
-        <file name="Bump2.m4a" />
-        <file name="Bump2.ogg" />
-        <file name="Scratch2.m4a" />
-        <file name="Scratch2.ogg" />
-        <file name="wild-pig-008.m4a" />
-        <file name="wild-pig-008.ogg" />
+        <file name="TorreSaciAtaque.m4a" />
+        <file name="TorreSaciAtaque.ogg" />
+        <file name="TorreCurupiraAtaqueAcerto.m4a" />
+        <file name="TorreCurupiraAtaqueAcerto.ogg" />
+        <file name="TorreSaciAtaqueAcerto.m4a" />
+        <file name="TorreSaciAtaqueAcerto.ogg" />
+        <file name="TorreCurupiraAtaque.m4a" />
+        <file name="TorreCurupiraAtaque.ogg" />
+        <file name="InimigoCarinhaAtacado.m4a" />
+        <file name="InimigoCarinhaAtacado.ogg" />
+        <file name="InimigoGordaoAtacado.m4a" />
+        <file name="InimigoGordaoAtacado.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">
