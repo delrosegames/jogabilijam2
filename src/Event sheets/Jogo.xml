@@ -271,7 +271,7 @@
                 <include>InimigoCarinha</include>
             </sub-events>
         </event-group>
-        <event-group description="" sid="935227215247602" title="Controles de tempo">
+        <event-group description="" sid="935227215247602" title="Controles da Fase">
             <sub-events>
                 <event-block sid="239516784665887">
                     <conditions>
@@ -362,6 +362,20 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="142010906856471">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="411617480174630" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">VoltarMenuBotao</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="362312328251874" type="System">
+                            <param id="0" name="Layout">&quot;MenuPrincipal&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
