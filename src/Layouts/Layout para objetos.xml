@@ -372,7 +372,7 @@
                         <hotspotX>0.535714269</hotspotX>
                         <hotspotY>0.75</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="TorreCurupiraBase" uid="49">
