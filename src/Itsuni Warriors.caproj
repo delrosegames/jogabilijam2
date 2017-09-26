@@ -146,46 +146,53 @@
                     <instance-variable name="Damage" sid="710449381458903" type="number" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="10">
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="3">
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\1.png">
                             <collision-poly>
-                                <point x="0.571429" y="0.266667" />
-                                <point x="0.5" y="0.316667" />
-                                <point x="0.821429" y="0.5" />
-                                <point x="0.464286" y="0.75" />
-                                <point x="0.5" y="0.866667" />
-                                <point x="0.321429" y="0.85" />
-                                <point x="0.178571" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\2.png">
                             <collision-poly>
-                                <point x="0.5" y="0.35" />
-                                <point x="0.75" y="0.5" />
-                                <point x="0.678571" y="0.85" />
-                                <point x="0.5" y="0.866667" />
-                                <point x="0.321429" y="0.85" />
-                                <point x="0.25" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\3.png">
                             <collision-poly>
-                                <point x="0.5" y="0.383333" />
-                                <point x="0.75" y="0.5" />
-                                <point x="0.714286" y="0.866667" />
-                                <point x="0.285714" y="0.866667" />
-                                <point x="0.214286" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\4.png">
                             <collision-poly>
-                                <point x="0.571429" y="0.266667" />
-                                <point x="0.5" y="0.316667" />
-                                <point x="0.785714" y="0.5" />
-                                <point x="0.678571" y="0.85" />
-                                <point x="0.5" y="0.866667" />
-                                <point x="0.321429" y="0.85" />
-                                <point x="0.214286" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                     </animation>
