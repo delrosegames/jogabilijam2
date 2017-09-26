@@ -579,7 +579,7 @@
                         <y>180</y>
                         <z>0</z>
                         <width>30</width>
-                        <height>90</height>
+                        <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -924,7 +924,7 @@
                         <y>240</y>
                         <z>0</z>
                         <width>30</width>
-                        <height>30</height>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
