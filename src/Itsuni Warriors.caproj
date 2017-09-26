@@ -147,10 +147,47 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="10">
-                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\1.png" />
-                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\2.png" />
-                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\3.png" />
-                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\4.png" />
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\1.png">
+                            <collision-poly>
+                                <point x="0.571429" y="0.266667" />
+                                <point x="0.5" y="0.316667" />
+                                <point x="0.821429" y="0.5" />
+                                <point x="0.464286" y="0.75" />
+                                <point x="0.5" y="0.866667" />
+                                <point x="0.321429" y="0.85" />
+                                <point x="0.178571" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\2.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.35" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.678571" y="0.85" />
+                                <point x="0.5" y="0.866667" />
+                                <point x="0.321429" y="0.85" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\3.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.383333" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.714286" y="0.866667" />
+                                <point x="0.285714" y="0.866667" />
+                                <point x="0.214286" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\4.png">
+                            <collision-poly>
+                                <point x="0.571429" y="0.266667" />
+                                <point x="0.5" y="0.316667" />
+                                <point x="0.785714" y="0.5" />
+                                <point x="0.678571" y="0.85" />
+                                <point x="0.5" y="0.866667" />
+                                <point x="0.321429" y="0.85" />
+                                <point x="0.214286" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -743,6 +780,29 @@
         </object-type>
         <object-type name="Function" sid="437304036268360">
             <plugin id="Function" />
+        </object-type>
+        <object-type name="PausarBotao" sid="786727025684785">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Pausado" sid="720576526329969" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="290332171472373" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AcelerarBotao" sid="317336911659000">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Acelerado" sid="504167370375517" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830611354774848" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

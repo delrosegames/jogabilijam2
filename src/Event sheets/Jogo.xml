@@ -271,6 +271,99 @@
                 <include>InimigoCarinha</include>
             </sub-events>
         </event-group>
-        <event-group description="" sid="392492720024306" title="Torres X Inimigos" />
+        <event-group description="" sid="935227215247602" title="Controles de tempo">
+            <sub-events>
+                <event-block sid="239516784665887">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="660485750382426" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">PausarBotao</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="333887372937888">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="920854881895369" type="PausarBotao">
+                                    <param id="0" name="Instance variable">Pausado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="261181694654038" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="281372772006484" type="PausarBotao">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="622425172407784" type="PausarBotao">
+                                    <param id="0" name="Instance variable">Pausado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="261118877722308">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="855656338804088" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="519020778954912" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="575779952550002" type="PausarBotao">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="262239071655881" type="PausarBotao">
+                                    <param id="0" name="Instance variable">Pausado</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="693461248779218">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="684015473485751" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">AcelerarBotao</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="260004080516226">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="592398016382874" type="AcelerarBotao">
+                                    <param id="0" name="Instance variable">Acelerado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="546279789063720" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="703297454138588" type="AcelerarBotao">
+                                    <param id="0" name="Instance variable">Acelerado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="158795969078849">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="228136763749719" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="990042859196132" type="System">
+                                    <param id="0" name="Time scale">2</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="586590907565434" type="AcelerarBotao">
+                                    <param id="0" name="Instance variable">Acelerado</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
