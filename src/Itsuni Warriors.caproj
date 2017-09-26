@@ -76,7 +76,7 @@
             </object-type>
             <object-type name="MenuPrincipalFundo" sid="318572454003810">
                 <plugin id="TiledBg" />
-                <texture original-source="D:\Downloads\exemplo menu.jpg" />
+                <texture original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\menu- logo-icones\Menu nao pronto.png" />
             </object-type>
         </object-folder>
         <object-folder name="Torres">
