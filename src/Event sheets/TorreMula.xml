@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TorreMula</name>
+    <events>
+        <variable comment="Custo de construção da Torre Mula Sem Cabeça" constant="1" name="TORRE_MULA_CUSTO" sid="450131932921059" static="0" type="number">20</variable>
+        <event-group description="" sid="790885185636681" title="Construção da Torre Mula">
+            <sub-events>
+                <event-block sid="444901691927454">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="873058127337794" type="TorreMulaBase" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="6" name="Set range" sid="726646733873074" type="TorreMulaBase">
+                            <param id="0" name="Range">90</param>
+                        </action>
+                        <action behavior="Turret" id="9" name="Set rotate speed" sid="773529017836588" type="TorreMulaBase">
+                            <param id="0" name="Rotate speed">999999</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="560043688146429" type="TorreMula">
+                            <param id="0" name="Pin to">TorreMulaBase</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="572544116347250" type="System">
+                            <param id="0" name="Variable">CustoTorreConstruindo</param>
+                            <param id="1" name="Value">TORRE_MULA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Gera uma nova torre para ser posicionada</comment>
+                <event-block any="1" sid="868399528077361">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="839480588790538" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">TorreMulaBotao</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="385602667004056" type="Keyboard">
+                            <param id="0" name="Key">84 (T)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="249868531602768">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="530655807609953" type="System">
+                                    <param id="0" name="Variable">DinheiroAtual</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">TORRE_MULA_CUSTO</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="999853910225382" type="System">
+                                    <param id="0" name="Variable">ConstruindoTorre</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="643357403769964" type="System">
+                                    <param id="0" name="Object to create">TorreMulaBase</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Além disso, somente é exibida (e semi-transparente) caso esteja sobre a zona de construção.</comment>
+                <event-block sid="972401584373847">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="163515089574578" type="TorreMulaBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="961524181767844" type="TorreMula">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="310467534740707" type="TorreMula">
+                            <param id="0" name="Opacity">TORRE_CONSTRUINDO_OPACITY</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="895865948990042">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="774906714253096" type="Mouse">
+                                    <param id="0" name="Object">ZonaConstrucao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="833430947101385" type="TorreMula">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="639286680737643">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="308575864206781" type="TorreMulaBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="585184117107321" type="TorreMula">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="796901094990793" title="Rotação da Torre Mula">
+            <sub-events>
+                <comment>Verifica a rotação da base para seleção do sprite a ser utilizado</comment>
+                <event-block sid="154557688642502">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="809867805922507" type="TorreMula">
+                            <param id="0" name="Instance variable">Atacando</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="991443797330091">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="946980481319480" type="TorreMulaBase">
+                                    <param id="0" name="First angle">0</param>
+                                    <param id="1" name="Second angle">45</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="288166281813934" type="TorreMulaBase">
+                                    <param id="0" name="First angle">315.01</param>
+                                    <param id="1" name="Second angle">360</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="654738666862581" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;ParadoDireita&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="977093550134699">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="249329064755702" type="TorreMulaBase">
+                                    <param id="0" name="First angle">45.01</param>
+                                    <param id="1" name="Second angle">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="495084728172787" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;ParadoFrente&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="925768511702327">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="791147721448668" type="TorreMulaBase">
+                                    <param id="0" name="First angle">135.01</param>
+                                    <param id="1" name="Second angle">225</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="416498325608240" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;ParadoEsquerda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="271722472386563">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="762288122237256" type="TorreMulaBase">
+                                    <param id="0" name="First angle">225.01</param>
+                                    <param id="1" name="Second angle">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="263106086797142" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;ParadoCostas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="588900938260237" title="Ataque Torre Mula">
+            <sub-events>
+                <event-block sid="532736786698432">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="945647091646227" type="TorreMulaBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="134892102753236" type="TorreMulaBase">
+                            <param id="0" name="Target">FInimigoBase</param>
+                        </action>
+                        <action behavior="Turret" id="5" name="Set enabled" sid="691486884328759" type="TorreMulaBase">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="351940276364222">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="573083527872010" type="TorreMulaBase" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="506669075886831" type="TorreMula">
+                            <param id="0" name="Instance variable">Atacando</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="354650652861126">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="171773032586368" type="FInimigoBase">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="Offset X">TorreMulaBase.X + 30</param>
+                                    <param id="2" name="Offset Y">TorreMulaBase.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="742013525345084" type="TorreMula">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="448861157914606" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;AtaqueDireita&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="544276986347795">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="646168133306654" type="FInimigoBase">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="Offset X">TorreMulaBase.X - 30</param>
+                                    <param id="2" name="Offset Y">TorreMulaBase.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="122177988325819" type="TorreMula">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="771561511917068" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;AtaqueEsquerda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="979305786977452">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="541597271119109" type="FInimigoBase">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="Offset X">TorreMulaBase.X</param>
+                                    <param id="2" name="Offset Y">TorreMulaBase.Y - 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="146350719287209" type="TorreMula">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="879343865971196" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;AtaqueCostas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="738675470081578">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="573359310608920" type="FInimigoBase">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                    <param id="1" name="Offset X">TorreMulaBase.X</param>
+                                    <param id="2" name="Offset Y">TorreMulaBase.Y + 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="107335069099574" type="TorreMula">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="702726963032406" type="TorreMula">
+                                    <param id="0" name="Animation">&quot;AtaqueFrente&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="507708832825207">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="958768068091500" type="TorreMula">
+                            <param id="0" name="Object">FInimigoBase</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="802651684992717" type="FInimigoBase">
+                            <param id="0" name="Instance variable">PontosVida</param>
+                            <param id="1" name="Value">TorreMula.Damage</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="623063644605025">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="786897370750318" type="TorreMula" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="204845322989311" type="TorreMula">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

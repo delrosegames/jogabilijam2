@@ -933,6 +933,286 @@
             <object-type name="TorreCaiporaBotao" sid="141408592875375">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TorreMulaBase" sid="721749736387831">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Turret" sid="925359509229035">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>TorreMula</type>
+                    <type>TorreMulaBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="588542026499681" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Frente\1.png">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreMula" sid="550059123969112">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Atacando" sid="861963352312934" type="boolean" />
+                    <instance-variable name="Damage" sid="749980629164822" type="number" />
+                </instance-variables>
+                <container>
+                    <type>TorreMula</type>
+                    <type>TorreMulaBase</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="773294541593868" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Frente\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Frente\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Frente\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Frente\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="408496168821818" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\1.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\2.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\3.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\4.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="209029847582169" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Lado\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="752491847314474" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Costas\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Costas\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Costas\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Mula GIRANDO parada todos os lados 60x30px\Costas\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueFrente" pingpong="0" repeatcount="1" repeatto="0" sid="834992073863318" speed="6">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.266667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Frente\frente-atacando_0000_Camada-4.png">
+                            <collision-poly>
+                                <point x="0.233333" y="0.116667" />
+                                <point x="0.5" y="0.0166667" />
+                                <point x="0.733333" y="0.133333" />
+                                <point x="0.633333" y="0.5" />
+                                <point x="0.645833" y="0.602082" />
+                                <point x="0.395833" y="0.675" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.266667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Frente\frente-atacando_0001_Camada-3.png">
+                            <collision-poly>
+                                <point x="0.233333" y="0.116667" />
+                                <point x="0.5" y="0.0166667" />
+                                <point x="0.733333" y="0.133333" />
+                                <point x="0.633333" y="0.5" />
+                                <point x="0.645833" y="0.602082" />
+                                <point x="0.395833" y="0.675" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.266667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Frente\frente-atacando_0002_Camada-2.png">
+                            <collision-poly>
+                                <point x="0.233333" y="0.116667" />
+                                <point x="0.5" y="0.0166667" />
+                                <point x="0.733333" y="0.133333" />
+                                <point x="0.633333" y="0.5" />
+                                <point x="0.645833" y="0.602082" />
+                                <point x="0.395833" y="0.675" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.266667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Frente\frente-atacando_0003_Camada-1.png">
+                            <collision-poly>
+                                <point x="0.233333" y="0.116667" />
+                                <point x="0.5" y="0.0166667" />
+                                <point x="0.733333" y="0.133333" />
+                                <point x="0.633333" y="0.5" />
+                                <point x="0.645833" y="0.602082" />
+                                <point x="0.395833" y="0.675" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueDireita" pingpong="0" repeatcount="1" repeatto="0" sid="320282943601068" speed="6">
+                        <frame duration="1" hotspotX="0.233333" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0000_Camada-4.png">
+                            <collision-poly>
+                                <point x="0.55" y="0.55" />
+                                <point x="0.45" y="0.55" />
+                                <point x="0.95" y="0.5" />
+                                <point x="0.8625" y="0.69375" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.0666667" y="0.933333" />
+                                <point x="0.0416666" y="0.560417" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.233333" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0001_Camada-3.png">
+                            <collision-poly>
+                                <point x="0.55" y="0.55" />
+                                <point x="0.45" y="0.55" />
+                                <point x="0.95" y="0.5" />
+                                <point x="0.8625" y="0.69375" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.0666667" y="0.933333" />
+                                <point x="0.0416666" y="0.560417" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.233333" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0002_Camada-2.png">
+                            <collision-poly>
+                                <point x="0.55" y="0.55" />
+                                <point x="0.45" y="0.55" />
+                                <point x="0.95" y="0.5" />
+                                <point x="0.8625" y="0.69375" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.0666667" y="0.933333" />
+                                <point x="0.0416666" y="0.560417" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.233333" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0003_Camada-1.png">
+                            <collision-poly>
+                                <point x="0.55" y="0.55" />
+                                <point x="0.45" y="0.55" />
+                                <point x="0.95" y="0.5" />
+                                <point x="0.8625" y="0.69375" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.0666667" y="0.933333" />
+                                <point x="0.0416666" y="0.560417" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="329254888990363" speed="6">
+                        <frame duration="1" hotspotX="0.766667" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0000_Camada-4.png">
+                            <collision-poly>
+                                <point x="0.0916665" y="0.51875" />
+                                <point x="0.410417" y="0.50625" />
+                                <point x="0.908334" y="0.554166" />
+                                <point x="0.933333" y="0.933333" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.3" y="0.7" />
+                                <point x="0.127083" y="0.639584" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.766667" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0001_Camada-3.png">
+                            <collision-poly>
+                                <point x="0.0916665" y="0.51875" />
+                                <point x="0.410417" y="0.50625" />
+                                <point x="0.908334" y="0.554166" />
+                                <point x="0.933333" y="0.933333" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.3" y="0.7" />
+                                <point x="0.127083" y="0.639584" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.766667" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0002_Camada-2.png">
+                            <collision-poly>
+                                <point x="0.0916665" y="0.51875" />
+                                <point x="0.410417" y="0.50625" />
+                                <point x="0.908334" y="0.554166" />
+                                <point x="0.933333" y="0.933333" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.3" y="0.7" />
+                                <point x="0.127083" y="0.639584" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.766667" hotspotY="0.766667" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Lado\lado-atacando_0003_Camada-1.png">
+                            <collision-poly>
+                                <point x="0.0916665" y="0.51875" />
+                                <point x="0.410417" y="0.50625" />
+                                <point x="0.908334" y="0.554166" />
+                                <point x="0.933333" y="0.933333" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.3" y="0.7" />
+                                <point x="0.127083" y="0.639584" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="AtaqueCostas" pingpong="0" repeatcount="1" repeatto="0" sid="872935745819216" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Costas\costas-atacando_0000_Camada-4.png">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.133333" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.6" y="0.5" />
+                                <point x="0.8" y="0.9" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.2" y="0.9" />
+                                <point x="0.333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Costas\costas-atacando_0001_Camada-3.png">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.133333" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.6" y="0.5" />
+                                <point x="0.8" y="0.9" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.2" y="0.9" />
+                                <point x="0.333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Costas\costas-atacando_0002_Camada-2.png">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.133333" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.6" y="0.5" />
+                                <point x="0.8" y="0.9" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.2" y="0.9" />
+                                <point x="0.333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Mula sem cabeça - não está pronto\PNG frame por frame Atacando SEPARADOS\Costas\costas-atacando_0003_Camada-1.png">
+                            <collision-poly>
+                                <point x="0.366667" y="0.183333" />
+                                <point x="0.5" y="0.133333" />
+                                <point x="0.633333" y="0.183333" />
+                                <point x="0.6" y="0.5" />
+                                <point x="0.8" y="0.9" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.2" y="0.9" />
+                                <point x="0.333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TorreMulaBotao" sid="909826714529440">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Inimigos">
             <object-type name="InimigoCarinha" sid="536442448283577">
@@ -1180,6 +1460,7 @@
                 <member>TorreCaiporaBase</member>
                 <member>TorreCucaBase</member>
                 <member>TorreCurupiraBase</member>
+                <member>TorreMulaBase</member>
                 <member>TorreSaciBase</member>
             </members>
             <instance-variables>
@@ -1199,6 +1480,7 @@
                 <member>TorreCuca</member>
                 <member>TorreCucaPocao</member>
                 <member>TorreCurupira</member>
+                <member>TorreMula</member>
                 <member>TorreSaci</member>
                 <member>TorreSaciTiro</member>
             </members>
@@ -1208,6 +1490,7 @@
                 <member>TorreCaipora</member>
                 <member>TorreCuca</member>
                 <member>TorreCurupira</member>
+                <member>TorreMula</member>
                 <member>TorreSaci</member>
             </members>
             <behaviors>
@@ -1259,6 +1542,7 @@
             <event-sheet>TorreSaci.xml</event-sheet>
             <event-sheet>TorreCurupira.xml</event-sheet>
             <event-sheet>TorreCaipora.xml</event-sheet>
+            <event-sheet>TorreMula.xml</event-sheet>
         </event-folder>
         <event-folder name="Inimigos">
             <event-sheet>InimigoCarinha.xml</event-sheet>
