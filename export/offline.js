@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1506393969,
+	"version": 1506397746,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -23,6 +23,9 @@
 		"images/torrecurupira-sheet0.png",
 		"images/torrecurupira-sheet1.png",
 		"images/torrecurupiratirobase-sheet0.png",
+		"images/torrecaiporabase-sheet0.png",
+		"images/torrecaipora-sheet0.png",
+		"images/torrecaiporatiro-sheet0.png",
 		"images/inimigocarinha-sheet0.png",
 		"images/inimigocarinha-sheet1.png",
 		"images/inimigocarinhabase-sheet0.png",
