@@ -378,7 +378,7 @@
                         <behavior-instance type="Flash" />
                         <behavior-instance type="Turret">
                             <properties>
-                                <range>120</range>
+                                <range>360</range>
                                 <rate-of-fire>0.01</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>999999</rotate-speed>

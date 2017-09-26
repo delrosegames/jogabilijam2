@@ -411,6 +411,16 @@
                             <param id="0" name="Instance variable">Voltando</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="25" name="Play at object" sid="811427313331007" type="Audio">
+                            <param id="0" name="Audio file">wild-pig-008</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-5</param>
+                            <param id="3" name="Object">TorreCurupiraBase</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="802764620931927">
