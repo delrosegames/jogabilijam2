@@ -6,7 +6,7 @@
         <variable constant="0" name="TORRE_CONSTRUINDO_OPACITY" sid="775097329495963" static="0" type="number">50</variable>
         <variable constant="0" name="CustoTorreConstruindo" sid="667912732975726" static="0" type="number">0</variable>
         <variable constant="0" name="ConstruindoTorre" sid="508071098799263" static="0" type="number">0</variable>
-        <variable constant="0" name="Vidas" sid="737657344023187" static="0" type="number">20</variable>
+        <variable constant="0" name="Vidas" sid="737657344023187" static="0" type="number">3</variable>
         <variable constant="0" name="Timer" sid="746709797750586" static="0" type="number">-1</variable>
         <variable constant="0" name="DinheiroAtual" sid="147354329828043" static="0" type="number">10000</variable>
         <variable constant="0" name="OndaAtual" sid="621447858659797" static="0" type="number">0</variable>
@@ -24,6 +24,38 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;MusicaJogo&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="706155948588837" type="System">
+                            <param id="0" name="Variable">CustoTorreConstruindo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="487798406977791" type="System">
+                            <param id="0" name="Variable">ConstruindoTorre</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446075308741334" type="System">
+                            <param id="0" name="Variable">Vidas</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446050567390669" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="612775161210740" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Value">10000</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="450587183334490" type="System">
+                            <param id="0" name="Variable">OndaAtual</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="959921185748036" type="System">
+                            <param id="0" name="Variable">CurrentEnemies</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="723649705532358" type="System">
+                            <param id="0" name="Variable">TotalEnemies</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                     </actions>
                 </event-block>
