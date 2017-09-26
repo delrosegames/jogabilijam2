@@ -280,16 +280,6 @@
                         <action id="-8" name="Set angle" sid="796221543918463" type="TorreCaiporaTiro">
                             <param id="0" name="Angle">TorreCaiporaBase.Angle</param>
                         </action>
-                        <action id="25" name="Play at object" sid="717589462288707" type="Audio">
-                            <param id="0" name="Audio file">Airshot2</param>
-                            <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">-10</param>
-                            <param id="3" name="Object">TorreCaiporaTiro</param>
-                            <param id="4" name="Inner angle">360</param>
-                            <param id="5" name="Outer angle">360</param>
-                            <param id="6" name="Outer gain">0</param>
-                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="839735855872873">
@@ -304,16 +294,6 @@
                             <param id="1" name="Value">TorreCaiporaTiro.Damage</param>
                         </action>
                         <action id="-9" name="Destroy" sid="156532693443698" type="TorreCaiporaTiro" />
-                        <action id="25" name="Play at object" sid="470707715206956" type="Audio">
-                            <param id="0" name="Audio file">Scratch2</param>
-                            <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">-5</param>
-                            <param id="3" name="Object">FInimigoBase</param>
-                            <param id="4" name="Inner angle">360</param>
-                            <param id="5" name="Outer angle">360</param>
-                            <param id="6" name="Outer gain">0</param>
-                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
