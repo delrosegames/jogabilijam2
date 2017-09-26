@@ -106,31 +106,6 @@
         </event-group>
         <event-group description="" sid="144970434342464" title="Ataque Torre Cuca">
             <sub-events>
-                <event-block sid="119704217927599">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="934802144196251" type="TorreCucaPocao">
-                            <param id="0" name="Instance variable">Contador</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="318860647725550" type="TorreCucaPocao" />
-                    </actions>
-                </event-block>
-                <event-block sid="589175053354441">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="299658163941937" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="973120581544975" type="TorreCucaPocao">
-                            <param id="0" name="Instance variable">Contador</param>
-                            <param id="1" name="Value">TorreCucaPocao.Contador + 1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="403315591531885">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="649825466864795" type="TorreCucaPocao">
