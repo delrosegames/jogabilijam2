@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TorreCuca</name>
     <events>
+        <variable constant="1" name="TEMPO_ANIMACAO_ATAQUE" sid="595301376026027" static="0" type="number">0.6</variable>
         <variable constant="1" name="TORRE_CUCA_CUSTO" sid="756668379883790" static="0" type="number">50</variable>
         <event-group description="" sid="496447630493579" title="Construção da Torre Cuca">
             <sub-events>
@@ -140,7 +141,7 @@
                         <action id="-9" name="Destroy" sid="725880006977166" type="TorreCucaPocao" />
                         <action id="-3" name="Create object" sid="442980798119867" type="System">
                             <param id="0" name="Object to create">TorreCucaPocao</param>
-                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                             <param id="2" name="X">TorreCucaPocao.X</param>
                             <param id="3" name="Y">TorreCucaPocao.Y</param>
                         </action>
@@ -181,9 +182,13 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="282790839804393" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X - 30{###}TorreCuca.Y - 30{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="410044305356046" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X - 30</param>
                                     <param id="3" name="Y">TorreCuca.Y - 30</param>
                                 </action>
@@ -203,9 +208,13 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="326479821377789" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X{###}TorreCuca.Y - 30{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="351523988448880" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X</param>
                                     <param id="3" name="Y">TorreCuca.Y - 30</param>
                                 </action>
@@ -225,9 +234,13 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="941355652546623" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X + 30{###}TorreCuca.Y - 30{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="883731265667539" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X + 30</param>
                                     <param id="3" name="Y">TorreCuca.Y - 30</param>
                                 </action>
@@ -247,9 +260,13 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="482183969246210" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X + 30{###}TorreCuca.Y{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="370269724412499" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X + 30</param>
                                     <param id="3" name="Y">TorreCuca.Y</param>
                                 </action>
@@ -269,9 +286,13 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="742997830914632" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X + 30{###}TorreCuca.Y + 30{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="547476976150417" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X + 30</param>
                                     <param id="3" name="Y">TorreCuca.Y + 30</param>
                                 </action>
@@ -291,9 +312,13 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="340204672808525" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X{###}TorreCuca.Y + 30{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="207435386424217" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X</param>
                                     <param id="3" name="Y">TorreCuca.Y + 30</param>
                                 </action>
@@ -313,9 +338,13 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="804198513280576" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X - 30{###}TorreCuca.Y + 30{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="433592900167475" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X - 30</param>
                                     <param id="3" name="Y">TorreCuca.Y + 30</param>
                                 </action>
@@ -335,15 +364,61 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="374417102212975" type="Function">
+                                    <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                                    <param id="1" name="Parameter {n}">TorreCuca.X - 30{###}TorreCuca.Y{###}TorreCuca.UID</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="113889229980564" type="System">
                                     <param id="0" name="Object to create">TorreCucaPocao</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Chão&quot;)</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                                     <param id="2" name="X">TorreCuca.X - 30</param>
                                     <param id="3" name="Y">TorreCuca.Y</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="736169817592775">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="305211759130998" type="TorreCuca">
+                            <param id="0" name="Animation">&quot;Ataque&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="586053953712028" type="TorreCuca">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="842831110012512">
+                    <conditions>
+                        <condition id="0" name="On function" sid="593053640389186" type="Function">
+                            <param id="0" name="Name">&quot;CriarPocaoCuca&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="186720195432662" type="TorreCuca">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Play at object" sid="542227079037003" type="Audio">
+                            <param id="0" name="Audio file">AtaqueCuca</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-10</param>
+                            <param id="3" name="Object">TorreCuca</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="112776794222290" type="TorreCuca">
+                            <param id="0" name="Animation">&quot;Ataque&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="847499047978255" type="System">
+                            <param id="0" name="Seconds">TEMPO_ANIMACAO_ATAQUE</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>Enquanto um inimigo estiver passando sobre a poção da Torre Cuca, ele recebe de dano.</comment>
                 <event-block sid="547912351281388">

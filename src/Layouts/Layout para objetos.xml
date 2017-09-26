@@ -58,7 +58,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>30</x>
-                        <y>360</y>
+                        <y>330</y>
                         <z>0</z>
                         <width>30</width>
                         <height>30</height>
@@ -84,7 +84,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>60</x>
-                        <y>360</y>
+                        <y>330</y>
                         <z>0</z>
                         <width>30</width>
                         <height>60</height>
@@ -109,7 +109,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>90</x>
-                        <y>360</y>
+                        <y>330</y>
                         <z>0</z>
                         <width>30</width>
                         <height>60</height>
@@ -139,7 +139,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>120</x>
-                        <y>360</y>
+                        <y>330</y>
                         <z>0</z>
                         <width>30</width>
                         <height>30</height>
@@ -284,13 +284,14 @@
                 </instance>
                 <instance type="TorreCucaBase" uid="41">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <Flutuando>true</Flutuando>
+                        <Atacando>false</Atacando>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -307,7 +308,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="TorreCuca" uid="1">
@@ -356,10 +357,10 @@
                         <y>150</y>
                         <z>0</z>
                         <width>28</width>
-                        <height>28</height>
+                        <height>60</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.535714269</hotspotX>
+                        <hotspotY>0.75</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
