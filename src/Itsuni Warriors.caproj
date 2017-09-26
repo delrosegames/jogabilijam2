@@ -904,6 +904,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Damage" sid="835666448050376" type="number" />
+                    <instance-variable name="AlvoUID" sid="278820731898177" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="241220890124951">

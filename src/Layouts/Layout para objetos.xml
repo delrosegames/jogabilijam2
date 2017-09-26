@@ -497,8 +497,8 @@
                         <behavior-instance type="Flash" />
                         <behavior-instance type="Turret">
                             <properties>
-                                <range>180</range>
-                                <rate-of-fire>0.5</rate-of-fire>
+                                <range>210</range>
+                                <rate-of-fire>0.4</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>999999</rotate-speed>
                                 <target-mode>First in range</target-mode>
@@ -561,6 +561,7 @@
                     </properties>
                     <instance-variables>
                         <Damage>1</Damage>
+                        <AlvoUID>0</AlvoUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">

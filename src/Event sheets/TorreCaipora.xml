@@ -277,8 +277,25 @@
                             <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="796221543918463" type="TorreCaiporaTiro">
-                            <param id="0" name="Angle">TorreCaiporaBase.Angle</param>
+                        <action id="-10" name="Set value" sid="670389709482224" type="TorreCaiporaTiro">
+                            <param id="0" name="Instance variable">AlvoUID</param>
+                            <param id="1" name="Value">TorreCaiporaBase.Turret.TargetUID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="577943757979503">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="465813089597562" type="System">
+                            <param id="0" name="Object">TorreCaiporaTiro</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="864622933530572" type="FInimigoBase">
+                            <param id="0" name="Unique ID">TorreCaiporaTiro.AlvoUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="268545977143176" type="TorreCaiporaTiro">
+                            <param id="0" name="X">FInimigoBase.X</param>
+                            <param id="1" name="Y">FInimigoBase.Y</param>
                         </action>
                     </actions>
                 </event-block>

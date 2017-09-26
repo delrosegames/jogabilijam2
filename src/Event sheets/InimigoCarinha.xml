@@ -252,7 +252,7 @@
                             <param id="0" name="Instance variable">PontosVidaAnterior</param>
                             <param id="1" name="Value">InimigoCarinhaBase.PontosVida</param>
                         </action>
-                        <action id="25" name="Play at object" sid="396801377496929" type="Audio">
+                        <action disabled="1" id="25" name="Play at object" sid="396801377496929" type="Audio">
                             <param id="0" name="Audio file">InimigoCarinhaAtacado</param>
                             <param id="1" name="Loop">0</param>
                             <param id="2" name="Volume">-17</param>
