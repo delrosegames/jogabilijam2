@@ -223,7 +223,7 @@
                             <param id="1" name="Mode">1</param>
                         </action>
                         <action id="25" name="Play at object" sid="679792762901537" type="Audio">
-                            <param id="0" name="Audio file">Airshot2</param>
+                            <param id="0" name="Audio file">TorreSaciAtaque</param>
                             <param id="1" name="Loop">0</param>
                             <param id="2" name="Volume">-10</param>
                             <param id="3" name="Object">TorreSaciTiroBase</param>
@@ -251,7 +251,7 @@
                             <param id="1" name="Value">3</param>
                         </action>
                         <action id="25" name="Play at object" sid="471935355543453" type="Audio">
-                            <param id="0" name="Audio file">Scratch2</param>
+                            <param id="0" name="Audio file">TorreSaciAtaqueAcerto</param>
                             <param id="1" name="Loop">0</param>
                             <param id="2" name="Volume">-5</param>
                             <param id="3" name="Object">FInimigoBase</param>

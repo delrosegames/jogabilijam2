@@ -402,7 +402,7 @@
                     </conditions>
                     <actions>
                         <action id="25" name="Play at object" sid="542227079037003" type="Audio">
-                            <param id="0" name="Audio file">AtaqueCuca</param>
+                            <param id="0" name="Audio file">TorreCucaAtaque</param>
                             <param id="1" name="Loop">0</param>
                             <param id="2" name="Volume">-10</param>
                             <param id="3" name="Object">TorreCuca</param>

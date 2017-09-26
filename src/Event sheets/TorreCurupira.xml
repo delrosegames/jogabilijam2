@@ -275,6 +275,9 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="103069487738412" type="TorreCurupira">
                             <param id="0" name="Instance variable">Atacando</param>
                         </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="610339841151190" type="FInimigoBase">
+                            <param id="0" name="Unique ID">TorreCurupiraBase.Turret.TargetUID</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -298,6 +301,9 @@
                                             <param id="1" name="Offset X">30</param>
                                             <param id="2" name="Offset Y">0</param>
                                         </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="506301161491173" type="FInimigoBase">
+                                            <param id="0" name="Object">ZonaCaminho</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="941367513421898" type="Function">
@@ -319,6 +325,9 @@
                                     <param id="1" name="Offset X">0</param>
                                     <param id="2" name="Offset Y">30</param>
                                 </condition>
+                                <condition id="1" name="Is overlapping another object" sid="675585578721784" type="FInimigoBase">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="875014003482670" type="Function">
@@ -338,6 +347,9 @@
                                     <param id="1" name="Offset X">-30</param>
                                     <param id="2" name="Offset Y">0</param>
                                 </condition>
+                                <condition id="1" name="Is overlapping another object" sid="447780950803275" type="FInimigoBase">
+                                    <param id="0" name="Object">ZonaCaminho</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="710264651602752" type="Function">
@@ -356,6 +368,9 @@
                                     <param id="0" name="Object">ZonaCaminho</param>
                                     <param id="1" name="Offset X">0</param>
                                     <param id="2" name="Offset Y">-30</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="338970263569692" type="FInimigoBase">
+                                    <param id="0" name="Object">ZonaCaminho</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -396,6 +411,16 @@
                             <param id="0" name="Instance variable">Voltando</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="25" name="Play at object" sid="811427313331007" type="Audio">
+                            <param id="0" name="Audio file">TorreCurupiraAtaque</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-5</param>
+                            <param id="3" name="Object">TorreCurupiraBase</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="802764620931927">
@@ -411,7 +436,7 @@
                         </action>
                         <action id="-9" name="Destroy" sid="129520155597861" type="TorreSaciTiroBase" />
                         <action id="25" name="Play at object" sid="389438506847107" type="Audio">
-                            <param id="0" name="Audio file">Bump2</param>
+                            <param id="0" name="Audio file">TorreCurupiraAtaqueAcerto</param>
                             <param id="1" name="Loop">0</param>
                             <param id="2" name="Volume">-5</param>
                             <param id="3" name="Object">FInimigoBase</param>

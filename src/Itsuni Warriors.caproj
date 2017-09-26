@@ -146,46 +146,53 @@
                     <instance-variable name="Damage" sid="710449381458903" type="number" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="10">
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709610548595760" speed="3">
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\1.png">
                             <collision-poly>
-                                <point x="0.571429" y="0.266667" />
-                                <point x="0.5" y="0.316667" />
-                                <point x="0.821429" y="0.5" />
-                                <point x="0.464286" y="0.75" />
-                                <point x="0.5" y="0.866667" />
-                                <point x="0.321429" y="0.85" />
-                                <point x="0.178571" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\2.png">
                             <collision-poly>
-                                <point x="0.5" y="0.35" />
-                                <point x="0.75" y="0.5" />
-                                <point x="0.678571" y="0.85" />
-                                <point x="0.5" y="0.866667" />
-                                <point x="0.321429" y="0.85" />
-                                <point x="0.25" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\3.png">
                             <collision-poly>
-                                <point x="0.5" y="0.383333" />
-                                <point x="0.75" y="0.5" />
-                                <point x="0.714286" y="0.866667" />
-                                <point x="0.285714" y="0.866667" />
-                                <point x="0.214286" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.535714" hotspotY="0.75" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Cuca\Cuca Ataque - Poção Veneno\PNG frame por frame ATAQUE VENENO\4.png">
                             <collision-poly>
-                                <point x="0.571429" y="0.266667" />
-                                <point x="0.5" y="0.316667" />
-                                <point x="0.785714" y="0.5" />
-                                <point x="0.678571" y="0.85" />
-                                <point x="0.5" y="0.866667" />
-                                <point x="0.321429" y="0.85" />
-                                <point x="0.214286" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.714286" y="0.55" />
+                                <point x="0.821429" y="0.666667" />
+                                <point x="0.714286" y="0.766667" />
+                                <point x="0.495536" y="0.811459" />
+                                <point x="0.285714" y="0.766667" />
+                                <point x="0.178571" y="0.666667" />
+                                <point x="0.285714" y="0.55" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -436,101 +443,153 @@
                     <type>TorreCurupiraTiroBase</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="727034480058777" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Baixo.png">
+                    <animation framecount="8" loop="1" name="ParadoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="727034480058777" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Frente\Curupira-parado-Frente-08.png" />
+                    </animation>
+                    <animation framecount="8" loop="1" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="857029419567858" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Costas\Curupira-parado-Costas-08.png" />
+                    </animation>
+                    <animation framecount="8" loop="0" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="436392862812323" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-01.png">
                             <collision-poly>
-                                <point x="0.366667" y="0.183333" />
-                                <point x="0.5" y="0.166667" />
-                                <point x="0.633333" y="0.183333" />
-                                <point x="0.866667" y="0.933333" />
-                                <point x="0.133333" y="0.933333" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-02.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-03.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-04.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-05.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-06.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-07.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-08.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="ParadoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="857029419567858" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Cima.png">
+                    <animation framecount="8" loop="1" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="262501260379765" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame todos os lados PARADO girando 60x30px\Lado\Curupira-parado-Lado-08.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="AtacandoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="321906504016849" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Frente\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Frente\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Frente\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Frente\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="AtacandoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="103124138742675" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Costas\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Costas\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Costas\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Costas\4.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="AtacandoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="290074953984426" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\1.png">
                             <collision-poly>
-                                <point x="0.366667" y="0.183333" />
-                                <point x="0.5" y="0.166667" />
-                                <point x="0.633333" y="0.183333" />
-                                <point x="0.866667" y="0.933333" />
-                                <point x="0.133333" y="0.933333" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\2.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\3.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\4.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="ParadoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="436392862812323" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Direita.png">
-                            <collision-poly>
-                                <point x="0.366667" y="0.183333" />
-                                <point x="0.5" y="0.183333" />
-                                <point x="0.666667" y="0.166667" />
-                                <point x="0.6" y="0.5" />
-                                <point x="0.833333" y="0.916667" />
-                                <point x="0.133333" y="0.933333" />
-                                <point x="0.2" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="ParadoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="262501260379765" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dev\GitHub\delrosegames\Curupira - Esquerda.png">
-                            <collision-poly>
-                                <point x="0.333333" y="0.166667" />
-                                <point x="0.5" y="0.2" />
-                                <point x="0.633333" y="0.183333" />
-                                <point x="0.8" y="0.5" />
-                                <point x="0.866667" y="0.933333" />
-                                <point x="0.166667" y="0.916667" />
-                                <point x="0.4" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="AtacandoFrente" pingpong="0" repeatcount="1" repeatto="0" sid="321906504016849" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                            <collision-poly>
-                                <point x="0.366667" y="0.183333" />
-                                <point x="0.5" y="0.166667" />
-                                <point x="0.633333" y="0.183333" />
-                                <point x="0.866667" y="0.933333" />
-                                <point x="0.133333" y="0.933333" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="AtacandoCostas" pingpong="0" repeatcount="1" repeatto="0" sid="103124138742675" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                            <collision-poly>
-                                <point x="0.366667" y="0.183333" />
-                                <point x="0.5" y="0.166667" />
-                                <point x="0.633333" y="0.183333" />
-                                <point x="0.866667" y="0.933333" />
-                                <point x="0.133333" y="0.933333" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="AtacandoDireita" pingpong="0" repeatcount="1" repeatto="0" sid="290074953984426" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                            <collision-poly>
-                                <point x="0.366667" y="0.183333" />
-                                <point x="0.5" y="0.183333" />
-                                <point x="0.666667" y="0.166667" />
-                                <point x="0.6" y="0.5" />
-                                <point x="0.833333" y="0.916667" />
-                                <point x="0.133333" y="0.933333" />
-                                <point x="0.2" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="AtacandoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="630421638073500" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                            <collision-poly>
-                                <point x="0.333333" y="0.166667" />
-                                <point x="0.5" y="0.2" />
-                                <point x="0.633333" y="0.183333" />
-                                <point x="0.8" y="0.5" />
-                                <point x="0.866667" y="0.933333" />
-                                <point x="0.166667" y="0.916667" />
-                                <point x="0.4" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="4" loop="1" name="AtacandoEsquerda" pingpong="0" repeatcount="1" repeatto="0" sid="630421638073500" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Curupira\PNG frame por frame Curupira GIRANDO ATACANDO todos os lados 60x30px\Lado\4.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1224,16 +1283,20 @@
         <global-instance type="Function" uid="53" />
     </global-instances>
     <sounds-folder>
-        <file name="Airshot2.m4a" />
-        <file name="Airshot2.ogg" />
-        <file name="Hit4.m4a" />
-        <file name="Hit4.ogg" />
-        <file name="Bump2.m4a" />
-        <file name="Bump2.ogg" />
-        <file name="Scratch2.m4a" />
-        <file name="Scratch2.ogg" />
-        <file name="AtaqueCuca.m4a" />
-        <file name="AtaqueCuca.ogg" />
+        <file name="TorreSaciAtaque.m4a" />
+        <file name="TorreSaciAtaque.ogg" />
+        <file name="TorreCurupiraAtaqueAcerto.m4a" />
+        <file name="TorreCurupiraAtaqueAcerto.ogg" />
+        <file name="TorreSaciAtaqueAcerto.m4a" />
+        <file name="TorreSaciAtaqueAcerto.ogg" />
+        <file name="TorreCurupiraAtaque.m4a" />
+        <file name="TorreCurupiraAtaque.ogg" />
+        <file name="InimigoCarinhaAtacado.m4a" />
+        <file name="InimigoCarinhaAtacado.ogg" />
+        <file name="InimigoGordaoAtacado.m4a" />
+        <file name="InimigoGordaoAtacado.ogg" />
+        <file name="TorreCucaAtaque.m4a" />
+        <file name="TorreCucaAtaque.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">
