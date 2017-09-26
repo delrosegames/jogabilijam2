@@ -212,10 +212,21 @@
                     <sub-events>
                         <event-block sid="354650652861126">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="171773032586368" type="FInimigoBase">
-                                    <param id="0" name="Object">ZonaCaminho</param>
-                                    <param id="1" name="Offset X">TorreMulaBase.X + 30</param>
-                                    <param id="2" name="Offset Y">TorreMulaBase.Y</param>
+                                <condition id="-1" name="Compare X" sid="171773032586368" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X + 15</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="503868559544594" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X + 45</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="363410511177916" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y - 15</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="803284719951695" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y + 15</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -231,10 +242,21 @@
                         </event-block>
                         <event-block sid="544276986347795">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="646168133306654" type="FInimigoBase">
-                                    <param id="0" name="Object">ZonaCaminho</param>
-                                    <param id="1" name="Offset X">TorreMulaBase.X - 30</param>
-                                    <param id="2" name="Offset Y">TorreMulaBase.Y</param>
+                                <condition id="-1" name="Compare X" sid="579370702408555" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X - 15</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="360506984848746" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X - 45</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="159832848519686" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y - 15</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="471201610861626" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y + 15</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -250,10 +272,21 @@
                         </event-block>
                         <event-block sid="979305786977452">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="541597271119109" type="FInimigoBase">
-                                    <param id="0" name="Object">ZonaCaminho</param>
-                                    <param id="1" name="Offset X">TorreMulaBase.X</param>
-                                    <param id="2" name="Offset Y">TorreMulaBase.Y - 30</param>
+                                <condition id="-1" name="Compare X" sid="331822166839618" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X - 15</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="628451754648324" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X + 15</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="706730412194291" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y - 45</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="455140757105158" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y - 15</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -269,10 +302,21 @@
                         </event-block>
                         <event-block sid="738675470081578">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="573359310608920" type="FInimigoBase">
-                                    <param id="0" name="Object">ZonaCaminho</param>
-                                    <param id="1" name="Offset X">TorreMulaBase.X</param>
-                                    <param id="2" name="Offset Y">TorreMulaBase.Y + 30</param>
+                                <condition id="-1" name="Compare X" sid="305589626899708" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X - 15</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="720305757879226" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">TorreMula.X + 15</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="809978164146570" type="FInimigoBase">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y +15</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="186405232542202" type="FInimigoBase">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">TorreMula.Y + 45</param>
                                 </condition>
                             </conditions>
                             <actions>
