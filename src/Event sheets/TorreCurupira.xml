@@ -31,7 +31,7 @@
                         <condition id="6" name="On object clicked" sid="825270713449842" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">TorreCurrupiraBotao</param>
+                            <param id="2" name="Object clicked">CardCurupira</param>
                         </condition>
                         <condition id="0" name="On key pressed" sid="489261894576098" type="Keyboard">
                             <param id="0" name="Key">69 (E)</param>

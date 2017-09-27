@@ -30,10 +30,10 @@
                 <comment>Gera uma nova torre para ser posicionada</comment>
                 <event-block any="1" sid="857560062326518">
                     <conditions>
-                        <condition id="6" name="On object clicked" sid="894567438127097" type="Mouse">
+                        <condition id="6" name="On object clicked" sid="193708940587646" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">TorreSaciBotao</param>
+                            <param id="2" name="Object clicked">CardSaci</param>
                         </condition>
                         <condition id="0" name="On key pressed" sid="805034347495785" type="Keyboard">
                             <param id="0" name="Key">81 (Q)</param>
