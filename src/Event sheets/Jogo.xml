@@ -74,28 +74,13 @@
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="574683615385708" type="txtVidas">
-                            <param id="0" name="Text">&quot;Vidas: &quot; &amp; Vidas</param>
+                            <param id="0" name="Text">Vidas</param>
                         </action>
                         <action id="0" name="Set text" sid="177310736975976" type="txtOnda">
                             <param id="0" name="Text">&quot;Onda: &quot; &amp; OndaAtual</param>
                         </action>
                         <action id="0" name="Set text" sid="494830300481354" type="txtDinheiro">
                             <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; DinheiroAtual</param>
-                        </action>
-                        <action id="0" name="Set text" sid="986280678697568" type="TorreSaciBotao">
-                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_SACI_CUSTO &amp; &quot;] [Q] Saci&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="572532322244708" type="TorreCucaBotao">
-                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CUCA_CUSTO &amp; &quot;] [W] Cuca&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="769297257102359" type="TorreCurrupiraBotao">
-                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CURUPIRA_CUSTO &amp; &quot;] [E] Curupira&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="286502498252931" type="TorreCaiporaBotao">
-                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_CAIPORA_CUSTO &amp; &quot;] [R] Caipora&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="337071697171226" type="TorreMulaBotao">
-                            <param id="0" name="Text">&quot;[$&quot; &amp; TORRE_MULA_CUSTO &amp; &quot;] [T] Mula sem cabeça&quot;</param>
                         </action>
                     </actions>
                 </event-block>

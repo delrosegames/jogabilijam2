@@ -33,7 +33,7 @@
                         <condition id="6" name="On object clicked" sid="311172520558106" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">TorreCaiporaBotao</param>
+                            <param id="2" name="Object clicked">CardCaipora</param>
                         </condition>
                         <condition id="0" name="On key pressed" sid="962368283935993" type="Keyboard">
                             <param id="0" name="Key">82 (R)</param>
@@ -272,6 +272,16 @@
                         <condition behavior="Turret" id="1" name="On shoot" sid="115856250353215" type="TorreCaiporaBase" />
                     </conditions>
                     <actions>
+                        <action id="25" name="Play at object" sid="115045918998256" type="Audio">
+                            <param id="0" name="Audio file">TorreCaiporaAtaque</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">TorreCaiporaTiro</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Spawn another object" sid="206215845454907" type="TorreCaipora">
                             <param id="0" name="Object">TorreCaiporaTiro</param>
                             <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>

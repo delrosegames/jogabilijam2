@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -1538,6 +1539,57 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="GuaranaVida" sid="978524140776612">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304172392085600" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CardSaci" sid="109244969014842">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710844365996355" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button" sid="559794389624856">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="CardCuca" sid="389915010474917">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700037762307797" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CardCurupira" sid="915921938348570">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726062726964959" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CardCaipora" sid="522600626958848">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504770868171251" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CardMula" sid="757188918314597">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510974694881354" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type global="1" name="Ondas" sid="771785601887699">
             <plugin id="Arr" />
         </object-type>
@@ -1678,6 +1730,10 @@
         <file name="InimigoGordaoAtacado.ogg" />
         <file name="TorreCucaAtaque.m4a" />
         <file name="TorreCucaAtaque.ogg" />
+        <file name="TorreMulaAtaque.m4a" />
+        <file name="TorreMulaAtaque.ogg" />
+        <file name="TorreCaiporaAtaque.m4a" />
+        <file name="TorreCaiporaAtaque.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">
