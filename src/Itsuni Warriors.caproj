@@ -1671,6 +1671,10 @@
         <file name="InimigoGordaoAtacado.ogg" />
         <file name="TorreCucaAtaque.m4a" />
         <file name="TorreCucaAtaque.ogg" />
+        <file name="TorreMulaAtaque.m4a" />
+        <file name="TorreMulaAtaque.ogg" />
+        <file name="TorreCaiporaAtaque.m4a" />
+        <file name="TorreCaiporaAtaque.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">

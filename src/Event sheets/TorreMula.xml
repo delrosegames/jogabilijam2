@@ -238,6 +238,16 @@
                                     <param id="0" name="Animation">&quot;AtaqueDireita&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="25" name="Play at object" sid="517939554895435" type="Audio">
+                                    <param id="0" name="Audio file">TorreMulaAtaque</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">TorreMulaBase</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="544276986347795">
@@ -267,6 +277,16 @@
                                 <action id="4" name="Set animation" sid="771561511917068" type="TorreMula">
                                     <param id="0" name="Animation">&quot;AtaqueEsquerda&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="25" name="Play at object" sid="202811129827579" type="Audio">
+                                    <param id="0" name="Audio file">TorreMulaAtaque</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">TorreMulaBase</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -298,6 +318,16 @@
                                     <param id="0" name="Animation">&quot;AtaqueCostas&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="25" name="Play at object" sid="664642846920638" type="Audio">
+                                    <param id="0" name="Audio file">TorreMulaAtaque</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">TorreMulaBase</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="738675470081578">
@@ -327,6 +357,16 @@
                                 <action id="4" name="Set animation" sid="702726963032406" type="TorreMula">
                                     <param id="0" name="Animation">&quot;AtaqueFrente&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="25" name="Play at object" sid="352698332835449" type="Audio">
+                                    <param id="0" name="Audio file">TorreMulaAtaque</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">TorreMulaBase</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
