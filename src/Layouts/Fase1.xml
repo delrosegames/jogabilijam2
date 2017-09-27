@@ -109,33 +109,7 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="AcelerarBotao" uid="57">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Acelerado>false</Acelerado>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>418</x>
-                        <y>23</y>
-                        <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="Jogo - Cenário - Topo" sid="535357823329195">
@@ -171,6 +145,28 @@
                         <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0.516666651</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GuaranaFinalFase" uid="67">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>418</x>
+                        <y>53</y>
+                        <z>0</z>
+                        <width>90</width>
+                        <height>90</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -240,7 +236,7 @@
                     <properties>
                         <text>Onda 1</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-16,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -251,7 +247,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>484</x>
+                        <x>480</x>
                         <y>3</y>
                         <z>0</z>
                         <width>78</width>
@@ -306,7 +302,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>480</x>
-                        <y>293</y>
+                        <y>270</y>
                         <z>0</z>
                         <width>160</width>
                         <height>37</height>
@@ -332,7 +328,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>479</x>
+                        <x>478</x>
                         <y>33</y>
                         <z>0</z>
                         <width>160</width>
@@ -384,8 +380,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>460</x>
-                        <y>23</y>
+                        <x>561</x>
+                        <y>340</y>
                         <z>0</z>
                         <width>30</width>
                         <height>30</height>
@@ -407,7 +403,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>621</x>
-                        <y>341</y>
+                        <y>340</y>
                         <z>0</z>
                         <width>30</width>
                         <height>30</height>
@@ -428,7 +424,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>596</x>
+                        <x>601</x>
                         <y>18</y>
                         <z>0</z>
                         <width>30</width>
@@ -451,7 +447,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>509</x>
-                        <y>112</y>
+                        <y>122</y>
                         <z>0</z>
                         <width>30</width>
                         <height>40</height>
@@ -473,7 +469,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>559</x>
-                        <y>112</y>
+                        <y>122</y>
                         <z>0</z>
                         <width>30</width>
                         <height>40</height>
@@ -495,7 +491,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>609</x>
-                        <y>112</y>
+                        <y>122</y>
                         <z>0</z>
                         <width>30</width>
                         <height>40</height>
@@ -517,7 +513,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>509</x>
-                        <y>168</y>
+                        <y>178</y>
                         <z>0</z>
                         <width>30</width>
                         <height>40</height>
@@ -539,13 +535,38 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>559</x>
-                        <y>168</y>
+                        <y>178</y>
                         <z>0</z>
                         <width>30</width>
                         <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.324999988</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AcelerarBotao" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Acelerado>false</Acelerado>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>500</x>
+                        <y>340</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -591,7 +612,7 @@
                 </instance>
                 <instance type="EnemyGoal" uid="18">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -599,7 +620,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>465</x>
+                        <x>425</x>
                         <y>75</y>
                         <z>0</z>
                         <width>30</width>
