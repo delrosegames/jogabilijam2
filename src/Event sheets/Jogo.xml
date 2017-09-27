@@ -58,6 +58,9 @@
                             <param id="0" name="Variable">TotalEnemies</param>
                             <param id="1" name="Value">10</param>
                         </action>
+                        <action id="-13" name="Set time scale" sid="881199464027099" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="883179539520529">
@@ -65,9 +68,7 @@
                         <condition id="-3" name="On end of layout" sid="790365161098629" type="System" />
                     </conditions>
                     <actions>
-                        <action id="6" name="Stop" sid="188839250578348" type="Audio">
-                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
-                        </action>
+                        <action id="33" name="Stop all" sid="192901748396352" type="Audio" />
                     </actions>
                 </event-block>
                 <event-block sid="481072421821242">
@@ -310,7 +311,12 @@
                             <param id="2" name="Object clicked">PausarBotao</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="521045346637499" type="AcelerarBotao">
+                            <param id="0" name="Instance variable">Acelerado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="333887372937888">
                             <conditions>
@@ -358,7 +364,15 @@
                             <param id="2" name="Object clicked">AcelerarBotao</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="627441989143378" type="PausarBotao">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="886554811871673" type="PausarBotao">
+                            <param id="0" name="Instance variable">Pausado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="260004080516226">
                             <conditions>
