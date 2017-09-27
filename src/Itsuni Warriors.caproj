@@ -82,6 +82,12 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\menu- logo-icones\Menu nao pronto.png" />
             </object-type>
+            <object-type name="MenuPrincipalFase2Texto" sid="953701096873447">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="MenuPrincipalFase3Texto" sid="884151267398753">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Torres">
             <object-type name="TorreCuca" sid="867839164798438">
@@ -1471,13 +1477,99 @@
                 <plugin id="TiledBg" />
                 <texture />
             </object-type>
+            <object-type name="GuaranaFinalFase" sid="339867875021582">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284385582917954" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\Final- Guaraná\Guaraná 00.png">
+                            <collision-poly>
+                                <point x="0.277778" y="0.277778" />
+                                <point x="0.5" y="0.333333" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.622222" y="0.5" />
+                                <point x="0.9" y="0.9" />
+                                <point x="0.5" y="0.955556" />
+                                <point x="0.1" y="0.9" />
+                                <point x="0.133333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\Final- Guaraná\Guaraná 01.png">
+                            <collision-poly>
+                                <point x="0.144444" y="0.144444" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.622222" y="0.5" />
+                                <point x="0.9" y="0.9" />
+                                <point x="0.5" y="0.955556" />
+                                <point x="0.1" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\Final- Guaraná\Guaraná 02.png">
+                            <collision-poly>
+                                <point x="0.144444" y="0.144444" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.855556" y="0.5" />
+                                <point x="0.9" y="0.9" />
+                                <point x="0.5" y="0.955556" />
+                                <point x="0.1" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\Final- Guaraná\Guaraná 03.png">
+                            <collision-poly>
+                                <point x="0.144444" y="0.144444" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.855556" y="0.5" />
+                                <point x="0.9" y="0.9" />
+                                <point x="0.5" y="0.955556" />
+                                <point x="0.1" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RioFase2" sid="853498591792002">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980011990994909" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\rio1.png">
+                            <collision-poly>
+                                <point x="0.0246914" y="0.134831" />
+                                <point x="0.975309" y="0.134831" />
+                                <point x="0.995885" y="0.494382" />
+                                <point x="0.95679" y="0.764045" />
+                                <point x="0.0432099" y="0.764045" />
+                                <point x="0" y="0.494382" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\rio2.png">
+                            <collision-poly>
+                                <point x="0.0226337" y="0.123596" />
+                                <point x="0.977366" y="0.123596" />
+                                <point x="0.995885" y="0.494382" />
+                                <point x="0.95679" y="0.764045" />
+                                <point x="0.0432099" y="0.764045" />
+                                <point x="0" y="0.494382" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\rio3.png">
+                            <collision-poly>
+                                <point x="0.0246914" y="0.134831" />
+                                <point x="0.975309" y="0.134831" />
+                                <point x="0.99177" y="0.494382" />
+                                <point x="0.954733" y="0.752809" />
+                                <point x="0.0452675" y="0.752809" />
+                                <point x="0" y="0.494382" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Fases">
             <object-type name="Fase1_Fundo" sid="230111928141287">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508295869701976" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\mapa 01 ok.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\mapa 01 ok.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1496,6 +1588,112 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Fase2_Fundo" sid="974804522474824">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="829618625672462" speed="5">
+                        <frame duration="1" hotspotX="0.002079" hotspotY="0.00277778" original-source="C:\Users\patri\Desktop\cenario 2 ok.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fase3_Fundo" sid="574562187927566">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927787087743223" speed="5">
+                        <frame duration="1" hotspotX="0.00208333" hotspotY="0.00277778" original-source="C:\Users\patri\Desktop\mapa 3.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="GUI">
+            <object-type name="CardCaipora" sid="522600626958848">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504770868171251" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CardCuca" sid="389915010474917">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700037762307797" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CardCurupira" sid="915921938348570">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726062726964959" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CardMula" sid="757188918314597">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510974694881354" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CardSaci" sid="109244969014842">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710844365996355" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="AcelerarBotao" sid="317336911659000">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Acelerado" sid="504167370375517" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830611354774848" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GuaranaVida" sid="978524140776612">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304172392085600" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\Final- Guaraná\Guaraná 03.png">
+                            <collision-poly>
+                                <point x="0.144444" y="0.144444" />
+                                <point x="0.844444" y="0.155556" />
+                                <point x="0.855556" y="0.5" />
+                                <point x="0.9" y="0.9" />
+                                <point x="0.5" y="0.955556" />
+                                <point x="0.1" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PausarBotao" sid="786727025684785">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Pausado" sid="720576526329969" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="290332171472373" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="VoltarMenuBotao" sid="675440616287804">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894702895523681" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Mouse" sid="565626247793604">
             <plugin id="Mouse" />
@@ -1509,87 +1707,8 @@
         <object-type name="Function" sid="437304036268360">
             <plugin id="Function" />
         </object-type>
-        <object-type name="PausarBotao" sid="786727025684785">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Pausado" sid="720576526329969" type="boolean" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="290332171472373" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="AcelerarBotao" sid="317336911659000">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Acelerado" sid="504167370375517" type="boolean" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830611354774848" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="VoltarMenuBotao" sid="675440616287804">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894702895523681" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="GuaranaVida" sid="978524140776612">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304172392085600" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="CardSaci" sid="109244969014842">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710844365996355" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Button" sid="559794389624856">
             <plugin id="Button" />
-        </object-type>
-        <object-type name="CardCuca" sid="389915010474917">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700037762307797" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="CardCurupira" sid="915921938348570">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726062726964959" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="CardCaipora" sid="522600626958848">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504770868171251" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="CardMula" sid="757188918314597">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510974694881354" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type global="1" name="Ondas" sid="771785601887699">
             <plugin id="Arr" />
@@ -1676,6 +1795,8 @@
     <layout-folder>
         <layout-folder name="Fases">
             <layout>Fase1.xml</layout>
+            <layout>Fase2.xml</layout>
+            <layout>Fase3.xml</layout>
         </layout-folder>
         <layout>MenuPrincipal.xml</layout>
         <layout>Layout para objetos.xml</layout>
@@ -1696,6 +1817,8 @@
         </event-folder>
         <event-folder name="Fases">
             <event-sheet>Fase1.xml</event-sheet>
+            <event-sheet>Fase2.xml</event-sheet>
+            <event-sheet>Fase3.xml</event-sheet>
         </event-folder>
         <event-sheet>Jogo.xml</event-sheet>
         <event-sheet>MenuPrincipal.xml</event-sheet>
@@ -1717,8 +1840,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="67" />
-        <global-instance type="AJAX" uid="70" />
+        <global-instance type="Function" uid="161" />
+        <global-instance type="AJAX" uid="162" />
     </global-instances>
     <sounds-folder>
         <file name="TorreSaciAtaque.m4a" />
@@ -1739,6 +1862,10 @@
         <file name="TorreMulaAtaque.ogg" />
         <file name="TorreCaiporaAtaque.m4a" />
         <file name="TorreCaiporaAtaque.ogg" />
+        <file name="GameOver.m4a" />
+        <file name="GameOver.ogg" />
+        <file name="PerderVida.m4a" />
+        <file name="PerderVida.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">

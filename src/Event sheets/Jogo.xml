@@ -6,6 +6,7 @@
         <variable comment="Opacidade a ser usada nas torres quando estão sendo construídas." constant="1" name="TORRE_CONSTRUINDO_OPACITY" sid="775097329495963" static="0" type="number">50</variable>
         <variable comment="Quantidade total de ondas que as fases possuem." constant="1" name="TOTAL_ONDAS" sid="762576535214477" static="0" type="number">10</variable>
         <variable comment="Quantidade de dinheiro no início da fase." constant="1" name="DINHEIRO_INICIAL" sid="430335346948310" static="0" type="number">1000</variable>
+        <variable constant="0" name="GameOver" sid="257251146644517" static="0" type="number">0</variable>
         <variable constant="0" name="CustoTorreConstruindo" sid="667912732975726" static="0" type="number">0</variable>
         <variable constant="0" name="ConstruindoTorre" sid="508071098799263" static="0" type="number">0</variable>
         <variable constant="0" name="Vidas" sid="737657344023187" static="0" type="number">3</variable>
@@ -54,6 +55,9 @@
                             <param id="0" name="Variable">OndaInimigoAtual</param>
                             <param id="1" name="Value">-1</param>
                         </action>
+                        <action id="-13" name="Set time scale" sid="881199464027099" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="856289793945125" type="txtOnda">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -64,9 +68,7 @@
                         <condition id="-3" name="On end of layout" sid="790365161098629" type="System" />
                     </conditions>
                     <actions>
-                        <action id="6" name="Stop" sid="188839250578348" type="Audio">
-                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
-                        </action>
+                        <action id="33" name="Stop all" sid="192901748396352" type="Audio" />
                     </actions>
                 </event-block>
                 <event-block sid="481072421821242">
@@ -80,6 +82,9 @@
                         </action>
                         <action id="0" name="Set text" sid="494830300481354" type="txtDinheiro">
                             <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; DinheiroAtual</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="687099068190832" type="GuaranaFinalFase">
+                            <param id="0" name="Frame number">Vidas</param>
                         </action>
                     </actions>
                 </event-block>
@@ -357,7 +362,12 @@
                             <param id="2" name="Object clicked">PausarBotao</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="521045346637499" type="AcelerarBotao">
+                            <param id="0" name="Instance variable">Acelerado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="333887372937888">
                             <conditions>
@@ -405,7 +415,15 @@
                             <param id="2" name="Object clicked">AcelerarBotao</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="627441989143378" type="PausarBotao">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="886554811871673" type="PausarBotao">
+                            <param id="0" name="Instance variable">Pausado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="260004080516226">
                             <conditions>
@@ -450,6 +468,58 @@
                     <actions>
                         <action id="-25" name="Go to layout (by name)" sid="362312328251874" type="System">
                             <param id="0" name="Layout">&quot;MenuPrincipal&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390179929829095">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="769753414814095" type="System">
+                            <param id="0" name="Variable">Vidas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="883858425585489" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="922411178515829" type="txtFalhou">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="790377322212042">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="975044885924640" type="Audio">
+                                    <param id="0" name="Tag">&quot;GameOver&quot;</param>
+                                </condition>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="518254970312768" type="Audio">
+                                    <param id="0" name="Tag">&quot;PerderVida&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="768322222466498" type="Audio">
+                                    <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="514645408380859" type="Audio">
+                                    <param id="0" name="Audio file">GameOver</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;GameOver&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="145684275679529">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="564896505126408" type="Audio">
+                            <param id="0" name="Tag">&quot;GameOver&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="493844693356583" type="System">
+                            <param id="0" name="Layout">MenuPrincipal</param>
                         </action>
                     </actions>
                 </event-block>

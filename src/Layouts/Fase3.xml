@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Fase1</name>
-    <sid>260400252803821</sid>
-    <event-sheet>Fase1</event-sheet>
+    <name>Fase3</name>
+    <sid>698292567509145</sid>
+    <event-sheet>Fase3</event-sheet>
     <size>
         <width>640</width>
         <height>360</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Jogo - Cenário - Fundo" sid="268752649183020">
+        <layer name="Jogo - Cenário - Fundo" sid="601054312787911">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -29,29 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Fase1_Fundo" uid="20">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>480</width>
-                        <height>360</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpawnPoint" uid="10">
+                <instance type="SpawnPoint" uid="117">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -73,10 +51,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Fase3_Fundo" uid="70">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>360</height>
+                        <depth>0</depth>
+                        <hotspotX>0.002083333</hotspotX>
+                        <hotspotY>0.002777778</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Jogo - Chão" sid="420482967153445">
+        <layer name="Jogo - Chão" sid="145934069213836">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -94,7 +94,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Jogo - Torres e Inimigos" sid="771188489044174">
+        <layer name="Jogo - Torres e Inimigos" sid="286823553490566">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -112,7 +112,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Jogo - Cenário - Topo" sid="535357823329195">
+        <layer name="Jogo - Cenário - Topo" sid="578088120231066">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -128,7 +128,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Fase1_Arvore" uid="54">
+                <instance type="Fase1_Arvore" uid="118">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -150,7 +150,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GuaranaFinalFase" uid="67">
+                <instance type="GuaranaFinalFase" uid="119">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -175,7 +175,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="GUI - Fundo" sid="350938919586397">
+        <layer name="GUI - Fundo" sid="729650686517150">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -191,7 +191,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="FundoGUI" uid="19">
+                <instance type="FundoGUI" uid="120">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -216,7 +216,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="GUI - Frente" sid="880430370637180">
+        <layer name="GUI - Frente" sid="123055188648627">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -232,10 +232,10 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="txtOnda" uid="5">
+                <instance type="txtOnda" uid="121">
                     <properties>
                         <text>Onda 1</text>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -259,7 +259,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtVidas" uid="7">
+                <instance type="txtVidas" uid="122">
                     <properties>
                         <text>X</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -286,7 +286,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtFalhou" uid="8">
+                <instance type="txtFalhou" uid="123">
                     <properties>
                         <text>FALHOU</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -313,7 +313,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnPronto" uid="3">
+                <instance type="btnPronto" uid="124">
                     <properties>
                         <text>Iniciar próxima onda</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -340,7 +340,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtDinheiro" uid="6">
+                <instance type="txtDinheiro" uid="125">
                     <properties>
                         <text>Dinheiros: $xxx</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -367,7 +367,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PausarBotao" uid="56">
+                <instance type="PausarBotao" uid="126">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -392,7 +392,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="VoltarMenuBotao" uid="58">
+                <instance type="VoltarMenuBotao" uid="127">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -414,7 +414,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GuaranaVida" uid="68">
+                <instance type="GuaranaVida" uid="128">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -436,7 +436,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CardSaci" uid="69">
+                <instance type="CardSaci" uid="129">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -458,7 +458,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CardCuca" uid="4">
+                <instance type="CardCuca" uid="130">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -480,7 +480,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CardCurupira" uid="35">
+                <instance type="CardCurupira" uid="131">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -502,7 +502,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CardCaipora" uid="51">
+                <instance type="CardCaipora" uid="132">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -524,7 +524,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CardMula" uid="62">
+                <instance type="CardMula" uid="133">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -546,7 +546,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AcelerarBotao" uid="57">
+                <instance type="AcelerarBotao" uid="134">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -574,7 +574,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Guias" sid="638374927161118">
+        <layer name="Guias" sid="221727614910516">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -590,7 +590,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ZonaConstrucao" uid="9">
+                <instance type="ZonaConstrucao" uid="135">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -610,7 +610,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemyGoal" uid="18">
+                <instance type="EnemyGoal" uid="136">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -632,7 +632,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="22">
+                <instance type="ZonaConstrucao" uid="137">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -652,7 +652,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="23">
+                <instance type="ZonaConstrucao" uid="138">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -672,7 +672,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="24">
+                <instance type="ZonaConstrucao" uid="139">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -692,7 +692,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="25">
+                <instance type="ZonaConstrucao" uid="140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -712,7 +712,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="26">
+                <instance type="ZonaConstrucao" uid="141">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -732,7 +732,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="27">
+                <instance type="ZonaConstrucao" uid="142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -752,7 +752,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="28">
+                <instance type="ZonaConstrucao" uid="143">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -772,7 +772,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="29">
+                <instance type="ZonaConstrucao" uid="144">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -792,7 +792,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="30">
+                <instance type="ZonaConstrucao" uid="145">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -812,7 +812,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="31">
+                <instance type="ZonaConstrucao" uid="146">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -832,7 +832,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="11">
+                <instance type="PontoMovimento" uid="147">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -840,7 +840,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Ordem>0</Ordem>
+                        <Ordem>1</Ordem>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -857,7 +857,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="14">
+                <instance type="PontoMovimento" uid="148">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -865,7 +865,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Ordem>1</Ordem>
+                        <Ordem>2</Ordem>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -882,7 +882,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="16">
+                <instance type="PontoMovimento" uid="149">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -890,7 +890,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Ordem>2</Ordem>
+                        <Ordem>3</Ordem>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -907,7 +907,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="17">
+                <instance type="PontoMovimento" uid="150">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -915,7 +915,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Ordem>3</Ordem>
+                        <Ordem>4</Ordem>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -932,7 +932,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PontoMovimento" uid="21">
+                <instance type="PontoMovimento" uid="151">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -940,7 +940,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Ordem>4</Ordem>
+                        <Ordem>5</Ordem>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -957,7 +957,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaCaminho" uid="36">
+                <instance type="ZonaCaminho" uid="152">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -977,7 +977,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaCaminho" uid="37">
+                <instance type="ZonaCaminho" uid="153">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -997,7 +997,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaCaminho" uid="38">
+                <instance type="ZonaCaminho" uid="154">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1017,7 +1017,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaCaminho" uid="39">
+                <instance type="ZonaCaminho" uid="155">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1037,7 +1037,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaCaminho" uid="40">
+                <instance type="ZonaCaminho" uid="156">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1057,7 +1057,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZonaConstrucao" uid="55">
+                <instance type="ZonaConstrucao" uid="157">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>

@@ -83,6 +83,16 @@
                     <param id="0" name="Variable">Vidas</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="25" name="Play at object" sid="233965712608138" type="Audio">
+                    <param id="0" name="Audio file">PerderVida</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">0</param>
+                    <param id="3" name="Object">GuaranaFinalFase</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;PerderVida&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="378564797738253">

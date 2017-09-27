@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fase3</name>
+    <events>
+        <event-block sid="382351053238452">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="248647745630815" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="908568563042647" type="AJAX">
+                    <param id="0" name="Tag">&quot;Ondas&quot;</param>
+                    <param id="1" name="File">Fase1_Ondas.json</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="481683422771107">
+            <conditions>
+                <condition id="0" name="On completed" sid="111960662612623" type="AJAX">
+                    <param id="0" name="Tag">&quot;Ondas&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="567238447382781" type="Ondas">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <include>Jogo</include>
+    </events>
+</c2eventsheet>

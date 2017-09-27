@@ -105,7 +105,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>690</x>
+                        <x>661</x>
                         <y>30</y>
                         <z>0</z>
                         <width>192</width>
@@ -132,7 +132,105 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>690</x>
+                        <x>661</x>
+                        <y>30</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>144</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Fase2_Fundo" uid="112">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>862</x>
+                        <y>30</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>144</height>
+                        <depth>0</depth>
+                        <hotspotX>0.002079002</hotspotX>
+                        <hotspotY>0.002777778</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuPrincipalFase2Texto" uid="113">
+                    <properties>
+                        <text>Fase 2</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-15,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>862</x>
+                        <y>30</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>144</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Fase3_Fundo" uid="114">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1063</x>
+                        <y>30</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>144</height>
+                        <depth>0</depth>
+                        <hotspotX>0.002083333</hotspotX>
+                        <hotspotY>0.002777778</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuPrincipalFase3Texto" uid="115">
+                    <properties>
+                        <text>Fase 3</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-15,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1063</x>
                         <y>30</y>
                         <z>0</z>
                         <width>192</width>
