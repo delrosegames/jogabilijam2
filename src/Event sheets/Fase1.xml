@@ -9,24 +9,40 @@
                 <condition id="-2" name="On start of layout" sid="228419311402892" type="System" />
             </conditions>
             <actions>
-                <action id="5" name="Push" sid="773234927482735" type="Ondas">
+                <action disabled="1" id="5" name="Push" sid="773234927482735" type="Ondas">
                     <param id="0" name="Where">0</param>
                     <param id="1" name="Value">&quot;A&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
-                <action id="5" name="Push" sid="232156586689983" type="Ondas">
+                <action disabled="1" id="5" name="Push" sid="232156586689983" type="Ondas">
                     <param id="0" name="Where">0</param>
                     <param id="1" name="Value">&quot;B&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
-                <action id="5" name="Push" sid="355935998652477" type="Ondas">
+                <action disabled="1" id="5" name="Push" sid="355935998652477" type="Ondas">
                     <param id="0" name="Where">0</param>
                     <param id="1" name="Value">&quot;C&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
+                <action id="1" name="Request project file" sid="977002564495493" type="AJAX">
+                    <param id="0" name="Tag">&quot;Ondas&quot;</param>
+                    <param id="1" name="File">Fase1_Ondas.json</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="796725333265299">
+        <event-block sid="228450738685173">
+            <conditions>
+                <condition id="0" name="On completed" sid="545393201298139" type="AJAX">
+                    <param id="0" name="Tag">&quot;Ondas&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="876771889465230" type="Ondas">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="796725333265299">
             <conditions>
                 <condition id="0" name="On click" sid="294717438111605" type="Mouse">
                     <param id="0" name="Mouse button">2</param>

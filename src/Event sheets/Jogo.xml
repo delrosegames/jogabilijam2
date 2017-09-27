@@ -5,14 +5,14 @@
     <events>
         <variable comment="Opacidade a ser usada nas torres quando estão sendo construídas." constant="1" name="TORRE_CONSTRUINDO_OPACITY" sid="775097329495963" static="0" type="number">50</variable>
         <variable comment="Quantidade total de ondas que as fases possuem." constant="1" name="TOTAL_ONDAS" sid="762576535214477" static="0" type="number">10</variable>
+        <variable comment="Quantidade de dinheiro no início da fase." constant="1" name="DINHEIRO_INICIAL" sid="430335346948310" static="0" type="number">1000</variable>
         <variable constant="0" name="CustoTorreConstruindo" sid="667912732975726" static="0" type="number">0</variable>
         <variable constant="0" name="ConstruindoTorre" sid="508071098799263" static="0" type="number">0</variable>
         <variable constant="0" name="Vidas" sid="737657344023187" static="0" type="number">3</variable>
-        <variable constant="0" name="Timer" sid="746709797750586" static="0" type="number">-1</variable>
-        <variable constant="0" name="DinheiroAtual" sid="147354329828043" static="0" type="number">10000</variable>
+        <variable constant="0" name="DinheiroAtual" sid="147354329828043" static="0" type="number">0</variable>
+        <variable constant="0" name="OndaVindo" sid="126360296475382" static="0" type="number">0</variable>
         <variable constant="0" name="OndaAtual" sid="621447858659797" static="0" type="number">0</variable>
-        <variable constant="0" name="CurrentEnemies" sid="534231386862536" static="0" type="number">0</variable>
-        <variable constant="0" name="TotalEnemies" sid="140726674155418" static="0" type="number">10</variable>
+        <variable constant="0" name="OndaInimigoAtual" sid="308898413524551" static="0" type="number">-1</variable>
         <event-group description="" sid="511951437666883" title="Inicialização">
             <sub-events>
                 <event-block sid="200644767437486">
@@ -38,25 +38,24 @@
                             <param id="0" name="Variable">Vidas</param>
                             <param id="1" name="Value">3</param>
                         </action>
-                        <action id="-9" name="Set value" sid="446050567390669" type="System">
-                            <param id="0" name="Variable">Timer</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
                         <action id="-9" name="Set value" sid="612775161210740" type="System">
                             <param id="0" name="Variable">DinheiroAtual</param>
-                            <param id="1" name="Value">10000</param>
+                            <param id="1" name="Value">DINHEIRO_INICIAL</param>
                         </action>
                         <action id="-9" name="Set value" sid="450587183334490" type="System">
+                            <param id="0" name="Variable">OndaVindo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="401845567240579" type="System">
                             <param id="0" name="Variable">OndaAtual</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="959921185748036" type="System">
-                            <param id="0" name="Variable">CurrentEnemies</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="-9" name="Set value" sid="493020860621384" type="System">
+                            <param id="0" name="Variable">OndaInimigoAtual</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="723649705532358" type="System">
-                            <param id="0" name="Variable">TotalEnemies</param>
-                            <param id="1" name="Value">10</param>
+                        <action id="-15" name="Set visible" sid="856289793945125" type="txtOnda">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -185,94 +184,145 @@
         </event-group>
         <event-group description="" sid="217458358523251" title="Enemy spawning and movement">
             <sub-events>
-                <event-block sid="867015701702931">
+                <event-block sid="817788755569178">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="370313944984104" type="System">
-                            <param id="0" name="Variable">Timer</param>
-                            <param id="1" name="Comparison">5</param>
+                        <condition id="-14" name="Compare variable" sid="796654852505338" type="System">
+                            <param id="0" name="Variable">OndaVindo</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="361610049710697" type="System">
+                            <param id="0" name="Variable">OndaAtual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Ondas.Width</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="711688873565072" type="btnPronto">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="742475490052887">
+                        <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
+                        <event-block any="1" sid="719823273303887">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="481483151217900" type="System">
-                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                <condition id="6" name="On object clicked" sid="233243161357255" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btnPronto</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="755514663872233" type="System">
-                                    <param id="0" name="Variable">CurrentEnemies</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">TotalEnemies</param>
+                                <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="457934856402363" type="SpawnPoint">
-                                    <param id="0" name="Object">InimigoCarinha</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="750729167659018" type="System">
-                                    <param id="0" name="Variable">CurrentEnemies</param>
+                                <action id="-9" name="Set value" sid="283963509052349" type="System">
+                                    <param id="0" name="Variable">OndaVindo</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="212760558417889" title="Timer">
-            <sub-events>
-                <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
-                <event-block any="1" sid="719823273303887">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="233243161357255" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">btnPronto</param>
-                        </condition>
-                        <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
-                            <param id="0" name="Key">13 (Return)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="971314478371408">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="991946828535790" type="System">
-                                    <param id="0" name="Variable">Timer</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="392217073960283" type="System">
-                                    <param id="0" name="Variable">CurrentEnemies</param>
-                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="122560760405938" type="System">
                                     <param id="0" name="Variable">OndaAtual</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="192169636041595" type="System">
+                                    <param id="0" name="Variable">OndaInimigoAtual</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="885849639393558" type="txtOnda">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Inicia o Timer artificial</comment>
-                <event-block sid="790830225865745">
+                <event-block sid="726225427006600">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="278633144268187" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="341511226190070" type="System">
-                            <param id="0" name="Variable">Timer</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="-14" name="Compare variable" sid="554738223601073" type="System">
+                            <param id="0" name="Variable">OndaVindo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="714605096918984" type="System">
-                            <param id="0" name="Variable">Timer</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-15" name="Set visible" sid="155715829073974" type="btnPronto">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="148810237285925">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="589405409209464" type="System">
+                                    <param id="0" name="Interval (seconds)">0.45</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="139784853445327" type="System">
+                                    <param id="0" name="Variable">OndaInimigoAtual</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">Ondas.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="800055139701517" type="System">
+                                    <param id="0" name="Variable">OndaInimigoAtual</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>O item 1 é o Inimigo Carinha.</comment>
+                                <event-block sid="363211378720282">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="828038784386220" type="Ondas">
+                                            <param id="0" name="X">OndaAtual - 1</param>
+                                            <param id="1" name="Y">OndaInimigoAtual</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="662287511112903" type="SpawnPoint">
+                                            <param id="0" name="Object">InimigoCarinha</param>
+                                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Se o item da onda for -1, quer dizer que é o fim da onda.</comment>
+                                <event-block sid="818228605213098">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="108997722574013" type="Ondas">
+                                            <param id="0" name="X">OndaAtual - 1</param>
+                                            <param id="1" name="Y">OndaInimigoAtual</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="455721522729347" type="System">
+                                            <param id="0" name="Variable">OndaInimigoAtual</param>
+                                            <param id="1" name="Value">Ondas.Height</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="613325657845798">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="990039167970238" type="System">
+                            <param id="0" name="Variable">OndaVindo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="241920108764885" type="System">
+                            <param id="0" name="First value">InimigoCarinha.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="130903332576921" type="System">
+                            <param id="0" name="Variable">OndaVindo</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>

@@ -666,7 +666,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="Ondas" uid="68">
+        <instance type="Ondas" uid="15">
             <properties>
                 <width>0</width>
                 <height>2</height>

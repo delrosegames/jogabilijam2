@@ -239,7 +239,7 @@
                 <instance type="txtOnda" uid="5">
                     <properties>
                         <text>Onda 1</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>

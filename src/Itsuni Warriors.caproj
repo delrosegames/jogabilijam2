@@ -10,6 +10,7 @@
     <unique-id>19h5e6iiz1hif</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
@@ -1593,6 +1594,9 @@
         <object-type global="1" name="Ondas" sid="771785601887699">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="AJAX" sid="649208728764214">
+            <plugin id="AJAX" />
+        </object-type>
     </object-folder>
     <families>
         <family name="FTorreBase" plugin-id="Sprite" sid="544994410967895">
@@ -1699,7 +1703,7 @@
     <global-instances>
         <global-instance type="Mouse" uid="64" />
         <global-instance type="Keyboard" uid="65" />
-        <global-instance type="Audio" uid="15">
+        <global-instance type="Audio" uid="53">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -1713,7 +1717,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="53" />
+        <global-instance type="Function" uid="67" />
+        <global-instance type="AJAX" uid="70" />
     </global-instances>
     <sounds-folder>
         <file name="TorreSaciAtaque.m4a" />
@@ -1753,6 +1758,9 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Fases">
+            <file name="Fase1_Ondas.json" />
         </file-folder>
     </files-folder>
 </c2project>
