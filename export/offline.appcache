@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1506400294
+#1506476849
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -25,6 +25,9 @@ images/torrecurupiratirobase-sheet0.png
 images/torrecaiporabase-sheet0.png
 images/torrecaipora-sheet0.png
 images/torrecaiporatiro-sheet0.png
+images/torremulabase-sheet0.png
+images/torremula-sheet0.png
+images/torremula-sheet1.png
 images/inimigocarinha-sheet0.png
 images/inimigocarinha-sheet1.png
 images/inimigocarinhabase-sheet0.png
@@ -35,11 +38,18 @@ images/pontomovimento-sheet0.png
 images/spawnpoint-sheet0.png
 images/zonacaminho.png
 images/zonaconstrucao.png
+images/guaranafinalfase-sheet0.png
 images/fase1_fundo-sheet0.png
 images/fase1_arvore-sheet0.png
+images/cardcaipora-sheet0.png
+images/cardcuca-sheet0.png
+images/cardcurupira-sheet0.png
+images/cardmula-sheet0.png
+images/cardsaci-sheet0.png
+images/acelerarbotao-sheet0.png
+images/guaranavida-sheet0.png
 images/pausarbotao-sheet0.png
 images/pausarbotao-sheet1.png
-images/acelerarbotao-sheet0.png
 images/voltarmenubotao-sheet0.png
 media/torresaciataque.m4a
 media/torresaciataque.ogg
@@ -55,6 +65,14 @@ media/inimigogordaoatacado.m4a
 media/inimigogordaoatacado.ogg
 media/torrecucaataque.m4a
 media/torrecucaataque.ogg
+media/torremulaataque.m4a
+media/torremulaataque.ogg
+media/torrecaiporaataque.m4a
+media/torrecaiporaataque.ogg
+media/gameover.m4a
+media/gameover.ogg
+media/perdervida.m4a
+media/perdervida.ogg
 media/menuprincipalmusica.m4a
 media/menuprincipalmusica.ogg
 media/mattoglseby%20-%203.m4a
