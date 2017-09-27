@@ -2,7 +2,7 @@
 <c2layout>
     <name>Fase1</name>
     <sid>260400252803821</sid>
-    <event-sheet>Jogo</event-sheet>
+    <event-sheet>Fase1</event-sheet>
     <size>
         <width>640</width>
         <height>360</height>

@@ -10,6 +10,7 @@
     <unique-id>19h5e6iiz1hif</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -1537,6 +1538,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type global="1" name="Ondas" sid="771785601887699">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="FTorreBase" plugin-id="Sprite" sid="544994410967895">
@@ -1633,6 +1637,9 @@
         </event-folder>
         <event-folder name="Families">
             <event-sheet>FTorresInimigos.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Fases">
+            <event-sheet>Fase1.xml</event-sheet>
         </event-folder>
         <event-sheet>Jogo.xml</event-sheet>
         <event-sheet>MenuPrincipal.xml</event-sheet>
