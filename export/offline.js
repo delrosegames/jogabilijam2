@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1506476849,
+	"version": 1506484032,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -40,8 +40,11 @@
 		"images/zonacaminho.png",
 		"images/zonaconstrucao.png",
 		"images/guaranafinalfase-sheet0.png",
+		"images/riofase2-sheet0.png",
 		"images/fase1_fundo-sheet0.png",
 		"images/fase1_arvore-sheet0.png",
+		"images/fase2_fundo-sheet0.png",
+		"images/fase3_fundo-sheet0.png",
 		"images/cardcaipora-sheet0.png",
 		"images/cardcuca-sheet0.png",
 		"images/cardcurupira-sheet0.png",
@@ -83,6 +86,7 @@
 		"icon-114.png",
 		"icon-128.png",
 		"icon-256.png",
-		"loading-logo.png"
+		"loading-logo.png",
+		"fase1_ondas.json"
 	]
 }
