@@ -203,42 +203,66 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="711688873565072" type="btnPronto">
+                        <action id="-15" name="Set visible" sid="790862649171809" type="BotaoProximaOnda">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
-                        <event-block any="1" sid="719823273303887">
+                        <event-block sid="719823273303887">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="233243161357255" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">btnPronto</param>
-                                </condition>
                                 <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
                                     <param id="0" name="Key">13 (Return)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="283963509052349" type="System">
-                                    <param id="0" name="Variable">OndaVindo</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Call function" sid="438077127205063" type="Function">
+                                    <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-10" name="Add to" sid="122560760405938" type="System">
-                                    <param id="0" name="Variable">OndaAtual</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="192169636041595" type="System">
-                                    <param id="0" name="Variable">OndaInimigoAtual</param>
-                                    <param id="1" name="Value">-1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="885849639393558" type="txtOnda">
-                                    <param id="0" name="Visibility">1</param>
+                            </actions>
+                        </event-block>
+                        <event-block sid="276888967581913">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="936821063918717" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" sid="620482163744867" type="Mouse">
+                                    <param id="0" name="Object">BotaoProximaOnda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="582963811519937" type="Function">
+                                    <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
+                <event-block sid="240296123357771">
+                    <conditions>
+                        <condition id="0" name="On function" sid="675949412688109" type="Function">
+                            <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="283963509052349" type="System">
+                            <param id="0" name="Variable">OndaVindo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="122560760405938" type="System">
+                            <param id="0" name="Variable">OndaAtual</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="192169636041595" type="System">
+                            <param id="0" name="Variable">OndaInimigoAtual</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="885849639393558" type="txtOnda">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="726225427006600">
                     <conditions>
@@ -249,7 +273,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="155715829073974" type="btnPronto">
+                        <action id="-15" name="Set visible" sid="980276211649896" type="BotaoProximaOnda">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -392,6 +416,35 @@
         </event-group>
         <event-group description="" sid="935227215247602" title="Controles da Fase">
             <sub-events>
+                <event-block sid="860091847341616">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="464878668420726" type="Mouse">
+                            <param id="0" name="Object">BotaoProximaOnda</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="312286025198453" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="174451582661007" type="BotaoProximaOnda">
+                            <param id="0" name="Animation">&quot;Pressionado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="908658250302164">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="833452536555384" type="Mouse">
+                            <param id="0" name="Object">BotaoProximaOnda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="989443988737532" type="BotaoProximaOnda">
+                            <param id="0" name="Animation">&quot;Piscando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="239516784665887">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="660485750382426" type="Mouse">

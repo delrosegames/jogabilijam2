@@ -1868,22 +1868,11 @@
             </object-type>
         </object-folder>
         <object-folder name="Jogo">
-            <object-type name="btnPronto" sid="679580239706214">
-                <plugin id="Text" />
-            </object-type>
             <object-type name="EnemyGoal" sid="692816703787875">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="968163514580144" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="FundoGUI" sid="878652979657616">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737176356470673" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2148,6 +2137,40 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894702895523681" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoGUI" sid="878652979657616">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737176356470673" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Menu Fundo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoProximaOnda" sid="394766353625437">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Piscando" pingpong="0" repeatcount="1" repeatto="0" sid="760668925557352" speed="1.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Iniciar Próxima Onda - Piscando 01 - Azul.png">
+                            <collision-poly>
+                                <point x="0.00757576" y="0.0123457" />
+                                <point x="0.992424" y="0.0123457" />
+                                <point x="0.992424" y="0.987654" />
+                                <point x="0.00757576" y="0.987654" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Iniciar Próxima Onda - Piscando 02 - Branco.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pressionado" pingpong="0" repeatcount="1" repeatto="0" sid="776394196484571" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Iniciar Próxima Onda - Botão Apertado.png">
+                            <collision-poly>
+                                <point x="0.0151515" y="0.0246914" />
+                                <point x="0.984848" y="0.0246914" />
+                                <point x="0.992424" y="0.987654" />
+                                <point x="0.00757576" y="0.987654" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>

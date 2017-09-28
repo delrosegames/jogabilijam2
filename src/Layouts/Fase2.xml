@@ -183,8 +183,8 @@
                         <x>480</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>159</width>
-                        <height>359</height>
+                        <width>2544</width>
+                        <height>12924</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -285,33 +285,6 @@
                         <z>0</z>
                         <width>160</width>
                         <height>37</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="btnPronto" uid="78">
-                    <properties>
-                        <text>Iniciar próxima onda</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-13,700,0</font>
-                        <color>0,153,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>478</x>
-                        <y>33</y>
-                        <z>0</z>
-                        <width>160</width>
-                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
