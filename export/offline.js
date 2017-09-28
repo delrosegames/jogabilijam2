@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1506484540,
+	"version": 1506569991,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -33,6 +33,12 @@
 		"images/inimigocarinha-sheet1.png",
 		"images/inimigocarinhabase-sheet0.png",
 		"images/inimigocarinhadevagar-sheet0.png",
+		"images/inimigogordao-sheet0.png",
+		"images/inimigogordao-sheet1.png",
+		"images/inimigogordaobase-sheet0.png",
+		"images/inimigochefao-sheet0.png",
+		"images/inimigochefao-sheet1.png",
+		"images/inimigochefaobase-sheet0.png",
 		"images/enemygoal-sheet0.png",
 		"images/fundogui-sheet0.png",
 		"images/pontomovimento-sheet0.png",
