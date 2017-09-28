@@ -308,6 +308,24 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>O item 3 é o Inimigo Chefão.</comment>
+                                <event-block sid="561578838363159">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="609685729181427" type="Ondas">
+                                            <param id="0" name="X">OndaAtual - 1</param>
+                                            <param id="1" name="Y">OndaInimigoAtual</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="376971339001675" type="SpawnPoint">
+                                            <param id="0" name="Object">InimigoChefao</param>
+                                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <comment>Se o item da onda for -1, quer dizer que é o fim da onda.</comment>
                                 <event-block sid="818228605213098">
                                     <conditions>
@@ -369,6 +387,7 @@
             <sub-events>
                 <include>InimigoCarinha</include>
                 <include>InimigoGordao</include>
+                <include>InimigoChefao</include>
             </sub-events>
         </event-group>
         <event-group description="" sid="935227215247602" title="Controles da Fase">
