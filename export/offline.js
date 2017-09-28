@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1506569991,
+	"version": 1506574030,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -40,7 +40,6 @@
 		"images/inimigochefao-sheet1.png",
 		"images/inimigochefaobase-sheet0.png",
 		"images/enemygoal-sheet0.png",
-		"images/fundogui-sheet0.png",
 		"images/pontomovimento-sheet0.png",
 		"images/spawnpoint-sheet0.png",
 		"images/zonacaminho.png",
@@ -61,6 +60,9 @@
 		"images/pausarbotao-sheet0.png",
 		"images/pausarbotao-sheet1.png",
 		"images/voltarmenubotao-sheet0.png",
+		"images/fundogui-sheet0.png",
+		"images/botaoproximaonda-sheet0.png",
+		"images/textodinheiro.png",
 		"media/torresaciataque.m4a",
 		"media/torresaciataque.ogg",
 		"media/torrecurupiraataqueacerto.m4a",
