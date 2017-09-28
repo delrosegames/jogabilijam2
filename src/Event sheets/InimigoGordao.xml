@@ -1,70 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>InimigoCarinha</name>
+    <name>InimigoGordao</name>
     <events>
-        <variable constant="1" name="INIMIGO_CARINHA_VELOCIDADE" sid="368365106531972" static="0" type="number">70</variable>
-        <variable constant="1" name="INIMIGO_CARINHA_PV_BASE" sid="294692083084042" static="0" type="number">5</variable>
-        <event-block sid="452106485874531">
+        <variable constant="1" name="INIMIGO_GORDAO_VELOCIDADE" sid="378485760750546" static="0" type="number">50</variable>
+        <variable constant="1" name="INIMIGO_GORDAO_PV_BASE" sid="645758954775981" static="0" type="number">10</variable>
+        <event-block sid="798643924827674">
             <conditions>
-                <condition id="-18" name="On created" sid="862760534543767" type="InimigoCarinhaBase" />
+                <condition id="-18" name="On created" sid="874627955665347" type="InimigoGordaoBase" />
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="396705606790675" type="InimigoCarinhaBase">
+                <action id="-10" name="Set value" sid="532209796518941" type="InimigoGordaoBase">
                     <param id="0" name="Instance variable">PontosVida</param>
-                    <param id="1" name="Value">INIMIGO_CARINHA_PV_BASE + ((OndaAtual - 1) * (INIMIGO_CARINHA_PV_BASE/2))</param>
+                    <param id="1" name="Value">INIMIGO_GORDAO_PV_BASE + ((OndaAtual - 1) * (INIMIGO_GORDAO_PV_BASE/2))</param>
                 </action>
-                <action id="-10" name="Set value" sid="364148524142305" type="InimigoCarinhaBase">
+                <action id="-10" name="Set value" sid="363791226567054" type="InimigoGordaoBase">
                     <param id="0" name="Instance variable">PontosVidaAnterior</param>
-                    <param id="1" name="Value">InimigoCarinhaBase.PontosVida</param>
+                    <param id="1" name="Value">InimigoGordaoBase.PontosVida</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="396454856612591" type="InimigoCarinha">
-                    <param id="0" name="Pin to">InimigoCarinhaBase</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="689725162226470" type="InimigoGordao">
+                    <param id="0" name="Pin to">InimigoGordaoBase</param>
                     <param id="1" name="Mode">1</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="534997722615497" type="InimigoCarinhaDevagar">
-                    <param id="0" name="Pin to">InimigoCarinha</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="817111624969691" type="InimigoGordaoDevagar">
+                    <param id="0" name="Pin to">InimigoGordao</param>
                     <param id="1" name="Mode">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="887122771947611" type="InimigoCarinhaDevagar">
+                <action id="-15" name="Set visible" sid="440686299127894" type="InimigoGordaoDevagar">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="479708935022218" type="InimigoCarinhaHP">
-                    <param id="0" name="Pin to">InimigoCarinha</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="109995295491579" type="InimigoGordaoHP">
+                    <param id="0" name="Pin to">InimigoGordao</param>
                     <param id="1" name="Mode">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="269827266879050">
+        <event-block sid="298397866811785">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="680218049729246" type="InimigoCarinhaBase">
+                <condition id="0" name="On collision with another object" sid="288745567313755" type="InimigoGordaoBase">
                     <param id="0" name="Object">PontoMovimento</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="548604558235020" type="InimigoCarinhaBase">
+                <action id="-10" name="Set value" sid="507801034250769" type="InimigoGordaoBase">
                     <param id="0" name="Instance variable">CurrentDestination</param>
                     <param id="1" name="Value">PontoMovimento.Ordem+1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="967390911316186">
+        <event-block sid="230087507913644">
             <conditions>
-                <condition id="-11" name="For Each" sid="947350158839464" type="System">
-                    <param id="0" name="Object">InimigoCarinhaBase</param>
+                <condition id="-11" name="For Each" sid="995652798392498" type="System">
+                    <param id="0" name="Object">InimigoGordaoBase</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="951644318464481">
+                <event-block sid="354733957953038">
                     <conditions>
-                        <condition id="-34" name="Pick by evaluate" sid="383681595120874" type="System">
+                        <condition id="-34" name="Pick by evaluate" sid="977049780126658" type="System">
                             <param id="0" name="Object">PontoMovimento</param>
-                            <param id="1" name="Expression">PontoMovimento.Ordem = InimigoCarinhaBase.CurrentDestination</param>
+                            <param id="1" name="Expression">PontoMovimento.Ordem = InimigoGordaoBase.CurrentDestination</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-22" name="Set angle toward position" sid="556515130501144" type="InimigoCarinhaBase">
+                        <action id="-22" name="Set angle toward position" sid="787794727020043" type="InimigoGordaoBase">
                             <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
                             <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
                         </action>
@@ -72,19 +72,19 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="580077237622810">
+        <event-block sid="448280352086833">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="384520987873014" type="InimigoCarinhaBase">
+                <condition id="0" name="On collision with another object" sid="399777290046026" type="InimigoGordaoBase">
                     <param id="0" name="Object">EnemyGoal</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="772221202387867" type="InimigoCarinhaBase" />
-                <action id="-11" name="Subtract from" sid="434971595620994" type="System">
+                <action id="-9" name="Destroy" sid="275479776008459" type="InimigoGordaoBase" />
+                <action id="-11" name="Subtract from" sid="732146664710497" type="System">
                     <param id="0" name="Variable">Vidas</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="25" name="Play at object" sid="233965712608138" type="Audio">
+                <action id="25" name="Play at object" sid="803062732286084" type="Audio">
                     <param id="0" name="Audio file">PerderVida</param>
                     <param id="1" name="Loop">0</param>
                     <param id="2" name="Volume">0</param>
@@ -96,146 +96,146 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="378564797738253">
+        <event-block sid="483212388357781">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="305160777681754" type="InimigoCarinhaBase">
+                <condition id="-7" name="Compare instance variable" sid="681247985680296" type="InimigoGordaoBase">
                     <param id="0" name="Instance variable">PontosVida</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="369429204019795" type="InimigoCarinha" />
-                <action id="-10" name="Add to" sid="489021851363339" type="System">
+                <action id="-9" name="Destroy" sid="154945621173151" type="InimigoGordao" />
+                <action id="-10" name="Add to" sid="275383952471436" type="System">
                     <param id="0" name="Variable">DinheiroAtual</param>
                     <param id="1" name="Value">2*OndaAtual</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="884465212408120">
+        <event-block sid="956148501879761">
             <conditions>
-                <condition id="-9" name="Is visible" sid="945006766098445" type="InimigoCarinhaHP" />
+                <condition id="-9" name="Is visible" sid="361631378529568" type="InimigoGordaoHP" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="414223159770690" type="InimigoCarinhaHP">
-                    <param id="0" name="Text">InimigoCarinhaBase.PontosVida</param>
+                <action id="0" name="Set text" sid="527293399629505" type="InimigoGordaoHP">
+                    <param id="0" name="Text">InimigoGordaoBase.PontosVida</param>
                 </action>
-                <action id="-24" name="Move to top" sid="184050003503892" type="InimigoCarinhaHP" />
+                <action id="-24" name="Move to top" sid="736621529829373" type="InimigoGordaoHP" />
             </actions>
         </event-block>
-        <event-group description="" sid="305892856718957" title="Efeito - Devagar">
+        <event-group description="" sid="893225510654209" title="Inimigo Gordão - Efeito - Devagar">
             <sub-events>
-                <event-block sid="798608113692711">
+                <event-block sid="425995617020288">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="334079250884517" type="System">
+                        <condition id="-6" name="Every X seconds" sid="907587155400576" type="System">
                             <param id="0" name="Interval (seconds)">1</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="164080900689913" type="InimigoCarinhaBase">
+                        <condition id="-7" name="Compare instance variable" sid="212868274717877" type="InimigoGordaoBase">
                             <param id="0" name="Instance variable">TempoDevagar</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="857117974897122" type="InimigoCarinhaBase">
+                        <action id="-10" name="Set value" sid="398061565071549" type="InimigoGordaoBase">
                             <param id="0" name="Instance variable">TempoDevagar</param>
-                            <param id="1" name="Value">InimigoCarinhaBase.TempoDevagar - 1</param>
+                            <param id="1" name="Value">InimigoGordaoBase.TempoDevagar - 1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="880227277276500">
+                <event-block sid="775244091008277">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="218215897243949" type="InimigoCarinhaBase">
+                        <condition id="-7" name="Compare instance variable" sid="451700652119175" type="InimigoGordaoBase">
                             <param id="0" name="Instance variable">TempoDevagar</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="143955018430874" type="InimigoCarinhaBase">
-                            <param id="0" name="Speed">INIMIGO_CARINHA_VELOCIDADE / 2</param>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="644556348127222" type="InimigoGordaoBase">
+                            <param id="0" name="Speed">INIMIGO_GORDAO_VELOCIDADE / 2</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="702383073434345" type="InimigoCarinhaDevagar">
+                        <action id="-15" name="Set visible" sid="798049340554697" type="InimigoGordaoDevagar">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="246154516460209">
+                <event-block sid="409625043061932">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="532340516197534" type="InimigoCarinhaBase">
+                        <condition id="-7" name="Compare instance variable" sid="499840604476903" type="InimigoGordaoBase">
                             <param id="0" name="Instance variable">TempoDevagar</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="264518921457482" type="InimigoCarinhaBase">
-                            <param id="0" name="Speed">INIMIGO_CARINHA_VELOCIDADE</param>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="370297732835588" type="InimigoGordaoBase">
+                            <param id="0" name="Speed">INIMIGO_GORDAO_VELOCIDADE</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="981849243193847" type="InimigoCarinhaDevagar">
+                        <action id="-15" name="Set visible" sid="688015156661882" type="InimigoGordaoDevagar">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="108200162256977" title="Seleciona a animação">
+        <event-group description="" sid="494618286565640" title="Inimigo Gordão - Seleciona a animação">
             <sub-events>
-                <event-block any="1" sid="426492180647390">
+                <event-block any="1" sid="286125274251924">
                     <conditions>
-                        <condition id="-13" name="Is between angles" sid="747827830181339" type="InimigoCarinhaBase">
+                        <condition id="-13" name="Is between angles" sid="285349253199611" type="InimigoGordaoBase">
                             <param id="0" name="First angle">0</param>
                             <param id="1" name="Second angle">45</param>
                         </condition>
-                        <condition id="-13" name="Is between angles" sid="252009855261565" type="InimigoCarinhaBase">
+                        <condition id="-13" name="Is between angles" sid="591759015628303" type="InimigoGordaoBase">
                             <param id="0" name="First angle">315.01</param>
                             <param id="1" name="Second angle">360</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="895069267123860" type="InimigoCarinha">
+                        <action id="4" name="Set animation" sid="502853596615390" type="InimigoGordao">
                             <param id="0" name="Animation">&quot;Direita&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="120988151298774">
+                <event-block sid="540146810423256">
                     <conditions>
-                        <condition id="-13" name="Is between angles" sid="980327386190540" type="InimigoCarinhaBase">
+                        <condition id="-13" name="Is between angles" sid="204355251373764" type="InimigoGordaoBase">
                             <param id="0" name="First angle">45.01</param>
                             <param id="1" name="Second angle">135</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="556404855550565" type="InimigoCarinha">
+                        <action id="4" name="Set animation" sid="938142224204446" type="InimigoGordao">
                             <param id="0" name="Animation">&quot;Frente&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="458768744390449">
+                <event-block sid="698918527645792">
                     <conditions>
-                        <condition id="-13" name="Is between angles" sid="501532221430375" type="InimigoCarinhaBase">
+                        <condition id="-13" name="Is between angles" sid="183983341960093" type="InimigoGordaoBase">
                             <param id="0" name="First angle">135.01</param>
                             <param id="1" name="Second angle">225</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="730714101912281" type="InimigoCarinha">
+                        <action id="4" name="Set animation" sid="402824929768394" type="InimigoGordao">
                             <param id="0" name="Animation">&quot;Esquerda&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="766592990550294">
+                <event-block sid="381699246024472">
                     <conditions>
-                        <condition id="-13" name="Is between angles" sid="468747035809442" type="InimigoCarinhaBase">
+                        <condition id="-13" name="Is between angles" sid="586469069433481" type="InimigoGordaoBase">
                             <param id="0" name="First angle">225.01</param>
                             <param id="1" name="Second angle">315</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="326203827578783" type="InimigoCarinha">
+                        <action id="4" name="Set animation" sid="789349702763141" type="InimigoGordao">
                             <param id="0" name="Animation">&quot;Costas&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -243,31 +243,31 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="566319009002124" title="InimigoCarinha - Alterações de variáveis">
+        <event-group description="" sid="786837359990014" title="Inimigo Gordão - Alterações de variáveis">
             <sub-events>
-                <event-block sid="844874846104174">
+                <event-block sid="883651044004635">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="824070071974684" type="InimigoCarinhaBase">
+                        <condition id="-7" name="Compare instance variable" sid="711046581803282" type="InimigoGordaoBase">
                             <param id="0" name="Instance variable">PontosVidaAnterior</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">InimigoCarinhaBase.PontosVida</param>
+                            <param id="2" name="Value">InimigoGordaoBase.PontosVida</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="697979394373950" type="InimigoCarinha">
+                        <action behavior="Flash" id="0" name="Flash" sid="728944554962098" type="InimigoGordao">
                             <param id="0" name="&apos;On&apos; time">0.005</param>
                             <param id="1" name="&apos;Off&apos; time">0.005</param>
                             <param id="2" name="Duration">0.1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="268307592458850" type="InimigoCarinhaBase">
+                        <action id="-10" name="Set value" sid="330413542480882" type="InimigoGordaoBase">
                             <param id="0" name="Instance variable">PontosVidaAnterior</param>
-                            <param id="1" name="Value">InimigoCarinhaBase.PontosVida</param>
+                            <param id="1" name="Value">InimigoGordaoBase.PontosVida</param>
                         </action>
-                        <action disabled="1" id="25" name="Play at object" sid="396801377496929" type="Audio">
+                        <action disabled="1" id="25" name="Play at object" sid="845659351707891" type="Audio">
                             <param id="0" name="Audio file">InimigoCarinhaAtacado</param>
                             <param id="1" name="Loop">0</param>
                             <param id="2" name="Volume">-17</param>
-                            <param id="3" name="Object">InimigoCarinhaBase</param>
+                            <param id="3" name="Object">InimigoGordaoBase</param>
                             <param id="4" name="Inner angle">360</param>
                             <param id="5" name="Outer angle">360</param>
                             <param id="6" name="Outer gain">0</param>

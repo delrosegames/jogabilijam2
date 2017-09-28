@@ -323,6 +323,9 @@
                     <behavior-type name="Pin" sid="647205347520814">
                         <behavior id="Pin" />
                     </behavior-type>
+                    <behavior-type name="Fade" sid="342748361914692">
+                        <behavior id="Fade" />
+                    </behavior-type>
                 </behaviors>
                 <container>
                     <type>TorreSaciTiro</type>
@@ -1409,6 +1412,215 @@
                     <type>InimigoCarinhaHP</type>
                 </container>
             </object-type>
+            <object-type name="InimigoGordao" sid="162830898687648">
+                <plugin id="Sprite" />
+                <container>
+                    <type>InimigoGordaoBase</type>
+                    <type>InimigoGordao</type>
+                    <type>InimigoGordaoDevagar</type>
+                    <type>InimigoGordaoHP</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Frente" pingpong="0" repeatcount="1" repeatto="0" sid="207200262405462" speed="7.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Frente\Carinha LV2_Gordao_Frente_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Frente\Carinha LV2_Gordao_Frente_02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Frente\Carinha LV2_Gordao_Frente_03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Frente\Carinha LV2_Gordao_Frente_04.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="Costas" pingpong="0" repeatcount="1" repeatto="0" sid="750194733369379" speed="7.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\1.png">
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.966667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.0333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\2.png">
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.966667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.0333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\3.png">
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.966667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.0333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Costas\4.png">
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.966667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.0333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="Direita" pingpong="0" repeatcount="1" repeatto="0" sid="275889393935418" speed="7.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\1.png">
+                            <collision-poly>
+                                <point x="0.7" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.133333" y="0.5" />
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\2.png">
+                            <collision-poly>
+                                <point x="0.7" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.133333" y="0.5" />
+                                <point x="0.6" y="0.3" />
+                                <point x="0.4" y="0.3" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\3.png">
+                            <collision-poly>
+                                <point x="0.7" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.133333" y="0.5" />
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\4.png">
+                            <collision-poly>
+                                <point x="0.7" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.133333" y="0.5" />
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="Esquerda" pingpong="0" repeatcount="1" repeatto="0" sid="612474328798452" speed="7.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\1.png">
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.866667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\2.png">
+                            <collision-poly>
+                                <point x="0.6" y="0.3" />
+                                <point x="0.4" y="0.3" />
+                                <point x="0.866667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\3.png">
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.866667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Olhando Lado\4.png">
+                            <collision-poly>
+                                <point x="0.566667" y="0.283333" />
+                                <point x="0.433333" y="0.283333" />
+                                <point x="0.866667" y="0.5" />
+                                <point x="0.733333" y="0.866667" />
+                                <point x="0.266667" y="0.866667" />
+                                <point x="0.3" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InimigoGordaoBase" sid="607992198329030">
+                <plugin id="Sprite" />
+                <container>
+                    <type>InimigoGordaoBase</type>
+                    <type>InimigoGordao</type>
+                    <type>InimigoGordaoDevagar</type>
+                    <type>InimigoGordaoHP</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="132417011959273" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Inimigos e Monstros\Carinha Lv 2 - Gordão\PNG frame por frame Parado Girando CARINHA LV1 30x60px\Frente\Carinha LV2_Gordao_Frente_01.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.0666667" />
+                                <point x="0.816667" y="0.183333" />
+                                <point x="0.933333" y="0.5" />
+                                <point x="0.816667" y="0.816667" />
+                                <point x="0.5" y="0.933333" />
+                                <point x="0.183333" y="0.816667" />
+                                <point x="0.0666667" y="0.5" />
+                                <point x="0.183333" y="0.183333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InimigoGordaoDevagar" sid="935623415550711">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="646903611360240">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>InimigoGordaoBase</type>
+                    <type>InimigoGordao</type>
+                    <type>InimigoGordaoDevagar</type>
+                    <type>InimigoGordaoHP</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="500081768126491" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Ataque - Paperugue\PNG frame por frame Redimuinho 30x60px\_0000_Quadro-8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InimigoGordaoHP" sid="930316101276342">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="357921892734412">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>InimigoGordaoBase</type>
+                    <type>InimigoGordao</type>
+                    <type>InimigoGordaoDevagar</type>
+                    <type>InimigoGordaoHP</type>
+                </container>
+            </object-type>
         </object-folder>
         <object-folder name="Jogo">
             <object-type name="btnPronto" sid="679580239706214">
@@ -1739,6 +1951,8 @@
             <members>
                 <member>InimigoCarinha</member>
                 <member>InimigoCarinhaDevagar</member>
+                <member>InimigoGordao</member>
+                <member>InimigoGordaoDevagar</member>
                 <member>TorreCaipora</member>
                 <member>TorreCuca</member>
                 <member>TorreCucaPocao</member>
@@ -1765,6 +1979,7 @@
         <family name="FInimigoBase" plugin-id="Sprite" sid="743101874488053">
             <members>
                 <member>InimigoCarinhaBase</member>
+                <member>InimigoGordaoBase</member>
             </members>
             <instance-variables>
                 <instance-variable name="CurrentDestination" sid="579954931039944" type="number" />
@@ -1781,6 +1996,7 @@
         <family name="FInimigo" plugin-id="Sprite" sid="943919387176437">
             <members>
                 <member>InimigoCarinha</member>
+                <member>InimigoGordao</member>
             </members>
             <behaviors>
                 <behavior-type name="Pin" sid="513419487031924">
@@ -1811,6 +2027,7 @@
         </event-folder>
         <event-folder name="Inimigos">
             <event-sheet>InimigoCarinha.xml</event-sheet>
+            <event-sheet>InimigoGordao.xml</event-sheet>
         </event-folder>
         <event-folder name="Families">
             <event-sheet>FTorresInimigos.xml</event-sheet>
