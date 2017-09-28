@@ -18,6 +18,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
@@ -1903,13 +1904,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="txtDinheiro" sid="714195652183497">
-                <plugin id="Text" />
-            </object-type>
             <object-type name="txtFalhou" sid="309002550746601">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="txtOnda" sid="653972415933431">
                 <plugin id="Text" />
             </object-type>
             <object-type name="txtVidas" sid="645772860270992">
@@ -2172,6 +2167,16 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="8" loop="0" name="Onda" pingpong="0" repeatcount="1" repeatto="0" sid="416845729689812" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 08.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
@@ -2195,6 +2200,10 @@
         </object-type>
         <object-type name="AJAX" sid="649208728764214">
             <plugin id="AJAX" />
+        </object-type>
+        <object-type name="TextoDinheiro" sid="576599672488964">
+            <plugin id="Spritefont2" />
+            <texture original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Fonte jogo.png" />
         </object-type>
     </object-folder>
     <families>

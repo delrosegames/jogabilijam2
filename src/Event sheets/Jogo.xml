@@ -58,9 +58,6 @@
                         <action id="-13" name="Set time scale" sid="881199464027099" type="System">
                             <param id="0" name="Time scale">1.0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="856289793945125" type="txtOnda">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="883179539520529">
@@ -77,14 +74,11 @@
                         <action id="0" name="Set text" sid="574683615385708" type="txtVidas">
                             <param id="0" name="Text">Vidas</param>
                         </action>
-                        <action id="0" name="Set text" sid="177310736975976" type="txtOnda">
-                            <param id="0" name="Text">&quot;Onda: &quot; &amp; OndaAtual</param>
-                        </action>
-                        <action id="0" name="Set text" sid="494830300481354" type="txtDinheiro">
-                            <param id="0" name="Text">&quot;Dinheiros: $&quot; &amp; DinheiroAtual</param>
-                        </action>
                         <action id="5" name="Set frame" sid="687099068190832" type="GuaranaFinalFase">
                             <param id="0" name="Frame number">Vidas</param>
+                        </action>
+                        <action id="0" name="Set text" sid="301654665738043" type="TextoDinheiro">
+                            <param id="0" name="Text">DinheiroAtual</param>
                         </action>
                     </actions>
                 </event-block>
@@ -187,7 +181,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="217458358523251" title="Enemy spawning and movement">
+        <event-group description="" sid="217458358523251" title="Jogo - Controle das ondas">
             <sub-events>
                 <event-block sid="817788755569178">
                     <conditions>
@@ -202,12 +196,37 @@
                             <param id="2" name="Value">Ondas.Width</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="790862649171809" type="BotaoProximaOnda">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="860091847341616">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="464878668420726" type="Mouse">
+                                    <param id="0" name="Object">BotaoProximaOnda</param>
+                                </condition>
+                                <condition id="2" name="Mouse button is down" sid="312286025198453" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="174451582661007" type="BotaoProximaOnda">
+                                    <param id="0" name="Animation">&quot;Pressionado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="908658250302164">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="833452536555384" type="Mouse">
+                                    <param id="0" name="Object">BotaoProximaOnda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="989443988737532" type="BotaoProximaOnda">
+                                    <param id="0" name="Animation">&quot;Piscando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="719823273303887">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
@@ -259,9 +278,6 @@
                             <param id="0" name="Variable">OndaInimigoAtual</param>
                             <param id="1" name="Value">-1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="885849639393558" type="txtOnda">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="726225427006600">
@@ -273,11 +289,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="980276211649896" type="BotaoProximaOnda">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="4" name="Set animation" sid="284267795601531" type="BotaoProximaOnda">
+                            <param id="0" name="Animation">&quot;Onda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="839995033058928" type="BotaoProximaOnda">
+                            <param id="0" name="Frame number">OndaAtual - 1</param>
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>Verifica se ainda tem inimigos na onda....</comment>
                         <event-block sid="148810237285925">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="589405409209464" type="System">
@@ -393,58 +414,8 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="781464800196903" title="Families">
-            <sub-events>
-                <include>FTorresInimigos</include>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="343672578460015" title="Torres">
-            <sub-events>
-                <include>TorreSaci</include>
-                <include>TorreCuca</include>
-                <include>TorreCurupira</include>
-                <include>TorreCaipora</include>
-                <include>TorreMula</include>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="320834891715971" title="Inimigos">
-            <sub-events>
-                <include>InimigoCarinha</include>
-                <include>InimigoGordao</include>
-                <include>InimigoChefao</include>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="935227215247602" title="Controles da Fase">
             <sub-events>
-                <event-block sid="860091847341616">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="464878668420726" type="Mouse">
-                            <param id="0" name="Object">BotaoProximaOnda</param>
-                        </condition>
-                        <condition id="2" name="Mouse button is down" sid="312286025198453" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="174451582661007" type="BotaoProximaOnda">
-                            <param id="0" name="Animation">&quot;Pressionado&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="908658250302164">
-                    <conditions>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="833452536555384" type="Mouse">
-                            <param id="0" name="Object">BotaoProximaOnda</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="989443988737532" type="BotaoProximaOnda">
-                            <param id="0" name="Animation">&quot;Piscando&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="239516784665887">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="660485750382426" type="Mouse">
@@ -614,6 +585,27 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="781464800196903" title="Families">
+            <sub-events>
+                <include>FTorresInimigos</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="343672578460015" title="Torres">
+            <sub-events>
+                <include>TorreSaci</include>
+                <include>TorreCuca</include>
+                <include>TorreCurupira</include>
+                <include>TorreCaipora</include>
+                <include>TorreMula</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="320834891715971" title="Inimigos">
+            <sub-events>
+                <include>InimigoCarinha</include>
+                <include>InimigoGordao</include>
+                <include>InimigoChefao</include>
             </sub-events>
         </event-group>
     </events>

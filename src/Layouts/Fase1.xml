@@ -218,21 +218,21 @@
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>614</x>
-                        <y>3</y>
+                        <x>450</x>
+                        <y>270</y>
                         <z>0</z>
-                        <width>22</width>
+                        <width>30</width>
                         <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -257,33 +257,6 @@
                         <z>0</z>
                         <width>120</width>
                         <height>60</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txtDinheiro" uid="6">
-                    <properties>
-                        <text>Dinheiros: $xxx</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-15,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>510</x>
-                        <y>150</y>
-                        <z>0</z>
-                        <width>143</width>
-                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -348,10 +321,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>601</x>
-                        <y>18</y>
+                        <x>412</x>
+                        <y>270</y>
                         <z>0</z>
-                        <width>30</width>
+                        <width>38</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -517,26 +490,29 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtOnda" uid="5">
+                <instance type="TextoDinheiro" uid="3">
                     <properties>
-                        <text>Onda 1</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16,700,0</font>
-                        <color>0,0,0</color>
+                        <character-width>7</character-width>
+                        <character-height>12</character-height>
+                        <character-set>0123456789</character-set>
+                        <text>120</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
+                        <character-spacing>-1</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>510</x>
-                        <y>120</y>
+                        <x>540</x>
+                        <y>138</y>
                         <z>0</z>
-                        <width>78</width>
-                        <height>30</height>
+                        <width>40</width>
+                        <height>15</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
