@@ -7,6 +7,7 @@
         <variable comment="Quantidade total de ondas que as fases possuem." constant="1" name="TOTAL_ONDAS" sid="762576535214477" static="0" type="number">10</variable>
         <variable comment="Quantidade de dinheiro no início da fase." constant="1" name="DINHEIRO_INICIAL" sid="430335346948310" static="0" type="number">1000</variable>
         <variable constant="0" name="GameOver" sid="257251146644517" static="0" type="number">0</variable>
+        <variable constant="0" name="Venceu" sid="703717148622194" static="0" type="number">0</variable>
         <variable constant="0" name="CustoTorreConstruindo" sid="667912732975726" static="0" type="number">0</variable>
         <variable constant="0" name="ConstruindoTorre" sid="508071098799263" static="0" type="number">0</variable>
         <variable constant="0" name="Vidas" sid="737657344023187" static="0" type="number">3</variable>
@@ -57,6 +58,14 @@
                         </action>
                         <action id="-13" name="Set time scale" sid="881199464027099" type="System">
                             <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="977601594008534" type="System">
+                            <param id="0" name="Variable">GameOver</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="795487237722128" type="System">
+                            <param id="0" name="Variable">Venceu</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -412,6 +421,77 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="315909595878043">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="968819224425986" type="System">
+                            <param id="0" name="Variable">OndaAtual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Ondas.Width</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="706066196803270" type="System">
+                            <param id="0" name="First value">FInimigo.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="518602849624998" type="System">
+                            <param id="0" name="Variable">OndaAtual</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="551036940491088" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="528079063480792">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="101380637783828" type="Audio">
+                                    <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
+                                </condition>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="486678480659137" type="Audio">
+                                    <param id="0" name="Tag">&quot;PerdeuVida&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="155371434431506" type="System">
+                                    <param id="0" name="Variable">Venceu</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="865346474526342" type="Audio">
+                                    <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="590821076480542" type="Audio">
+                                    <param id="0" name="Audio file">VenceuJogo</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;VenceuJogo&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="623691034883488" type="System">
+                                    <param id="0" name="Variable">Venceu</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="625604098015989">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="986070129855968" type="Audio">
+                            <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="751654665575471" type="System">
+                            <param id="0" name="Object to create">MensagemGanhou</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">180</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="935227215247602" title="Controles da Fase">
@@ -626,6 +706,11 @@
                                 <condition id="5" inverted="1" name="Is tag playing" sid="518254970312768" type="Audio">
                                     <param id="0" name="Tag">&quot;PerderVida&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="694414541137618" type="System">
+                                    <param id="0" name="Variable">GameOver</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="6" name="Stop" sid="768322222466498" type="Audio">
@@ -636,6 +721,10 @@
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;GameOver&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="899797496480877" type="System">
+                                    <param id="0" name="Variable">GameOver</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -648,7 +737,40 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-3" name="Create object" sid="788856236854258" type="System">
+                            <param id="0" name="Object to create">MensagemGameOver</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="473874414768807">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="963145278115613" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="382313699315795" type="Mouse">
+                            <param id="0" name="Object">MensagemGameOver</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="-2" name="Go to layout" sid="493844693356583" type="System">
+                            <param id="0" name="Layout">MenuPrincipal</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="113337556047422">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="829319965104226" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="937112562973433" type="Mouse">
+                            <param id="0" name="Object">MensagemGanhou</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="563835117501943" type="System">
                             <param id="0" name="Layout">MenuPrincipal</param>
                         </action>
                     </actions>

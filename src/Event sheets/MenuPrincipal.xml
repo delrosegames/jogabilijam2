@@ -22,7 +22,7 @@
                 <condition id="6" name="On object clicked" sid="796317999961683" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">MenuPrincipalFase1Texto</param>
+                    <param id="2" name="Object clicked">MiniaturaFase1</param>
                 </condition>
             </conditions>
             <actions>
@@ -36,7 +36,7 @@
                 <condition id="6" name="On object clicked" sid="813510086086256" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">MenuPrincipalFase2Texto</param>
+                    <param id="2" name="Object clicked">MiniaturaFase2</param>
                 </condition>
             </conditions>
             <actions>

@@ -225,8 +225,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>360</x>
-                        <y>300</y>
+                        <x>391</x>
+                        <y>-67</y>
                         <z>0</z>
                         <width>120</width>
                         <height>60</height>
