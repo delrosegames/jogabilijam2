@@ -2052,7 +2052,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504770868171251" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2060,7 +2060,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700037762307797" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2068,7 +2068,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726062726964959" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2076,7 +2076,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510974694881354" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2084,7 +2084,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710844365996355" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.325" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Personagens - Torres\Saci\Saci Parado - todos os lados\PNG frame por frame Parado Girando SACI 30x60px\Frente\Saci-Frente-01.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2157,7 +2157,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737176356470673" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Menu Fundo.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Menu Fundo com sombras.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2197,6 +2197,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TextoDinheiro" sid="576599672488964">
+                <plugin id="Spritefont2" />
+                <texture original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Fonte jogo.png" />
+            </object-type>
+            <object-type name="TextoPreco" sid="128915022826154">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="554747999571788">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Fonte jogo.png" />
+            </object-type>
         </object-folder>
         <object-type name="Mouse" sid="565626247793604">
             <plugin id="Mouse" />
@@ -2218,10 +2231,6 @@
         </object-type>
         <object-type name="AJAX" sid="649208728764214">
             <plugin id="AJAX" />
-        </object-type>
-        <object-type name="TextoDinheiro" sid="576599672488964">
-            <plugin id="Spritefont2" />
-            <texture original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Fonte jogo.png" />
         </object-type>
     </object-folder>
     <families>

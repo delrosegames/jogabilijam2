@@ -36,7 +36,7 @@
                             <param id="2" name="Object clicked">CardMula</param>
                         </condition>
                         <condition id="0" name="On key pressed" sid="385602667004056" type="Keyboard">
-                            <param id="0" name="Key">84 (T)</param>
+                            <param id="0" name="Key">83 (S)</param>
                         </condition>
                     </conditions>
                     <actions />
