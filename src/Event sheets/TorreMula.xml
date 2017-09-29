@@ -6,6 +6,25 @@
         <variable comment="Custo de construção da Torre Mula Sem Cabeça" constant="1" name="TORRE_MULA_CUSTO" sid="450131932921059" static="0" type="number">20</variable>
         <event-group description="" sid="790885185636681" title="Construção da Torre Mula">
             <sub-events>
+                <event-block sid="853719702603689">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="349882936215911" type="CardMula" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="801328973683278" type="CardMula">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="739968210653929" type="TextoPreco">
+                            <param id="0" name="Width">CardMula.Width - 6</param>
+                            <param id="1" name="Height">CardMula.Height - 10</param>
+                        </action>
+                        <action id="0" name="Set text" sid="907402845875892" type="TextoPreco">
+                            <param id="0" name="Text">&quot;ox&quot; &amp; TORRE_MULA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="444901691927454">
                     <conditions>
                         <condition id="-18" name="On created" sid="873058127337794" type="TorreMulaBase" />
@@ -24,6 +43,57 @@
                         <action id="-9" name="Set value" sid="572544116347250" type="System">
                             <param id="0" name="Variable">CustoTorreConstruindo</param>
                             <param id="1" name="Value">TORRE_MULA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="994408167255367">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="132436253143125" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="835865012041970" type="CardMula">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="622160354028912">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="245124803461832" type="Mouse">
+                            <param id="0" name="Object">CardMula</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="880514018241971" type="CardMula">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="160228965692240">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="868435957290376" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="930028135904093" type="CardMula">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="394817257018927">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="806188186154130" type="Mouse">
+                            <param id="0" name="Object">CardMula</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="465574221456934" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="517862728065882" type="CardMula">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>

@@ -6,6 +6,25 @@
         <variable comment="Custo de construção da Torre Curupira" constant="1" name="TORRE_CURUPIRA_CUSTO" sid="229573932798928" static="0" type="number">50</variable>
         <event-group description="" sid="908926764343223" title="Construção da Torre Curupira">
             <sub-events>
+                <event-block sid="206058491783246">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="819931488143191" type="CardCurupira" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="334875822793372" type="CardCurupira">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="612478219623266" type="TextoPreco">
+                            <param id="0" name="Width">CardCurupira.Width - 6</param>
+                            <param id="1" name="Height">CardCurupira.Height - 10</param>
+                        </action>
+                        <action id="0" name="Set text" sid="785936191138328" type="TextoPreco">
+                            <param id="0" name="Text">&quot;ox&quot; &amp; TORRE_CURUPIRA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="144257399196333">
                     <conditions>
                         <condition id="-18" name="On created" sid="822150304557560" type="TorreCurupiraBase" />
@@ -22,6 +41,57 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="271082097912304" type="TorreCurupiraTiroBase">
                             <param id="0" name="Pin to">TorreCurupiraBase</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="389536514612114">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="276357179154685" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="820524211137922" type="CardCurupira">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="195218292049933">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="982149176784251" type="Mouse">
+                            <param id="0" name="Object">CardCurupira</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="819651061182390" type="CardCurupira">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="783912634573450">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="193694633000017" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="249522935528487" type="CardCurupira">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="459927020459468">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="214320680907549" type="Mouse">
+                            <param id="0" name="Object">CardCurupira</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="442309757824132" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="589602684046048" type="CardCurupira">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>

@@ -7,6 +7,25 @@
         <variable constant="1" name="TORRE_CUCA_CUSTO" sid="756668379883790" static="0" type="number">50</variable>
         <event-group description="" sid="496447630493579" title="Construção da Torre Cuca">
             <sub-events>
+                <event-block sid="519595430188753">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="268492431574667" type="CardCuca" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="907116735695154" type="CardCuca">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="900340132093969" type="TextoPreco">
+                            <param id="0" name="Width">CardCuca.Width - 6</param>
+                            <param id="1" name="Height">CardCuca.Height - 10</param>
+                        </action>
+                        <action id="0" name="Set text" sid="593764636941825" type="TextoPreco">
+                            <param id="0" name="Text">&quot;ox&quot; &amp; TORRE_CUCA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="605572345987257">
                     <conditions>
                         <condition id="-18" name="On created" sid="413290038657319" type="TorreCucaBase" />
@@ -19,6 +38,57 @@
                         <action id="-9" name="Set value" sid="836364671209097" type="System">
                             <param id="0" name="Variable">CustoTorreConstruindo</param>
                             <param id="1" name="Value">TORRE_CUCA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="488526517232434">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="703595264053580" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="283122103267351" type="CardCuca">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="547838404016556">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="436458144380859" type="Mouse">
+                            <param id="0" name="Object">CardCuca</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="411433344297992" type="CardCuca">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="830573714754493">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="972522909830825" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="854405188825118" type="CardCuca">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="775914370195180">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="437312847872502" type="Mouse">
+                            <param id="0" name="Object">CardCuca</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="934062602816556" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="563224416439763" type="CardCuca">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>

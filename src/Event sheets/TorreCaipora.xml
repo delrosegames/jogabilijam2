@@ -6,6 +6,25 @@
         <variable constant="1" name="TORRE_CAIPORA_CUSTO" sid="182237493117931" static="0" type="number">15</variable>
         <event-group description="" sid="668142446708656" title="Construção da Torre Caipora">
             <sub-events>
+                <event-block sid="187376682666702">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="331337869862721" type="CardCaipora" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="477788093627482" type="CardCaipora">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="860091783626046" type="TextoPreco">
+                            <param id="0" name="Width">CardCaipora.Width - 6</param>
+                            <param id="1" name="Height">CardCaipora.Height - 10</param>
+                        </action>
+                        <action id="0" name="Set text" sid="449317133235063" type="TextoPreco">
+                            <param id="0" name="Text">&quot;ox&quot; &amp; TORRE_CAIPORA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="885928694353573">
                     <conditions>
                         <condition id="-18" name="On created" sid="478689627617744" type="TorreCaiporaBase" />
@@ -24,6 +43,57 @@
                         <action id="-9" name="Set value" sid="740878322672219" type="System">
                             <param id="0" name="Variable">CustoTorreConstruindo</param>
                             <param id="1" name="Value">TORRE_CAIPORA_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268138552844716">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="401255679780995" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="246070260013859" type="CardCaipora">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="443371023259473">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="115945024106196" type="Mouse">
+                            <param id="0" name="Object">CardCaipora</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="254485000350754" type="CardCaipora">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="667105964421833">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="361907709997757" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="520676579311736" type="CardCaipora">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="314750035024046">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="450678863360616" type="Mouse">
+                            <param id="0" name="Object">CardCaipora</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="215391078197743" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="987110844065360" type="CardCaipora">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>

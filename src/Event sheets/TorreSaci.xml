@@ -6,6 +6,25 @@
         <variable constant="1" name="TORRE_SACI_CUSTO" sid="545133342831364" static="0" type="number">30</variable>
         <event-group description="" sid="695601010302246" title="Construção da Torre Saci">
             <sub-events>
+                <event-block sid="678666036172802">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="645615192534173" type="CardSaci" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="178598579779196" type="CardSaci">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="867805156282380" type="TextoPreco">
+                            <param id="0" name="Width">CardSaci.Width - 6</param>
+                            <param id="1" name="Height">CardSaci.Height - 10</param>
+                        </action>
+                        <action id="0" name="Set text" sid="300894721620328" type="TextoPreco">
+                            <param id="0" name="Text">&quot;ox&quot; &amp; TORRE_SACI_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="954085206168398">
                     <conditions>
                         <condition id="-18" name="On created" sid="191885604716930" type="TorreSaciBase" />
@@ -24,6 +43,57 @@
                         <action id="-9" name="Set value" sid="429725007041012" type="System">
                             <param id="0" name="Variable">CustoTorreConstruindo</param>
                             <param id="1" name="Value">TORRE_SACI_CUSTO</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="846009079411919">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="537969846771554" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="749576895141211" type="CardSaci">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741029251828150">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="263494273781736" type="Mouse">
+                            <param id="0" name="Object">CardSaci</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="111854723766154" type="CardSaci">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="327044819290427">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="682497562867607" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="145491933270778" type="CardSaci">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="610839790323078">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="551289068733150" type="Mouse">
+                            <param id="0" name="Object">CardSaci</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="762297821461401" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="852569855140455" type="CardSaci">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>
