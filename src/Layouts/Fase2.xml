@@ -281,11 +281,11 @@
                         <x>560.615356445</x>
                         <y>339.923065186</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
+                        <width>43</width>
+                        <height>47</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.511627913</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -303,11 +303,11 @@
                         <x>620.615356445</x>
                         <y>339.923065186</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
+                        <width>43</width>
+                        <height>47</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.511627913</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -460,11 +460,11 @@
                         <x>499.615356445</x>
                         <y>339.923065186</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
+                        <width>43</width>
+                        <height>47</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.511627913</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
