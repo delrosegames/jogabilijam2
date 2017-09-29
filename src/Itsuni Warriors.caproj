@@ -1967,25 +1967,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="RioFase2" sid="853498591792002">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980011990994909" speed="3">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\rio1 ok.png">
-                            <collision-poly>
-                                <point x="0.0246914" y="0.134831" />
-                                <point x="0.975309" y="0.134831" />
-                                <point x="0.995885" y="0.494382" />
-                                <point x="0.95679" y="0.764045" />
-                                <point x="0.0432099" y="0.764045" />
-                                <point x="0" y="0.494382" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\rio-2 ok.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\rio3 -ok.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="Fases">
             <object-type name="Fase1_Fundo" sid="230111928141287">
@@ -2024,6 +2005,44 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927787087743223" speed="5">
                         <frame duration="1" hotspotX="0.00208333" hotspotY="0.00277778" original-source="C:\Users\patri\Desktop\mapa 3.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fase2_Rio" sid="853498591792002">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980011990994909" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\rio1 ok.png">
+                            <collision-poly>
+                                <point x="0.0246914" y="0.134831" />
+                                <point x="0.975309" y="0.134831" />
+                                <point x="0.995885" y="0.494382" />
+                                <point x="0.95679" y="0.764045" />
+                                <point x="0.0432099" y="0.764045" />
+                                <point x="0" y="0.494382" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\rio-2 ok.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\rio3 -ok.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fases_Moita1" sid="366409040324915">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479879645099021" speed="5">
+                        <frame duration="1" hotspotX="0.517241" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\moita1.png">
+                            <collision-poly>
+                                <point x="0.103448" y="0.136364" />
+                                <point x="0.482759" y="0.136364" />
+                                <point x="0.862069" y="0.181818" />
+                                <point x="1" y="0.5" />
+                                <point x="0.896552" y="0.863636" />
+                                <point x="0.482759" y="1" />
+                                <point x="0.137931" y="0.818182" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2203,25 +2222,6 @@
         <object-type name="TextoDinheiro" sid="576599672488964">
             <plugin id="Spritefont2" />
             <texture original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Fonte jogo.png" />
-        </object-type>
-        <object-type name="Sprite" sid="366409040324915">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479879645099021" speed="5">
-                    <frame duration="1" hotspotX="0.517241" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\moita1.png">
-                        <collision-poly>
-                            <point x="0.103448" y="0.136364" />
-                            <point x="0.482759" y="0.136364" />
-                            <point x="0.862069" y="0.181818" />
-                            <point x="1" y="0.5" />
-                            <point x="0.896552" y="0.863636" />
-                            <point x="0.482759" y="1" />
-                            <point x="0.137931" y="0.818182" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>
