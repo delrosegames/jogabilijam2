@@ -35,7 +35,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="149642953223078">
+        <event-block disabled="1" sid="149642953223078">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="371126679205420" type="InimigoChefaoBase">
                     <param id="0" name="Object">PontoMovimento</param>
@@ -48,7 +48,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="923243965646297">
+        <event-block disabled="1" sid="923243965646297">
             <conditions>
                 <condition id="-11" name="For Each" sid="110752673792560" type="System">
                     <param id="0" name="Object">InimigoChefaoBase</param>
@@ -56,7 +56,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="894993292610283">
+                <event-block disabled="1" sid="894993292610283">
                     <conditions>
                         <condition id="-34" name="Pick by evaluate" sid="910659798860316" type="System">
                             <param id="0" name="Object">PontoMovimento</param>
@@ -72,7 +72,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="678219259980013">
+        <event-block disabled="1" sid="678219259980013">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="765239662065059" type="InimigoChefaoBase">
                     <param id="0" name="Object">EnemyGoal</param>

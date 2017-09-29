@@ -35,10 +35,15 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="269827266879050">
+        <event-block disabled="1" sid="269827266879050">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="680218049729246" type="InimigoCarinhaBase">
                     <param id="0" name="Object">PontoMovimento</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="733841299632409" type="PontoMovimento">
+                    <param id="0" name="Instance variable">Ordem</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">InimigoCarinhaBase.CurrentDestination</param>
                 </condition>
             </conditions>
             <actions>
@@ -48,7 +53,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="967390911316186">
+        <event-block disabled="1" sid="967390911316186">
             <conditions>
                 <condition id="-11" name="For Each" sid="947350158839464" type="System">
                     <param id="0" name="Object">InimigoCarinhaBase</param>
@@ -56,7 +61,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="951644318464481">
+                <event-block disabled="1" sid="951644318464481">
                     <conditions>
                         <condition id="-34" name="Pick by evaluate" sid="383681595120874" type="System">
                             <param id="0" name="Object">PontoMovimento</param>
@@ -72,7 +77,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="580077237622810">
+        <event-block disabled="1" sid="580077237622810">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="384520987873014" type="InimigoCarinhaBase">
                     <param id="0" name="Object">EnemyGoal</param>
