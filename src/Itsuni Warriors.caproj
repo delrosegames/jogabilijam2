@@ -2223,6 +2223,52 @@
             <plugin id="Spritefont2" />
             <texture original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Fonte jogo.png" />
         </object-type>
+        <object-type name="MensagemGameOver" sid="602393217829128">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="529538069383551" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="C:\Users\patri\Desktop\MensagemGameOver.png">
+                        <collision-poly>
+                            <point x="0.00757576" y="0.0123457" />
+                            <point x="0.992424" y="0.0123457" />
+                            <point x="0.992424" y="0.987654" />
+                            <point x="0.00757576" y="0.987654" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MensagemGanhou" sid="130474300972671">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="422798041137507" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Users\patri\Desktop\MensagemGanhou.png">
+                        <collision-poly>
+                            <point x="0.00757576" y="0.0123457" />
+                            <point x="0.992424" y="0.0123457" />
+                            <point x="0.992424" y="0.987654" />
+                            <point x="0.00757576" y="0.987654" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MiniaturaFase1" sid="579934605906715">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662126539271645" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\patri\Desktop\Miniatura Mapa 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MiniaturaFase2" sid="911770258511158">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802841787257540" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\patri\Desktop\Miniatura Mapa 2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="FTorreBase" plugin-id="Sprite" sid="544994410967895">
@@ -2244,6 +2290,7 @@
         </family>
         <family name="FTorresInimigos" plugin-id="Sprite" sid="731597994609272">
             <members>
+                <member>GuaranaFinalFase</member>
                 <member>InimigoCarinha</member>
                 <member>InimigoCarinhaDevagar</member>
                 <member>InimigoChefao</member>
@@ -2384,6 +2431,8 @@
         <file name="GameOver.ogg" />
         <file name="PerderVida.m4a" />
         <file name="PerderVida.ogg" />
+        <file name="VenceuJogo.m4a" />
+        <file name="VenceuJogo.ogg" />
     </sounds-folder>
     <music-folder>
         <music-folder name="MenuPrincipal">
