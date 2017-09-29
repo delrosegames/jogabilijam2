@@ -589,6 +589,7 @@
         </event-group>
         <event-group description="" sid="781464800196903" title="Families">
             <sub-events>
+                <include>FInimigoBase</include>
                 <include>FTorresInimigos</include>
             </sub-events>
         </event-group>

@@ -35,7 +35,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="298397866811785">
+        <event-block disabled="1" sid="298397866811785">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="288745567313755" type="InimigoGordaoBase">
                     <param id="0" name="Object">PontoMovimento</param>
@@ -48,7 +48,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="230087507913644">
+        <event-block disabled="1" sid="230087507913644">
             <conditions>
                 <condition id="-11" name="For Each" sid="995652798392498" type="System">
                     <param id="0" name="Object">InimigoGordaoBase</param>
@@ -56,7 +56,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="354733957953038">
+                <event-block disabled="1" sid="354733957953038">
                     <conditions>
                         <condition id="-34" name="Pick by evaluate" sid="977049780126658" type="System">
                             <param id="0" name="Object">PontoMovimento</param>
@@ -72,7 +72,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="448280352086833">
+        <event-block disabled="1" sid="448280352086833">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="399777290046026" type="InimigoGordaoBase">
                     <param id="0" name="Object">EnemyGoal</param>

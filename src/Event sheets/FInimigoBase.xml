@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FInimigoBase</name>
+    <events>
+        <event-block sid="279775128876910">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="994081164050136" type="FInimigoBase">
+                    <param id="0" name="Object">PontoMovimento</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="590565711319484" type="PontoMovimento">
+                    <param id="0" name="Instance variable">Ordem</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">FInimigoBase.CurrentDestination</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="736441527607711" type="FInimigoBase">
+                    <param id="0" name="Instance variable">CurrentDestination</param>
+                    <param id="1" name="Value">PontoMovimento.Ordem+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="429253916948955">
+            <conditions>
+                <condition id="-11" name="For Each" sid="414503440584075" type="System">
+                    <param id="0" name="Object">FInimigoBase</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="922093490371721">
+                    <conditions>
+                        <condition id="-34" name="Pick by evaluate" sid="564120319781205" type="System">
+                            <param id="0" name="Object">PontoMovimento</param>
+                            <param id="1" name="Expression">PontoMovimento.Ordem = FInimigoBase.CurrentDestination</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="566663935186523" type="FInimigoBase">
+                            <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
+                            <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="667772251444694">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="506984579939595" type="FInimigoBase">
+                    <param id="0" name="Object">EnemyGoal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="574892410423850" type="FInimigoBase" />
+                <action id="-11" name="Subtract from" sid="172010364461692" type="System">
+                    <param id="0" name="Variable">Vidas</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="905972931454889" type="Audio">
+                    <param id="0" name="Audio file">PerderVida</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">0</param>
+                    <param id="3" name="Object">GuaranaFinalFase</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;PerderVida&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
