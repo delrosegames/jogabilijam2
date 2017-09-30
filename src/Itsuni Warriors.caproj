@@ -159,11 +159,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="CreditoFundo" sid="451842754617479">
+            <object-type name="CreditosFundo" sid="451842754617479">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722381323907634" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Tela de Créditos\PNG sem botão de Sair.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CreditosVoltar" sid="671941933398796">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="149217665048896" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Sair.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Sair 02- Apertado.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2462,6 +2471,7 @@
                 <member>CardCurupira</member>
                 <member>CardMula</member>
                 <member>CardSaci</member>
+                <member>CreditosVoltar</member>
                 <member>MenuPrincipalBotaoCreditos</member>
                 <member>MenuPrincipalBotaoIniciar</member>
                 <member>MenuPrincipalBotaoSair</member>
@@ -2526,7 +2536,7 @@
         </global-instance>
         <global-instance type="Function" uid="161" />
         <global-instance type="AJAX" uid="162" />
-        <global-instance type="Browser" uid="188" />
+        <global-instance type="Browser" uid="189" />
     </global-instances>
     <sounds-folder>
         <file name="TorreSaciAtaque.m4a" />

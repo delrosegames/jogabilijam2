@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MenuPrincipal</name>
     <events>
+        <variable constant="0" name="ExibindoCreditos" sid="603553003851799" static="0" type="number">0</variable>
         <variable constant="0" name="ExibindoSelecaoFases" sid="292275274752954" static="0" type="number">0</variable>
         <event-block sid="574300816907979">
             <conditions>
@@ -90,6 +91,38 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="408184704451915">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="497683139891635" type="Mouse">
+                            <param id="0" name="Object">MenuPrincipalBotaoCreditos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="749989805275773" type="MenuPrincipalCamera">
+                            <param id="0" name="Y">MenuPrincipalCamera.Y + 640</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="763047380777271" type="System">
+                            <param id="0" name="Variable">ExibindoCreditos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="625468009637985">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="826779806907916" type="Mouse">
+                            <param id="0" name="Object">CreditosVoltar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="957497992281174" type="MenuPrincipalCamera">
+                            <param id="0" name="Y">MenuPrincipalCamera.Y - 640</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="805967307768731" type="System">
+                            <param id="0" name="Variable">ExibindoCreditos</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="758949128365377">
@@ -124,6 +157,20 @@
                     <actions>
                         <action id="-1" name="Set X" sid="861683141128797" type="MenuPrincipalCamera">
                             <param id="0" name="X">MenuPrincipalCamera.X + 640</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="527271907804122">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="500225873607068" type="System">
+                            <param id="0" name="Variable">ExibindoCreditos</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="898788437828221" type="MenuPrincipalCamera">
+                            <param id="0" name="Y">MenuPrincipalCamera.Y + 640</param>
                         </action>
                     </actions>
                 </event-block>
