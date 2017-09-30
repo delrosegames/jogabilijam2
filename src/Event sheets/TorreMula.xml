@@ -70,6 +70,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="452704892053734">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="696401979067553" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="132787239445912" type="Mouse">
+                            <param id="0" name="Object">CardMula</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="290312732293492" type="CardMula">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="160228965692240">
                     <conditions>
                         <condition id="2" name="Key is down" sid="868435957290376" type="Keyboard">
@@ -118,13 +133,12 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">TORRE_MULA_CUSTO</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="999853910225382" type="System">
-                                    <param id="0" name="Variable">ConstruindoTorre</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="410226635070926" type="Function">
+                                    <param id="0" name="Name">&quot;LimparTorreEmConstrucao&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-3" name="Create object" sid="643357403769964" type="System">
                                     <param id="0" name="Object to create">TorreMulaBase</param>
                                     <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>

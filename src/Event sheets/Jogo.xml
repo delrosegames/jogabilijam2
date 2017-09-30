@@ -9,7 +9,6 @@
         <variable constant="0" name="GameOver" sid="257251146644517" static="0" type="number">0</variable>
         <variable constant="0" name="Venceu" sid="703717148622194" static="0" type="number">0</variable>
         <variable constant="0" name="CustoTorreConstruindo" sid="667912732975726" static="0" type="number">0</variable>
-        <variable constant="0" name="ConstruindoTorre" sid="508071098799263" static="0" type="number">0</variable>
         <variable constant="0" name="Vidas" sid="737657344023187" static="0" type="number">3</variable>
         <variable constant="0" name="DinheiroAtual" sid="147354329828043" static="0" type="number">0</variable>
         <variable constant="0" name="OndaVindo" sid="126360296475382" static="0" type="number">0</variable>
@@ -31,10 +30,6 @@
                         </action>
                         <action id="-9" name="Set value" sid="706155948588837" type="System">
                             <param id="0" name="Variable">CustoTorreConstruindo</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="487798406977791" type="System">
-                            <param id="0" name="Variable">ConstruindoTorre</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="446075308741334" type="System">
@@ -105,10 +100,6 @@
                         <condition id="-18" name="On created" sid="277273589563136" type="FTorreBase" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="663739946767332" type="System">
-                            <param id="0" name="Variable">ConstruindoTorre</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="449825519159888" type="FTorreBase">
                             <param id="0" name="Instance variable">Flutuando</param>
                             <param id="1" name="Value">1</param>
@@ -150,10 +141,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="649649668132514" type="System">
-                            <param id="0" name="Variable">ConstruindoTorre</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="-11" name="Subtract from" sid="418368896900184" type="System">
                             <param id="0" name="Variable">DinheiroAtual</param>
                             <param id="1" name="Value">CustoTorreConstruindo</param>
@@ -185,17 +172,26 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="188396013204339" type="FTorreBase" />
-                                <action id="-9" name="Set value" sid="839161127787733" type="System">
-                                    <param id="0" name="Variable">ConstruindoTorre</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="346055194752098">
+                    <conditions>
+                        <condition id="0" name="On function" sid="321189632936194" type="Function">
+                            <param id="0" name="Name">&quot;LimparTorreEmConstrucao&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="776058187337976" type="FTorreBase">
+                            <param id="0" name="Instance variable">Flutuando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="368688137863473" type="FTorreBase" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="217458358523251" title="Jogo - Controle das ondas">
+        <event-group description="" sid="217458358523251" title="Controle das ondas">
             <sub-events>
                 <event-group description="" sid="186632464436950" title="Iniciar Onda">
                     <sub-events>

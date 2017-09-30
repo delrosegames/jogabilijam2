@@ -70,6 +70,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="145526840411091">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="884376260852155" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="389256575596743" type="Mouse">
+                            <param id="0" name="Object">CardSaci</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="567346307884819" type="CardSaci">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="327044819290427">
                     <conditions>
                         <condition id="2" name="Key is down" sid="682497562867607" type="Keyboard">
@@ -118,13 +133,12 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">TORRE_SACI_CUSTO</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="441975419633130" type="System">
-                                    <param id="0" name="Variable">ConstruindoTorre</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="933577905470491" type="Function">
+                                    <param id="0" name="Name">&quot;LimparTorreEmConstrucao&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-3" name="Create object" sid="603215867841836" type="System">
                                     <param id="0" name="Object to create">TorreSaciBase</param>
                                     <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
