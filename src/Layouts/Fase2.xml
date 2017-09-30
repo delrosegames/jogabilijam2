@@ -234,33 +234,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="txtFalhou" uid="75">
-                    <properties>
-                        <text>FALHOU</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>153,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>359.615356445</x>
-                        <y>299.923065186</y>
-                        <z>0</z>
-                        <width>120</width>
-                        <height>60</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="PausarBotao" uid="76">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>

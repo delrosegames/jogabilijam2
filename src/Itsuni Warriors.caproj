@@ -1939,12 +1939,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="txtFalhou" sid="309002550746601">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="txtVidas" sid="645772860270992">
-                <plugin id="Text" />
-            </object-type>
             <object-type name="ZonaCaminho" sid="698927114105597">
                 <plugin id="TiledBg" />
                 <texture />
