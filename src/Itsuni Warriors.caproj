@@ -76,10 +76,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="MenuPrincipalFundo" sid="318572454003810">
-                <plugin id="TiledBg" />
-                <texture original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Principal - Tela de Início\Tela Inicial Logo.png" />
-            </object-type>
             <object-type name="MiniaturaFase1" sid="579934605906715">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -128,7 +124,17 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698291132236489" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Principal - Tela de Início\Tela Inicial Logo.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Principal - Tela de Início\Tela Inicial Logo.png">
+                            <collision-poly>
+                                <point x="0.307813" y="0.547222" />
+                                <point x="0.5" y="0.00833333" />
+                                <point x="0.740625" y="0.461111" />
+                                <point x="0.742188" y="0.5" />
+                                <point x="0.973437" y="0.952778" />
+                                <point x="0.5" y="0.988889" />
+                                <point x="0.290625" y="0.483333" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -173,6 +179,14 @@
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="149217665048896" speed="0">
                         <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Sair.png" />
                         <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Sair 02- Apertado.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuPrincipalFundo" sid="557134167869410">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="551420741380320" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Tela inicial-ilustracao .png" />
                     </animation>
                 </animation-folder>
             </object-type>
