@@ -2101,7 +2101,7 @@
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="830611354774848" speed="0">
                         <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Avançar.png" />
-                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Avançar 02- Apertado.png" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Avançar - Pressionado.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2129,23 +2129,12 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Pausar" pingpong="0" repeatcount="0" repeatto="0" sid="290332171472373" speed="0">
-                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Pausar.png">
-                            <collision-poly>
-                                <point x="0.0232558" y="0.0212766" />
-                                <point x="0.488372" y="0" />
-                                <point x="0.976744" y="0.0212766" />
-                                <point x="1" y="0.489362" />
-                                <point x="0.976744" y="0.978723" />
-                                <point x="0.488372" y="1" />
-                                <point x="0.0232558" y="0.978723" />
-                                <point x="0" y="0.489362" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Pausar 02 -Apertado.png" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Pause.png" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Pause - Pressionado.png" />
                     </animation>
                     <animation framecount="2" loop="0" name="Continuar" pingpong="0" repeatcount="0" repeatto="0" sid="491276936982399" speed="0">
                         <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Play.png" />
-                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Play 02- Apertado.png" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="0.510638" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Play-Pause-Avançar-Sair\Botão Play - Pressionado.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2190,15 +2179,20 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="8" loop="0" name="Onda" pingpong="0" repeatcount="1" repeatto="0" sid="416845729689812" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 02.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 03.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 04.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 05.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 06.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 07.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 08.png" />
+                    <animation framecount="13" loop="0" name="Onda" pingpong="0" repeatcount="1" repeatto="0" sid="416845729689812" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 7.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 9.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 12.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botão Ondas\Onda 13.png" />
                     </animation>
                 </animation-folder>
             </object-type>

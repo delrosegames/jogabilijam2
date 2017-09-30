@@ -197,249 +197,257 @@
         </event-group>
         <event-group description="" sid="217458358523251" title="Jogo - Controle das ondas">
             <sub-events>
-                <event-block sid="817788755569178">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="796654852505338" type="System">
-                            <param id="0" name="Variable">OndaVindo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="361610049710697" type="System">
-                            <param id="0" name="Variable">OndaAtual</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">Ondas.Width</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="186632464436950" title="Iniciar Onda">
                     <sub-events>
-                        <event-block sid="860091847341616">
+                        <event-block sid="817788755569178">
                             <conditions>
-                                <condition id="7" name="Cursor is over object" sid="464878668420726" type="Mouse">
-                                    <param id="0" name="Object">BotaoProximaOnda</param>
+                                <condition id="-14" name="Compare variable" sid="796654852505338" type="System">
+                                    <param id="0" name="Variable">OndaVindo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="2" name="Mouse button is down" sid="312286025198453" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="174451582661007" type="BotaoProximaOnda">
-                                    <param id="0" name="Animation">&quot;Pressionado&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="908658250302164">
-                            <conditions>
-                                <condition id="7" inverted="1" name="Cursor is over object" sid="833452536555384" type="Mouse">
-                                    <param id="0" name="Object">BotaoProximaOnda</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="989443988737532" type="BotaoProximaOnda">
-                                    <param id="0" name="Animation">&quot;Piscando&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="885828983048962">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="678835990190129" type="Keyboard">
-                                    <param id="0" name="Key">13 (Return)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="950299578981647" type="BotaoProximaOnda">
-                                    <param id="0" name="Animation">&quot;Pressionado&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="719823273303887">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="996373299186420" type="Keyboard">
-                                    <param id="0" name="Key">13 (Return)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="438077127205063" type="Function">
-                                    <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="276888967581913">
-                            <conditions>
-                                <condition id="3" name="On button released" sid="936821063918717" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                                <condition id="7" name="Cursor is over object" sid="620482163744867" type="Mouse">
-                                    <param id="0" name="Object">BotaoProximaOnda</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="582963811519937" type="Function">
-                                    <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
-                <event-block sid="240296123357771">
-                    <conditions>
-                        <condition id="0" name="On function" sid="675949412688109" type="Function">
-                            <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="283963509052349" type="System">
-                            <param id="0" name="Variable">OndaVindo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="122560760405938" type="System">
-                            <param id="0" name="Variable">OndaAtual</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="192169636041595" type="System">
-                            <param id="0" name="Variable">OndaInimigoAtual</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="726225427006600">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="554738223601073" type="System">
-                            <param id="0" name="Variable">OndaVindo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="284267795601531" type="BotaoProximaOnda">
-                            <param id="0" name="Animation">&quot;Onda&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="839995033058928" type="BotaoProximaOnda">
-                            <param id="0" name="Frame number">OndaAtual - 1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <comment>Verifica se ainda tem inimigos na onda....</comment>
-                        <event-block sid="148810237285925">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="589405409209464" type="System">
-                                    <param id="0" name="Interval (seconds)">0.45</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="139784853445327" type="System">
-                                    <param id="0" name="Variable">OndaInimigoAtual</param>
+                                <condition id="-14" name="Compare variable" sid="361610049710697" type="System">
+                                    <param id="0" name="Variable">OndaAtual</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">Ondas.Height</param>
+                                    <param id="2" name="Value">Ondas.Width</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="800055139701517" type="System">
-                                    <param id="0" name="Variable">OndaInimigoAtual</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <comment>O item 1 é o Inimigo Carinha.</comment>
-                                <event-block sid="363211378720282">
+                                <event-block sid="860091847341616">
                                     <conditions>
-                                        <condition id="1" name="Compare at XY" sid="828038784386220" type="Ondas">
-                                            <param id="0" name="X">OndaAtual - 1</param>
-                                            <param id="1" name="Y">OndaInimigoAtual</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">1</param>
+                                        <condition id="7" name="Cursor is over object" sid="464878668420726" type="Mouse">
+                                            <param id="0" name="Object">BotaoProximaOnda</param>
+                                        </condition>
+                                        <condition id="2" name="Mouse button is down" sid="312286025198453" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="662287511112903" type="SpawnPoint">
-                                            <param id="0" name="Object">InimigoCarinha</param>
-                                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="4" name="Set animation" sid="174451582661007" type="BotaoProximaOnda">
+                                            <param id="0" name="Animation">&quot;Pressionado&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>O item 2 é o Inimigo Gordão.</comment>
-                                <event-block sid="925738745927232">
+                                <event-block sid="908658250302164">
                                     <conditions>
-                                        <condition id="1" name="Compare at XY" sid="937383051457154" type="Ondas">
-                                            <param id="0" name="X">OndaAtual - 1</param>
-                                            <param id="1" name="Y">OndaInimigoAtual</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">2</param>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="833452536555384" type="Mouse">
+                                            <param id="0" name="Object">BotaoProximaOnda</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="834550966112134" type="SpawnPoint">
-                                            <param id="0" name="Object">InimigoGordao</param>
-                                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="4" name="Set animation" sid="989443988737532" type="BotaoProximaOnda">
+                                            <param id="0" name="Animation">&quot;Piscando&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>O item 3 é o Inimigo Chefão.</comment>
-                                <event-block sid="561578838363159">
+                                <event-block sid="885828983048962">
                                     <conditions>
-                                        <condition id="1" name="Compare at XY" sid="609685729181427" type="Ondas">
-                                            <param id="0" name="X">OndaAtual - 1</param>
-                                            <param id="1" name="Y">OndaInimigoAtual</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">3</param>
+                                        <condition id="2" name="Key is down" sid="678835990190129" type="Keyboard">
+                                            <param id="0" name="Key">13 (Return)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="376971339001675" type="SpawnPoint">
-                                            <param id="0" name="Object">InimigoChefao</param>
-                                            <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="4" name="Set animation" sid="950299578981647" type="BotaoProximaOnda">
+                                            <param id="0" name="Animation">&quot;Pressionado&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>Se o item da onda for -1, quer dizer que é o fim da onda.</comment>
-                                <event-block sid="818228605213098">
+                                <event-block sid="719823273303887">
                                     <conditions>
-                                        <condition id="1" name="Compare at XY" sid="108997722574013" type="Ondas">
-                                            <param id="0" name="X">OndaAtual - 1</param>
-                                            <param id="1" name="Y">OndaInimigoAtual</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">-1</param>
+                                        <condition id="3" name="On key released" sid="996373299186420" type="Keyboard">
+                                            <param id="0" name="Key">13 (Return)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="455721522729347" type="System">
-                                            <param id="0" name="Variable">OndaInimigoAtual</param>
-                                            <param id="1" name="Value">Ondas.Height</param>
+                                        <action id="0" name="Call function" sid="438077127205063" type="Function">
+                                            <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="276888967581913">
+                                    <conditions>
+                                        <condition id="3" name="On button released" sid="936821063918717" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                        </condition>
+                                        <condition id="7" name="Cursor is over object" sid="620482163744867" type="Mouse">
+                                            <param id="0" name="Object">BotaoProximaOnda</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="582963811519937" type="Function">
+                                            <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Reinicia variáveis das ondas e inicia a próxima onda quando o jogador clicar em &quot;Pronto&quot; ou pressionar Enter.</comment>
+                        <event-block sid="240296123357771">
+                            <conditions>
+                                <condition id="0" name="On function" sid="675949412688109" type="Function">
+                                    <param id="0" name="Name">&quot;JogoIniciarOnda&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="283963509052349" type="System">
+                                    <param id="0" name="Variable">OndaVindo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="122560760405938" type="System">
+                                    <param id="0" name="Variable">OndaAtual</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="192169636041595" type="System">
+                                    <param id="0" name="Variable">OndaInimigoAtual</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <comment>Se todos os inimigos da onda atual já tiverem sido criados e não houver mais nenhuma instância de inimigo, quer dizer que todos já foram eliminados. Portanto, informa que não estão mais vindo inimigos.</comment>
-                <event-block sid="613325657845798">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="990039167970238" type="System">
-                            <param id="0" name="Variable">OndaInimigoAtual</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">Ondas.Height</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="241920108764885" type="System">
-                            <param id="0" name="First value">FInimigo.Count</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="130903332576921" type="System">
-                            <param id="0" name="Variable">OndaVindo</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
+                </event-group>
+                <event-group description="" sid="773584933260618" title="Controle da onda atual">
+                    <sub-events>
+                        <event-block sid="726225427006600">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="554738223601073" type="System">
+                                    <param id="0" name="Variable">OndaVindo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="284267795601531" type="BotaoProximaOnda">
+                                    <param id="0" name="Animation">&quot;Onda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="839995033058928" type="BotaoProximaOnda">
+                                    <param id="0" name="Frame number">OndaAtual - 1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Verifica se ainda tem inimigos na onda....</comment>
+                                <event-block sid="148810237285925">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="589405409209464" type="System">
+                                            <param id="0" name="Interval (seconds)">0.45</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="139784853445327" type="System">
+                                            <param id="0" name="Variable">OndaInimigoAtual</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Ondas.Height</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="800055139701517" type="System">
+                                            <param id="0" name="Variable">OndaInimigoAtual</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>O item 1 é o Inimigo Carinha.</comment>
+                                        <event-block sid="363211378720282">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="828038784386220" type="Ondas">
+                                                    <param id="0" name="X">OndaAtual - 1</param>
+                                                    <param id="1" name="Y">OndaInimigoAtual</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="662287511112903" type="SpawnPoint">
+                                                    <param id="0" name="Object">InimigoCarinha</param>
+                                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>O item 2 é o Inimigo Gordão.</comment>
+                                        <event-block sid="925738745927232">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="937383051457154" type="Ondas">
+                                                    <param id="0" name="X">OndaAtual - 1</param>
+                                                    <param id="1" name="Y">OndaInimigoAtual</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="834550966112134" type="SpawnPoint">
+                                                    <param id="0" name="Object">InimigoGordao</param>
+                                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>O item 3 é o Inimigo Chefão.</comment>
+                                        <event-block sid="561578838363159">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="609685729181427" type="Ondas">
+                                                    <param id="0" name="X">OndaAtual - 1</param>
+                                                    <param id="1" name="Y">OndaInimigoAtual</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="376971339001675" type="SpawnPoint">
+                                                    <param id="0" name="Object">InimigoChefao</param>
+                                                    <param id="1" name="Layer">LayerIndex(&quot;Jogo - Torres e Inimigos&quot;)</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Se o item da onda for -1, quer dizer que é o fim da onda.</comment>
+                                        <event-block sid="818228605213098">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="108997722574013" type="Ondas">
+                                                    <param id="0" name="X">OndaAtual - 1</param>
+                                                    <param id="1" name="Y">OndaInimigoAtual</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="455721522729347" type="System">
+                                                    <param id="0" name="Variable">OndaInimigoAtual</param>
+                                                    <param id="1" name="Value">Ondas.Height</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Se todos os inimigos da onda atual já tiverem sido criados e não houver mais nenhuma instância de inimigo, quer dizer que todos já foram eliminados. Portanto, informa que não estão mais vindo inimigos.</comment>
+                        <event-block sid="613325657845798">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="990039167970238" type="System">
+                                    <param id="0" name="Variable">OndaInimigoAtual</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">Ondas.Height</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="241920108764885" type="System">
+                                    <param id="0" name="First value">FInimigo.Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="130903332576921" type="System">
+                                    <param id="0" name="Variable">OndaVindo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <comment>Sequência executada quando o jogador vence a partida.</comment>
                 <event-group description="" sid="736479378745769" title="Vitória">
                     <sub-events>
@@ -516,289 +524,384 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="935227215247602" title="Controles da Fase">
-            <sub-events>
-                <event-block sid="964906594345585">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="815281819442530" type="Mouse">
-                            <param id="0" name="Object">PausarBotao</param>
-                        </condition>
-                        <condition id="2" name="Mouse button is down" sid="365041919502805" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="629921541920685" type="PausarBotao">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="903044928000707">
-                    <conditions>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="329025223882829" type="Mouse">
-                            <param id="0" name="Object">PausarBotao</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="200132178376514" type="PausarBotao">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="239516784665887">
-                    <conditions>
-                        <condition id="3" name="On button released" sid="660485750382426" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                        </condition>
-                        <condition id="7" name="Cursor is over object" sid="772572619519080" type="Mouse">
-                            <param id="0" name="Object">PausarBotao</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="521045346637499" type="AcelerarBotao">
-                            <param id="0" name="Instance variable">Acelerado</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="700057507058992" type="AcelerarBotao">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="556696522003282" title="Derrota">
                     <sub-events>
-                        <event-block sid="333887372937888">
+                        <event-block sid="390179929829095">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="920854881895369" type="PausarBotao">
-                                    <param id="0" name="Instance variable">Pausado</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set time scale" sid="261181694654038" type="System">
-                                    <param id="0" name="Time scale">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="281372772006484" type="PausarBotao">
-                                    <param id="0" name="Animation">&quot;Pausar&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="622425172407784" type="PausarBotao">
-                                    <param id="0" name="Instance variable">Pausado</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="261118877722308">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="855656338804088" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set time scale" sid="519020778954912" type="System">
-                                    <param id="0" name="Time scale">0</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="575779952550002" type="PausarBotao">
-                                    <param id="0" name="Animation">&quot;Continuar&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="262239071655881" type="PausarBotao">
-                                    <param id="0" name="Instance variable">Pausado</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="693461248779218">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="684015473485751" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">AcelerarBotao</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="627441989143378" type="PausarBotao">
-                            <param id="0" name="Animation">&quot;Pausar&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="886554811871673" type="PausarBotao">
-                            <param id="0" name="Instance variable">Pausado</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="260004080516226">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="592398016382874" type="AcelerarBotao">
-                                    <param id="0" name="Instance variable">Acelerado</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set time scale" sid="546279789063720" type="System">
-                                    <param id="0" name="Time scale">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="703297454138588" type="AcelerarBotao">
-                                    <param id="0" name="Instance variable">Acelerado</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="569453449799859" type="AcelerarBotao">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="158795969078849">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="228136763749719" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set time scale" sid="990042859196132" type="System">
-                                    <param id="0" name="Time scale">2</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="586590907565434" type="AcelerarBotao">
-                                    <param id="0" name="Instance variable">Acelerado</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="209549302078144" type="AcelerarBotao">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="986261547011829">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="511367030813093" type="Mouse">
-                            <param id="0" name="Object">VoltarMenuBotao</param>
-                        </condition>
-                        <condition id="2" name="Mouse button is down" sid="370791966331358" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="145643275908747" type="VoltarMenuBotao">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="926402153212315">
-                    <conditions>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="501698387345521" type="Mouse">
-                            <param id="0" name="Object">VoltarMenuBotao</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="919082335068982" type="VoltarMenuBotao">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="142010906856471">
-                    <conditions>
-                        <condition id="3" name="On button released" sid="411617480174630" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                        </condition>
-                        <condition id="7" name="Cursor is over object" sid="503165966948977" type="Mouse">
-                            <param id="0" name="Object">VoltarMenuBotao</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="362312328251874" type="System">
-                            <param id="0" name="Layout">&quot;MenuPrincipal&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="390179929829095">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="769753414814095" type="System">
-                            <param id="0" name="Variable">Vidas</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set time scale" sid="883858425585489" type="System">
-                            <param id="0" name="Time scale">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="922411178515829" type="txtFalhou">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="790377322212042">
-                            <conditions>
-                                <condition id="5" inverted="1" name="Is tag playing" sid="975044885924640" type="Audio">
-                                    <param id="0" name="Tag">&quot;GameOver&quot;</param>
-                                </condition>
-                                <condition id="5" inverted="1" name="Is tag playing" sid="518254970312768" type="Audio">
-                                    <param id="0" name="Tag">&quot;PerderVida&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="694414541137618" type="System">
-                                    <param id="0" name="Variable">GameOver</param>
+                                <condition id="-14" name="Compare variable" sid="769753414814095" type="System">
+                                    <param id="0" name="Variable">Vidas</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="6" name="Stop" sid="768322222466498" type="Audio">
-                                    <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                <action id="-13" name="Set time scale" sid="883858425585489" type="System">
+                                    <param id="0" name="Time scale">0</param>
                                 </action>
-                                <action id="0" name="Play" sid="514645408380859" type="Audio">
-                                    <param id="0" name="Audio file">GameOver</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;GameOver&quot;</param>
+                                <action id="-15" name="Set visible" sid="922411178515829" type="txtFalhou">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="899797496480877" type="System">
-                                    <param id="0" name="Variable">GameOver</param>
-                                    <param id="1" name="Value">1</param>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="790377322212042">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="975044885924640" type="Audio">
+                                            <param id="0" name="Tag">&quot;GameOver&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="518254970312768" type="Audio">
+                                            <param id="0" name="Tag">&quot;PerderVida&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="694414541137618" type="System">
+                                            <param id="0" name="Variable">GameOver</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="768322222466498" type="Audio">
+                                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="514645408380859" type="Audio">
+                                            <param id="0" name="Audio file">GameOver</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;GameOver&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="899797496480877" type="System">
+                                            <param id="0" name="Variable">GameOver</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="145684275679529">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="564896505126408" type="Audio">
+                                    <param id="0" name="Tag">&quot;GameOver&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="788856236854258" type="System">
+                                    <param id="0" name="Object to create">MensagemGameOver</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                                    <param id="2" name="X">320</param>
+                                    <param id="3" name="Y">180</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="145684275679529">
-                    <conditions>
-                        <condition id="0" name="On ended" sid="564896505126408" type="Audio">
-                            <param id="0" name="Tag">&quot;GameOver&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="788856236854258" type="System">
-                            <param id="0" name="Object to create">MensagemGameOver</param>
-                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
-                            <param id="2" name="X">320</param>
-                            <param id="3" name="Y">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="473874414768807">
-                    <conditions>
-                        <condition id="3" name="On button released" sid="963145278115613" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                        </condition>
-                        <condition id="7" name="Cursor is over object" sid="382313699315795" type="Mouse">
-                            <param id="0" name="Object">MensagemGameOver</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="493844693356583" type="System">
-                            <param id="0" name="Layout">MenuPrincipal</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="113337556047422">
-                    <conditions>
-                        <condition id="3" name="On button released" sid="829319965104226" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                        </condition>
-                        <condition id="7" name="Cursor is over object" sid="937112562973433" type="Mouse">
-                            <param id="0" name="Object">MensagemGanhou</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="563835117501943" type="System">
-                            <param id="0" name="Layout">MenuPrincipal</param>
-                        </action>
-                    </actions>
-                </event-block>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="935227215247602" title="Controles da Fase">
+            <sub-events>
+                <event-group description="" sid="969874179960098" title="Pausar e Continuar">
+                    <sub-events>
+                        <event-block sid="964906594345585">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="815281819442530" type="Mouse">
+                                    <param id="0" name="Object">PausarBotao</param>
+                                </condition>
+                                <condition id="2" name="Mouse button is down" sid="365041919502805" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="629921541920685" type="PausarBotao">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903044928000707">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="329025223882829" type="Mouse">
+                                    <param id="0" name="Object">PausarBotao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="200132178376514" type="PausarBotao">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="148021065993144">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="265096893556984" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="803507756283711" type="PausarBotao">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="984292706265472">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="908575794214829" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="930894193570249" type="PausarBotao">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="239516784665887">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="660485750382426" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" sid="772572619519080" type="Mouse">
+                                    <param id="0" name="Object">PausarBotao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="820842624204642" type="Function">
+                                    <param id="0" name="Name">&quot;JogoPausarContinuar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="174865450691342">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="148348319836098" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="909787339239428" type="Function">
+                                    <param id="0" name="Name">&quot;JogoPausarContinuar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406379539007700">
+                            <conditions>
+                                <condition id="0" name="On function" sid="341892042386255" type="Function">
+                                    <param id="0" name="Name">&quot;JogoPausarContinuar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="521045346637499" type="AcelerarBotao">
+                                    <param id="0" name="Instance variable">Acelerado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="700057507058992" type="AcelerarBotao">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set playback rate" sid="439252345629662" type="Audio">
+                                    <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                    <param id="1" name="Playback rate">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="333887372937888">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="920854881895369" type="PausarBotao">
+                                            <param id="0" name="Instance variable">Pausado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="261181694654038" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="281372772006484" type="PausarBotao">
+                                            <param id="0" name="Animation">&quot;Pausar&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="622425172407784" type="PausarBotao">
+                                            <param id="0" name="Instance variable">Pausado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="12" name="Remove all effects" sid="231468051328671" type="Audio">
+                                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="261118877722308">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="855656338804088" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="519020778954912" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="575779952550002" type="PausarBotao">
+                                            <param id="0" name="Animation">&quot;Continuar&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="262239071655881" type="PausarBotao">
+                                            <param id="0" name="Instance variable">Pausado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="18" name="Add gain effect" sid="937131097062481" type="Audio">
+                                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                            <param id="1" name="Gain">-10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="679918396362617" title="Acelerar">
+                    <sub-events>
+                        <event-block any="1" sid="693461248779218">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="684015473485751" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">AcelerarBotao</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="678839004572950" type="Keyboard">
+                                    <param id="0" name="Key">90 (Z)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="627441989143378" type="PausarBotao">
+                                    <param id="0" name="Animation">&quot;Pausar&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="886554811871673" type="PausarBotao">
+                                    <param id="0" name="Instance variable">Pausado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="12" name="Remove all effects" sid="466637276225682" type="Audio">
+                                    <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="260004080516226">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="592398016382874" type="AcelerarBotao">
+                                            <param id="0" name="Instance variable">Acelerado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="546279789063720" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="703297454138588" type="AcelerarBotao">
+                                            <param id="0" name="Instance variable">Acelerado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="569453449799859" type="AcelerarBotao">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="5" name="Set playback rate" sid="384367463986588" type="Audio">
+                                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                            <param id="1" name="Playback rate">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="158795969078849">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="228136763749719" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="990042859196132" type="System">
+                                            <param id="0" name="Time scale">2</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="586590907565434" type="AcelerarBotao">
+                                            <param id="0" name="Instance variable">Acelerado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="209549302078144" type="AcelerarBotao">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="5" name="Set playback rate" sid="249994849550303" type="Audio">
+                                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                            <param id="1" name="Playback rate">1.2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="593186086668483" title="Voltar para tela inicial">
+                    <sub-events>
+                        <event-block sid="986261547011829">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="511367030813093" type="Mouse">
+                                    <param id="0" name="Object">VoltarMenuBotao</param>
+                                </condition>
+                                <condition id="2" name="Mouse button is down" sid="370791966331358" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="145643275908747" type="VoltarMenuBotao">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="926402153212315">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="501698387345521" type="Mouse">
+                                    <param id="0" name="Object">VoltarMenuBotao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="919082335068982" type="VoltarMenuBotao">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="142010906856471">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="411617480174630" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" sid="503165966948977" type="Mouse">
+                                    <param id="0" name="Object">VoltarMenuBotao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="362312328251874" type="System">
+                                    <param id="0" name="Layout">&quot;MenuPrincipal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="126728149810837" title="Vitória e Derrota - ações">
+                    <sub-events>
+                        <event-block sid="473874414768807">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="963145278115613" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" sid="382313699315795" type="Mouse">
+                                    <param id="0" name="Object">MensagemGameOver</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="493844693356583" type="System">
+                                    <param id="0" name="Layout">MenuPrincipal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="113337556047422">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="829319965104226" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" sid="937112562973433" type="Mouse">
+                                    <param id="0" name="Object">MensagemGanhou</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="563835117501943" type="System">
+                                    <param id="0" name="Layout">MenuPrincipal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="781464800196903" title="Families">
