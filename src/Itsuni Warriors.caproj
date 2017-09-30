@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -2357,6 +2358,9 @@
             <object-type name="Mouse" sid="565626247793604">
                 <plugin id="Mouse" />
             </object-type>
+            <object-type name="Browser" sid="376536429720020">
+                <plugin id="Browser" />
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -2514,6 +2518,7 @@
         </global-instance>
         <global-instance type="Function" uid="161" />
         <global-instance type="AJAX" uid="162" />
+        <global-instance type="Browser" uid="188" />
     </global-instances>
     <sounds-folder>
         <file name="TorreSaciAtaque.m4a" />

@@ -28,6 +28,16 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="462722947681109">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="659117674159944" type="Mouse">
+                            <param id="0" name="Object">MenuPrincipalBotaoSair</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="843662467559216" type="Browser" />
+                    </actions>
+                </event-block>
                 <event-block sid="671988790006808">
                     <conditions>
                         <condition id="7" name="Cursor is over object" sid="121180653099883" type="Mouse">
@@ -115,6 +125,16 @@
                         <action id="-1" name="Set X" sid="861683141128797" type="MenuPrincipalCamera">
                             <param id="0" name="X">MenuPrincipalCamera.X + 640</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="324115371932294">
+                    <conditions>
+                        <condition id="-32" inverted="1" name="Is on platform" sid="289232918289175" type="System">
+                            <param id="0" name="Platform">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="991120194714921" type="MenuPrincipalBotaoSair" />
                     </actions>
                 </event-block>
             </sub-events>
