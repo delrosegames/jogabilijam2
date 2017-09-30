@@ -2102,7 +2102,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927787087743223" speed="5">
-                        <frame duration="1" hotspotX="0.00208333" hotspotY="0.00277778" original-source="C:\Users\patri\Desktop\mapa 3.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\Mapa 3 ok.jpg" />
                     </animation>
                 </animation-folder>
             </object-type>
