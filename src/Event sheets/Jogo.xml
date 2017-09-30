@@ -14,6 +14,7 @@
         <variable constant="0" name="DinheiroAtual" sid="147354329828043" static="0" type="number">0</variable>
         <variable constant="0" name="OndaVindo" sid="126360296475382" static="0" type="number">0</variable>
         <variable constant="0" name="OndaAtual" sid="621447858659797" static="0" type="number">0</variable>
+        <variable constant="0" name="OndaAtualAcabou" sid="205716657689811" static="0" type="number">0</variable>
         <variable constant="0" name="OndaInimigoAtual" sid="308898413524551" static="0" type="number">-1</variable>
         <event-group description="" sid="511951437666883" title="Inicialização">
             <sub-events>
@@ -50,6 +51,10 @@
                         </action>
                         <action id="-9" name="Set value" sid="401845567240579" type="System">
                             <param id="0" name="Variable">OndaAtual</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="213985970757421" type="System">
+                            <param id="0" name="Variable">OndaAtualAcabou</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="493020860621384" type="System">
@@ -404,9 +409,9 @@
                 <event-block sid="613325657845798">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="990039167970238" type="System">
-                            <param id="0" name="Variable">OndaVindo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="0" name="Variable">OndaInimigoAtual</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Ondas.Height</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="241920108764885" type="System">
                             <param id="0" name="First value">FInimigo.Count</param>
@@ -421,77 +426,81 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="315909595878043">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="968819224425986" type="System">
-                            <param id="0" name="Variable">OndaAtual</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Ondas.Width</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="706066196803270" type="System">
-                            <param id="0" name="First value">FInimigo.Count</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="518602849624998" type="System">
-                            <param id="0" name="Variable">OndaAtual</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set time scale" sid="551036940491088" type="System">
-                            <param id="0" name="Time scale">0</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="736479378745769" title="Vitória">
                     <sub-events>
-                        <event-block sid="528079063480792">
+                        <event-block sid="315909595878043">
                             <conditions>
-                                <condition id="5" inverted="1" name="Is tag playing" sid="101380637783828" type="Audio">
-                                    <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
-                                </condition>
-                                <condition id="5" inverted="1" name="Is tag playing" sid="486678480659137" type="Audio">
-                                    <param id="0" name="Tag">&quot;PerdeuVida&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="155371434431506" type="System">
-                                    <param id="0" name="Variable">Venceu</param>
+                                <condition id="-14" name="Compare variable" sid="968819224425986" type="System">
+                                    <param id="0" name="Variable">OndaAtual</param>
                                     <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Ondas.Width</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="706066196803270" type="System">
+                                    <param id="0" name="First value">FInimigo.Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="518602849624998" type="System">
+                                    <param id="0" name="Variable">OndaAtual</param>
+                                    <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="6" name="Stop" sid="865346474526342" type="Audio">
-                                    <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                <action id="-13" name="Set time scale" sid="551036940491088" type="System">
+                                    <param id="0" name="Time scale">0</param>
                                 </action>
-                                <action id="0" name="Play" sid="590821076480542" type="Audio">
-                                    <param id="0" name="Audio file">VenceuJogo</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;VenceuJogo&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="623691034883488" type="System">
-                                    <param id="0" name="Variable">Venceu</param>
-                                    <param id="1" name="Value">1</param>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="528079063480792">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="101380637783828" type="Audio">
+                                            <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="486678480659137" type="Audio">
+                                            <param id="0" name="Tag">&quot;PerdeuVida&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="155371434431506" type="System">
+                                            <param id="0" name="Variable">Venceu</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="865346474526342" type="Audio">
+                                            <param id="0" name="Tag">&quot;MusicaJogo&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="590821076480542" type="Audio">
+                                            <param id="0" name="Audio file">VenceuJogo</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;VenceuJogo&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="623691034883488" type="System">
+                                            <param id="0" name="Variable">Venceu</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="625604098015989">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="986070129855968" type="Audio">
+                                    <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="751654665575471" type="System">
+                                    <param id="0" name="Object to create">MensagemGanhou</param>
+                                    <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
+                                    <param id="2" name="X">320</param>
+                                    <param id="3" name="Y">180</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="625604098015989">
-                    <conditions>
-                        <condition id="0" name="On ended" sid="986070129855968" type="Audio">
-                            <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="751654665575471" type="System">
-                            <param id="0" name="Object to create">MensagemGanhou</param>
-                            <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
-                            <param id="2" name="X">320</param>
-                            <param id="3" name="Y">180</param>
-                        </action>
-                    </actions>
-                </event-block>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="935227215247602" title="Controles da Fase">
