@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MenuPrincipal</name>
     <events>
+        <variable constant="0" name="ExibindoSelecaoFases" sid="292275274752954" static="0" type="number">0</variable>
         <event-block sid="574300816907979">
             <conditions>
                 <condition id="3" name="On button released" sid="343703903983054" type="Mouse">
@@ -21,6 +22,10 @@
                         <action id="-1" name="Set X" sid="675923080966027" type="MenuPrincipalCamera">
                             <param id="0" name="X">MenuPrincipalCamera.X + 640</param>
                         </action>
+                        <action id="-9" name="Set value" sid="335807457891357" type="System">
+                            <param id="0" name="Variable">ExibindoSelecaoFases</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="671988790006808">
@@ -32,6 +37,10 @@
                     <actions>
                         <action id="-1" name="Set X" sid="391750080929170" type="MenuPrincipalCamera">
                             <param id="0" name="X">MenuPrincipalCamera.X - 640</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="123001343195935" type="System">
+                            <param id="0" name="Variable">ExibindoSelecaoFases</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -91,6 +100,20 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;MenuPrincipal&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="188611865613867">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="285796256197573" type="System">
+                            <param id="0" name="Variable">ExibindoSelecaoFases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="861683141128797" type="MenuPrincipalCamera">
+                            <param id="0" name="X">MenuPrincipalCamera.X + 640</param>
                         </action>
                     </actions>
                 </event-block>

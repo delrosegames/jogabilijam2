@@ -495,10 +495,6 @@
                                             <param id="3" name="Volume">-10</param>
                                             <param id="1" name="Tag (optional)">&quot;VenceuJogo&quot;</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="623691034883488" type="System">
-                                            <param id="0" name="Variable">Venceu</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
                                         <action id="-3" name="Create object" sid="751654665575471" type="System">
                                             <param id="0" name="Object to create">MensagemGanhou</param>
                                             <param id="1" name="Layer">LayerIndex(&quot;Diálogos - Fundo&quot;)</param>
@@ -509,15 +505,16 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block disabled="1" sid="625604098015989">
+                        <event-block sid="625604098015989">
                             <conditions>
                                 <condition id="0" name="On ended" sid="986070129855968" type="Audio">
                                     <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="746054352937312" type="System">
-                                    <param id="0" name="Layout">MenuPrincipal</param>
+                                <action id="-9" name="Set value" sid="623691034883488" type="System">
+                                    <param id="0" name="Variable">Venceu</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -566,10 +563,6 @@
                                             <param id="3" name="Volume">-10</param>
                                             <param id="1" name="Tag (optional)">&quot;GameOver&quot;</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="899797496480877" type="System">
-                                            <param id="0" name="Variable">GameOver</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
                                         <action id="-3" name="Create object" sid="788856236854258" type="System">
                                             <param id="0" name="Object to create">MensagemGameOver</param>
                                             <param id="1" name="Layer">LayerIndex(&quot;Diálogos - Fundo&quot;)</param>
@@ -580,15 +573,16 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block disabled="1" sid="145684275679529">
+                        <event-block sid="145684275679529">
                             <conditions>
                                 <condition id="0" name="On ended" sid="564896505126408" type="Audio">
                                     <param id="0" name="Tag">&quot;GameOver&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="717826363714243" type="System">
-                                    <param id="0" name="Layout">MenuPrincipal</param>
+                                <action id="-9" name="Set value" sid="899797496480877" type="System">
+                                    <param id="0" name="Variable">GameOver</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -872,35 +866,33 @@
                 </event-group>
                 <event-group description="" sid="126728149810837" title="Vitória e Derrota - ações">
                     <sub-events>
-                        <event-block sid="473874414768807">
+                        <event-block any="1" sid="473874414768807">
                             <conditions>
-                                <condition id="3" name="On button released" sid="963145278115613" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
+                                <condition id="-14" name="Compare variable" sid="953083188483262" type="System">
+                                    <param id="0" name="Variable">GameOver</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
-                                <condition id="7" name="Cursor is over object" sid="382313699315795" type="Mouse">
-                                    <param id="0" name="Object">MensagemGameOver</param>
+                                <condition id="-14" name="Compare variable" sid="750541283706021" type="System">
+                                    <param id="0" name="Variable">Venceu</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="493844693356583" type="System">
-                                    <param id="0" name="Layout">MenuPrincipal</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="113337556047422">
-                            <conditions>
-                                <condition id="3" name="On button released" sid="829319965104226" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                                <condition id="7" name="Cursor is over object" sid="937112562973433" type="Mouse">
-                                    <param id="0" name="Object">MensagemGanhou</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="563835117501943" type="System">
-                                    <param id="0" name="Layout">MenuPrincipal</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="327358572992943">
+                                    <conditions>
+                                        <condition id="1" name="On any key pressed" sid="734682166355946" type="Keyboard" />
+                                        <condition id="1" name="On any click" sid="868182617985758" type="Mouse" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="493844693356583" type="System">
+                                            <param id="0" name="Layout">MenuPrincipal</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
