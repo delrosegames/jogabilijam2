@@ -127,6 +127,11 @@
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">CardCuca.UID</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="165395875532087" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">TORRE_CUCA_CUSTO</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="887598599577798" type="CardCuca">
@@ -240,6 +245,34 @@
                     <actions>
                         <action id="-16" name="Set opacity" sid="866081056947810" type="TorreCuca">
                             <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="417404107390634">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="717016298797055" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TORRE_CUCA_CUSTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="812973230649845" type="CardCuca">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="557758681326160">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="619768155342421" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="277107742607684" type="CardCuca">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>

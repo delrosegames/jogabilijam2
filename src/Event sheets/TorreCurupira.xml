@@ -130,6 +130,11 @@
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">CardCurupira.UID</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="338117521233263" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">TORRE_CURUPIRA_CUSTO</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="968415612917073" type="CardCurupira">
@@ -243,6 +248,34 @@
                     <actions>
                         <action id="-16" name="Set opacity" sid="122524284190154" type="TorreCurupira">
                             <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="601441967285912">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="286677151611273" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TORRE_CURUPIRA_CUSTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="829536378140838" type="CardCurupira">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="951719379587803">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="805123965160835" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="520039649271488" type="CardCurupira">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>

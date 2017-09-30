@@ -132,6 +132,11 @@
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">CardMula.UID</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="284437421256575" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">TORRE_MULA_CUSTO</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="759176211656364" type="CardMula">
@@ -245,6 +250,34 @@
                     <actions>
                         <action id="-16" name="Set opacity" sid="585184117107321" type="TorreMula">
                             <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="745332275372103">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="735057083714440" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TORRE_MULA_CUSTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="777788211876546" type="CardMula">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="184081413988167">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="282891270309121" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="414495670960405" type="CardMula">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
