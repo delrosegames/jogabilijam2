@@ -241,9 +241,22 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="885828983048962">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="678835990190129" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="950299578981647" type="BotaoProximaOnda">
+                                    <param id="0" name="Animation">&quot;Pressionado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="719823273303887">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="996373299186420" type="Keyboard">
+                                <condition id="3" name="On key released" sid="996373299186420" type="Keyboard">
                                     <param id="0" name="Key">13 (Return)</param>
                                 </condition>
                             </conditions>
@@ -406,6 +419,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Se todos os inimigos da onda atual já tiverem sido criados e não houver mais nenhuma instância de inimigo, quer dizer que todos já foram eliminados. Portanto, informa que não estão mais vindo inimigos.</comment>
                 <event-block sid="613325657845798">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="990039167970238" type="System">
@@ -426,6 +440,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Sequência executada quando o jogador vence a partida.</comment>
                 <event-group description="" sid="736479378745769" title="Vitória">
                     <sub-events>
                         <event-block sid="315909595878043">
