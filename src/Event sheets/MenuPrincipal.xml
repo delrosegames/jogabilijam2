@@ -14,7 +14,7 @@
             <sub-events>
                 <event-block sid="392043054461473">
                     <conditions>
-                        <condition id="7" name="Cursor is over object" sid="775954609933051" type="Mouse">
+                        <condition id="7" name="Cursor is over object" sid="606974740655651" type="Mouse">
                             <param id="0" name="Object">MenuPrincipalBotaoIniciar</param>
                         </condition>
                     </conditions>
