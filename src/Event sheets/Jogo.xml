@@ -499,22 +499,25 @@
                                             <param id="0" name="Variable">Venceu</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="-3" name="Create object" sid="751654665575471" type="System">
+                                            <param id="0" name="Object to create">MensagemGanhou</param>
+                                            <param id="1" name="Layer">LayerIndex(&quot;Diálogos - Fundo&quot;)</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="625604098015989">
+                        <event-block disabled="1" sid="625604098015989">
                             <conditions>
                                 <condition id="0" name="On ended" sid="986070129855968" type="Audio">
                                     <param id="0" name="Tag">&quot;VenceuJogo&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="751654665575471" type="System">
-                                    <param id="0" name="Object to create">MensagemGanhou</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
-                                    <param id="2" name="X">320</param>
-                                    <param id="3" name="Y">180</param>
+                                <action id="-2" name="Go to layout" sid="746054352937312" type="System">
+                                    <param id="0" name="Layout">MenuPrincipal</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -567,22 +570,25 @@
                                             <param id="0" name="Variable">GameOver</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="-3" name="Create object" sid="788856236854258" type="System">
+                                            <param id="0" name="Object to create">MensagemGameOver</param>
+                                            <param id="1" name="Layer">LayerIndex(&quot;Diálogos - Fundo&quot;)</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="145684275679529">
+                        <event-block disabled="1" sid="145684275679529">
                             <conditions>
                                 <condition id="0" name="On ended" sid="564896505126408" type="Audio">
                                     <param id="0" name="Tag">&quot;GameOver&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="788856236854258" type="System">
-                                    <param id="0" name="Object to create">MensagemGameOver</param>
-                                    <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
-                                    <param id="2" name="X">320</param>
-                                    <param id="3" name="Y">180</param>
+                                <action id="-2" name="Go to layout" sid="717826363714243" type="System">
+                                    <param id="0" name="Layout">MenuPrincipal</param>
                                 </action>
                             </actions>
                         </event-block>
