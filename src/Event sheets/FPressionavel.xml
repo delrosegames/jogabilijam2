@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FPressionavel</name>
+    <events>
+        <event-block sid="796708134418670">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="325359535692329" type="Mouse">
+                    <param id="0" name="Object">FPressionavel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="877488973686864" type="FPressionavel">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="377215833726947">
+            <conditions>
+                <condition id="3" name="On button released" sid="863606585401108" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="785552538850123" type="Mouse">
+                    <param id="0" name="Object">FPressionavel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="575971910271232" type="FPressionavel">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="229197344185559">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="399471678090470" type="Mouse">
+                    <param id="0" name="Object">FPressionavel</param>
+                </condition>
+                <condition id="2" name="Mouse button is down" sid="105623550439853" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="173719570878329" type="FPressionavel">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

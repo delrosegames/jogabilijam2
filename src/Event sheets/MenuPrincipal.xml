@@ -3,61 +3,75 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MenuPrincipal</name>
     <events>
-        <event-block sid="503880196780472">
+        <event-block sid="574300816907979">
             <conditions>
-                <condition id="6" name="On object clicked" sid="803729536252366" type="Mouse">
+                <condition id="3" name="On button released" sid="343703903983054" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">MenuPrincipalBotaoIniciar</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="675923080966027" type="MenuPrincipalCamera">
-                    <param id="0" name="X">MenuPrincipalCamera.X + 640</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="182220487055297">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="796317999961683" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">MiniaturaFase1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="576766777881772" type="System">
-                    <param id="0" name="Layout">Fase1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="787550762738575">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="813510086086256" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">MiniaturaFase2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="193893969725459" type="System">
-                    <param id="0" name="Layout">Fase2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="106280947152343">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="374224185117189" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">MenuPrincipalFase3Texto</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="850483526531933" type="System">
-                    <param id="0" name="Layout">Fase3</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="392043054461473">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="775954609933051" type="Mouse">
+                            <param id="0" name="Object">MenuPrincipalBotaoIniciar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="675923080966027" type="MenuPrincipalCamera">
+                            <param id="0" name="X">MenuPrincipalCamera.X + 640</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671988790006808">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="121180653099883" type="Mouse">
+                            <param id="0" name="Object">SelecaoFasesVoltar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="391750080929170" type="MenuPrincipalCamera">
+                            <param id="0" name="X">MenuPrincipalCamera.X - 640</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="726533158512483">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="106053234027974" type="Mouse">
+                            <param id="0" name="Object">MiniaturaFase1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="992752246360230" type="System">
+                            <param id="0" name="Layout">Fase1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="642820497365735">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="666035563727323" type="Mouse">
+                            <param id="0" name="Object">MiniaturaFase2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="239593043359616" type="System">
+                            <param id="0" name="Layout">Fase2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="315598349491742">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="861394286410616" type="Mouse">
+                            <param id="0" name="Object">MiniaturaFase3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="296979755022369" type="System">
+                            <param id="0" name="Layout">Fase3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="758949128365377">
             <conditions>
@@ -92,5 +106,6 @@
                 </action>
             </actions>
         </event-block>
+        <include>FPressionavel</include>
     </events>
 </c2eventsheet>
