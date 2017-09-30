@@ -570,7 +570,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Damage>1</Damage>
+                        <Damage>0.75</Damage>
                         <AlvoUID>0</AlvoUID>
                     </instance-variables>
                     <behavior-instances>
