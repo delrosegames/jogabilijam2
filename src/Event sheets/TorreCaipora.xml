@@ -132,6 +132,11 @@
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">CardCaipora.UID</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="811076543123058" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">TORRE_CAIPORA_CUSTO</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="141435909028062" type="CardCaipora">
@@ -245,6 +250,34 @@
                     <actions>
                         <action id="-16" name="Set opacity" sid="764095873369294" type="TorreCaipora">
                             <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="580960154077737">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="199820002798584" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TORRE_CAIPORA_CUSTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="475988309318488" type="CardCaipora">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="996489134243019">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="783050488135485" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="463976558555564" type="CardCaipora">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>

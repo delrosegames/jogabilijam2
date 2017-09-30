@@ -31,7 +31,9 @@
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="grayscale">Grayscale</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -2114,6 +2116,11 @@
         <object-folder name="GUI">
             <object-type name="CardCaipora" sid="522600626958848">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Grayscale">
+                        <effect id="grayscale" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="504770868171251" speed="0">
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Cards Personagens-Torres\Caipora A- 01.png" />
@@ -2123,6 +2130,11 @@
             </object-type>
             <object-type name="CardCuca" sid="389915010474917">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Grayscale">
+                        <effect id="grayscale" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="700037762307797" speed="0">
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Cards Personagens-Torres\Cuca W- 01.png" />
@@ -2132,6 +2144,11 @@
             </object-type>
             <object-type name="CardCurupira" sid="915921938348570">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Grayscale">
+                        <effect id="grayscale" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="726062726964959" speed="0">
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Cards Personagens-Torres\Curupira E- 01.png" />
@@ -2141,6 +2158,11 @@
             </object-type>
             <object-type name="CardMula" sid="757188918314597">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Grayscale">
+                        <effect id="grayscale" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="510974694881354" speed="0">
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Cards Personagens-Torres\Mula S- 01.png" />
@@ -2150,6 +2172,11 @@
             </object-type>
             <object-type name="CardSaci" sid="109244969014842">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Grayscale">
+                        <effect id="grayscale" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="710844365996355" speed="0">
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="D:\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Menu , Logo, Ícones\Menu Lateral InGame\Botões Cards Personagens-Torres\Saci Q- 01.png" />

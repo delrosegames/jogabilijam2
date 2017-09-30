@@ -132,6 +132,11 @@
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">CardSaci.UID</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="410049897042493" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">TORRE_SACI_CUSTO</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="666253929907316" type="CardSaci">
@@ -245,6 +250,34 @@
                     <actions>
                         <action id="-16" name="Set opacity" sid="233114813231605" type="TorreSaci">
                             <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="980979740918367">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="738203407271577" type="System">
+                            <param id="0" name="Variable">DinheiroAtual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TORRE_SACI_CUSTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="662689390225806" type="CardSaci">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="496687169508715">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="529524067263696" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="770880338475162" type="CardSaci">
+                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
