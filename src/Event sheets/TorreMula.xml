@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TorreMula</name>
     <events>
-        <variable comment="Custo de construção da Torre Mula Sem Cabeça" constant="1" name="TORRE_MULA_CUSTO" sid="450131932921059" static="0" type="number">20</variable>
+        <variable comment="Custo de construção da Torre Mula Sem Cabeça" constant="1" name="TORRE_MULA_CUSTO" sid="450131932921059" static="0" type="number">25</variable>
         <event-group description="" sid="790885185636681" title="Construção da Torre Mula">
             <sub-events>
                 <event-block sid="853719702603689">

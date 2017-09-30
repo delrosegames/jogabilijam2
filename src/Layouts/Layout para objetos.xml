@@ -41,7 +41,7 @@
                         <PontosVida>0</PontosVida>
                         <TempoDevagar>0</TempoDevagar>
                         <PontosVidaAnterior>0</PontosVidaAnterior>
-                        <DinheiroRecompensa>5</DinheiroRecompensa>
+                        <DinheiroRecompensa>2</DinheiroRecompensa>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -709,7 +709,7 @@
                         <PontosVida>0</PontosVida>
                         <TempoDevagar>0</TempoDevagar>
                         <PontosVidaAnterior>0</PontosVidaAnterior>
-                        <DinheiroRecompensa>10</DinheiroRecompensa>
+                        <DinheiroRecompensa>3</DinheiroRecompensa>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -805,7 +805,7 @@
                         <PontosVida>0</PontosVida>
                         <TempoDevagar>0</TempoDevagar>
                         <PontosVidaAnterior>0</PontosVidaAnterior>
-                        <DinheiroRecompensa>20</DinheiroRecompensa>
+                        <DinheiroRecompensa>5</DinheiroRecompensa>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
