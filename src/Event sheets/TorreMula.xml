@@ -16,6 +16,10 @@
                             <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="679943080557670" type="TextoPreco">
+                            <param id="0" name="Pin to">CardMula</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                         <action id="-7" name="Set size" sid="739968210653929" type="TextoPreco">
                             <param id="0" name="Width">CardMula.Width - 6</param>
                             <param id="1" name="Height">CardMula.Height - 10</param>
@@ -46,71 +50,124 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="994408167255367">
+                <event-block sid="233421757276751">
                     <conditions>
-                        <condition id="3" name="On key released" sid="132436253143125" type="Keyboard">
+                        <condition id="3" name="On key released" sid="139862997834709" type="Keyboard">
                             <param id="0" name="Key">83 (S)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="835865012041970" type="CardMula">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="802949580520873" type="Function">
+                            <param id="0" name="Name">&quot;CardMulaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="622160354028912">
+                <event-block sid="129719315652950">
                     <conditions>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="245124803461832" type="Mouse">
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="458562648502105" type="Mouse">
                             <param id="0" name="Object">CardMula</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="880514018241971" type="CardMula">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="324680429475135" type="Function">
+                            <param id="0" name="Name">&quot;CardMulaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="452704892053734">
+                <event-block sid="447650962784447">
                     <conditions>
-                        <condition id="3" name="On button released" sid="696401979067553" type="Mouse">
+                        <condition id="3" name="On button released" sid="927673206348738" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                         </condition>
-                        <condition id="7" name="Cursor is over object" sid="132787239445912" type="Mouse">
+                        <condition id="7" name="Cursor is over object" sid="314802664647039" type="Mouse">
                             <param id="0" name="Object">CardMula</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="290312732293492" type="CardMula">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="551299614561860" type="Function">
+                            <param id="0" name="Name">&quot;CardMulaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="160228965692240">
+                <event-block sid="138760157254732">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="868435957290376" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="329206790608664" type="Keyboard">
                             <param id="0" name="Key">83 (S)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="930028135904093" type="CardMula">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="0" name="Call function" sid="136092196972437" type="Function">
+                            <param id="0" name="Name">&quot;CardMulaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="394817257018927">
+                <event-block sid="853432425854747">
                     <conditions>
-                        <condition id="7" name="Cursor is over object" sid="806188186154130" type="Mouse">
+                        <condition id="7" name="Cursor is over object" sid="297266695032073" type="Mouse">
                             <param id="0" name="Object">CardMula</param>
                         </condition>
-                        <condition id="2" name="Mouse button is down" sid="465574221456934" type="Mouse">
+                        <condition id="2" name="Mouse button is down" sid="532860100568870" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="517862728065882" type="CardMula">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="0" name="Call function" sid="149153123849447" type="Function">
+                            <param id="0" name="Name">&quot;CardMulaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="682929598131177">
+                    <conditions>
+                        <condition id="0" name="On function" sid="660463162482706" type="Function">
+                            <param id="0" name="Name">&quot;CardMulaPressionado&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="178440514408883" type="System">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Expression">TextoPreco.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">CardMula.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="759176211656364" type="CardMula">
+                            <param id="0" name="Frame number">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="581160953410658">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="577562806365534" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="561554571068440" type="TextoPreco">
+                                    <param id="0" name="Height">CardMula.Height - 10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="856875387758928">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="191978793933256" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="927337149303783" type="TextoPreco">
+                                    <param id="0" name="Height">CardMula.Height - 6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Gera uma nova torre para ser posicionada</comment>
                 <event-block any="1" sid="868399528077361">

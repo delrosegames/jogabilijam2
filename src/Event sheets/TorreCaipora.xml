@@ -16,6 +16,10 @@
                             <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="895438568076574" type="TextoPreco">
+                            <param id="0" name="Pin to">CardCaipora</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                         <action id="-7" name="Set size" sid="860091783626046" type="TextoPreco">
                             <param id="0" name="Width">CardCaipora.Width - 6</param>
                             <param id="1" name="Height">CardCaipora.Height - 10</param>
@@ -53,8 +57,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="246070260013859" type="CardCaipora">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="953138919860960" type="Function">
+                            <param id="0" name="Name">&quot;CardCaiporaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -65,8 +70,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="254485000350754" type="CardCaipora">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="241786839537014" type="Function">
+                            <param id="0" name="Name">&quot;CardCaiporaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -80,8 +86,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="888745513972721" type="CardCaipora">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="639176688577744" type="Function">
+                            <param id="0" name="Name">&quot;CardCaiporaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -92,8 +99,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="520676579311736" type="CardCaipora">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="0" name="Call function" sid="331134851621333" type="Function">
+                            <param id="0" name="Name">&quot;CardCaiporaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -107,10 +115,59 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="987110844065360" type="CardCaipora">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="0" name="Call function" sid="546780689931800" type="Function">
+                            <param id="0" name="Name">&quot;CardCaiporaPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="895136459583547">
+                    <conditions>
+                        <condition id="0" name="On function" sid="616553881361156" type="Function">
+                            <param id="0" name="Name">&quot;CardCaiporaPressionado&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="600408792394568" type="System">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Expression">TextoPreco.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">CardCaipora.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="141435909028062" type="CardCaipora">
+                            <param id="0" name="Frame number">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="469518295688289">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="211903819305387" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="879032840625660" type="TextoPreco">
+                                    <param id="0" name="Height">CardCaipora.Height - 10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="629502298451944">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="242329706567620" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="993070843364883" type="TextoPreco">
+                                    <param id="0" name="Height">CardCaipora.Height - 6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Gera uma nova torre para ser posicionada</comment>
                 <event-block any="1" sid="852245018156165">

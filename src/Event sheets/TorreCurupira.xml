@@ -16,6 +16,10 @@
                             <param id="1" name="Layer">LayerIndex(&quot;GUI - Frente&quot;)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="312086265450248" type="TextoPreco">
+                            <param id="0" name="Pin to">CardCurupira</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                         <action id="-7" name="Set size" sid="612478219623266" type="TextoPreco">
                             <param id="0" name="Width">CardCurupira.Width - 6</param>
                             <param id="1" name="Height">CardCurupira.Height - 10</param>
@@ -44,71 +48,124 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="389536514612114">
+                <event-block sid="283608305613886">
                     <conditions>
-                        <condition id="3" name="On key released" sid="276357179154685" type="Keyboard">
+                        <condition id="3" name="On key released" sid="659576090630295" type="Keyboard">
                             <param id="0" name="Key">69 (E)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="820524211137922" type="CardCurupira">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="187128367373774" type="Function">
+                            <param id="0" name="Name">&quot;CardCurupiraPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="195218292049933">
+                <event-block sid="736949238283137">
                     <conditions>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="982149176784251" type="Mouse">
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="461814232809396" type="Mouse">
                             <param id="0" name="Object">CardCurupira</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="819651061182390" type="CardCurupira">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="157684444606789" type="Function">
+                            <param id="0" name="Name">&quot;CardCurupiraPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="931571667682777">
+                <event-block sid="883283116292841">
                     <conditions>
-                        <condition id="3" name="On button released" sid="146343330970719" type="Mouse">
+                        <condition id="3" name="On button released" sid="812695617471300" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                         </condition>
-                        <condition id="7" name="Cursor is over object" sid="571334841277407" type="Mouse">
+                        <condition id="7" name="Cursor is over object" sid="885324185482888" type="Mouse">
                             <param id="0" name="Object">CardCurupira</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="816070936323915" type="CardCurupira">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="174341717799808" type="Function">
+                            <param id="0" name="Name">&quot;CardCurupiraPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="783912634573450">
+                <event-block sid="584219470355865">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="193694633000017" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="668056655576705" type="Keyboard">
                             <param id="0" name="Key">69 (E)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="249522935528487" type="CardCurupira">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="0" name="Call function" sid="442510932524381" type="Function">
+                            <param id="0" name="Name">&quot;CardCurupiraPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="459927020459468">
+                <event-block sid="158667136436104">
                     <conditions>
-                        <condition id="7" name="Cursor is over object" sid="214320680907549" type="Mouse">
+                        <condition id="7" name="Cursor is over object" sid="895179147157678" type="Mouse">
                             <param id="0" name="Object">CardCurupira</param>
                         </condition>
-                        <condition id="2" name="Mouse button is down" sid="442309757824132" type="Mouse">
+                        <condition id="2" name="Mouse button is down" sid="555493493232877" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="589602684046048" type="CardCurupira">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="0" name="Call function" sid="504641565133173" type="Function">
+                            <param id="0" name="Name">&quot;CardCurupiraPressionado&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="607617524755835">
+                    <conditions>
+                        <condition id="0" name="On function" sid="887775330987382" type="Function">
+                            <param id="0" name="Name">&quot;CardCurupiraPressionado&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="942830161757848" type="System">
+                            <param id="0" name="Object">TextoPreco</param>
+                            <param id="1" name="Expression">TextoPreco.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">CardCurupira.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="968415612917073" type="CardCurupira">
+                            <param id="0" name="Frame number">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="723561508456729">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="824662659413990" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="691510731738259" type="TextoPreco">
+                                    <param id="0" name="Height">CardCurupira.Height - 10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="726882572876221">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="254723210799176" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="288672124305049" type="TextoPreco">
+                                    <param id="0" name="Height">CardCurupira.Height - 6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Gera uma nova torre para ser posicionada</comment>
                 <event-block any="1" sid="894901107098727">
