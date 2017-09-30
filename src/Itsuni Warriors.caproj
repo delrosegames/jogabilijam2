@@ -2526,7 +2526,7 @@
         </global-instance>
         <global-instance type="Function" uid="161" />
         <global-instance type="AJAX" uid="162" />
-        <global-instance type="Browser" uid="188" />
+        <global-instance type="Browser" uid="189" />
     </global-instances>
     <sounds-folder>
         <file name="TorreSaciAtaque.m4a" />
