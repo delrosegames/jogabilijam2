@@ -87,7 +87,30 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Fases_Moitao" uid="8">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>330</x>
+                        <y>118</y>
+                        <z>0</z>
+                        <width>46</width>
+                        <height>41</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.51219511</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Jogo - Cenário - Topo" sid="535357823329195">
@@ -569,7 +592,7 @@
                         <x>120</x>
                         <y>90</y>
                         <z>0</z>
-                        <width>180</width>
+                        <width>240</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

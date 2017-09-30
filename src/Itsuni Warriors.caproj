@@ -2080,6 +2080,25 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Fases_Moitao" sid="109964262218768">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668440050402865" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\itens das fases\moitao.png">
+                            <collision-poly>
+                                <point x="0.173913" y="0.195122" />
+                                <point x="0.5" y="0" />
+                                <point x="0.804348" y="0.219512" />
+                                <point x="0.978261" y="0.487805" />
+                                <point x="0.913043" y="0.902439" />
+                                <point x="0.5" y="1" />
+                                <point x="0.108696" y="0.878049" />
+                                <point x="0" y="0.487805" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="GUI">
             <object-type name="CardCaipora" sid="522600626958848">
@@ -2328,6 +2347,7 @@
         </family>
         <family name="FTorresInimigos" plugin-id="Sprite" sid="731597994609272">
             <members>
+                <member>Fases_Moitao</member>
                 <member>GuaranaFinalFase</member>
                 <member>InimigoCarinha</member>
                 <member>InimigoCarinhaDevagar</member>
