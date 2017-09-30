@@ -2071,7 +2071,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508295869701976" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\mapa 01 ok.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Cenarios\fase 01 arrumado final.png" />
                     </animation>
                 </animation-folder>
             </object-type>
