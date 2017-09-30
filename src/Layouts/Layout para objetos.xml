@@ -41,6 +41,7 @@
                         <PontosVida>0</PontosVida>
                         <TempoDevagar>0</TempoDevagar>
                         <PontosVidaAnterior>0</PontosVidaAnterior>
+                        <DinheiroRecompensa>5</DinheiroRecompensa>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -356,7 +357,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Damage>0.2</Damage>
+                        <Damage>1</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Fade">
@@ -462,7 +463,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Damage>4</Damage>
+                        <Damage>3</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -708,6 +709,7 @@
                         <PontosVida>0</PontosVida>
                         <TempoDevagar>0</TempoDevagar>
                         <PontosVidaAnterior>0</PontosVidaAnterior>
+                        <DinheiroRecompensa>10</DinheiroRecompensa>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -803,6 +805,7 @@
                         <PontosVida>0</PontosVida>
                         <TempoDevagar>0</TempoDevagar>
                         <PontosVidaAnterior>0</PontosVidaAnterior>
+                        <DinheiroRecompensa>20</DinheiroRecompensa>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">

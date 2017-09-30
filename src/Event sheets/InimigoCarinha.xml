@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>InimigoCarinha</name>
     <events>
-        <variable constant="1" name="INIMIGO_CARINHA_VELOCIDADE" sid="368365106531972" static="0" type="number">70</variable>
+        <variable constant="1" name="INIMIGO_CARINHA_VELOCIDADE" sid="368365106531972" static="0" type="number">60</variable>
         <variable constant="1" name="INIMIGO_CARINHA_PV_BASE" sid="294692083084042" static="0" type="number">5</variable>
         <event-block sid="452106485874531">
             <conditions>
@@ -32,88 +32,6 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="479708935022218" type="InimigoCarinhaHP">
                     <param id="0" name="Pin to">InimigoCarinha</param>
                     <param id="1" name="Mode">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="269827266879050">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="680218049729246" type="InimigoCarinhaBase">
-                    <param id="0" name="Object">PontoMovimento</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="733841299632409" type="PontoMovimento">
-                    <param id="0" name="Instance variable">Ordem</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">InimigoCarinhaBase.CurrentDestination</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="548604558235020" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">CurrentDestination</param>
-                    <param id="1" name="Value">PontoMovimento.Ordem+1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="967390911316186">
-            <conditions>
-                <condition id="-11" name="For Each" sid="947350158839464" type="System">
-                    <param id="0" name="Object">InimigoCarinhaBase</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block disabled="1" sid="951644318464481">
-                    <conditions>
-                        <condition id="-34" name="Pick by evaluate" sid="383681595120874" type="System">
-                            <param id="0" name="Object">PontoMovimento</param>
-                            <param id="1" name="Expression">PontoMovimento.Ordem = InimigoCarinhaBase.CurrentDestination</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-22" name="Set angle toward position" sid="556515130501144" type="InimigoCarinhaBase">
-                            <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
-                            <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="580077237622810">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="384520987873014" type="InimigoCarinhaBase">
-                    <param id="0" name="Object">EnemyGoal</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="772221202387867" type="InimigoCarinhaBase" />
-                <action id="-11" name="Subtract from" sid="434971595620994" type="System">
-                    <param id="0" name="Variable">Vidas</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="25" name="Play at object" sid="233965712608138" type="Audio">
-                    <param id="0" name="Audio file">PerderVida</param>
-                    <param id="1" name="Loop">0</param>
-                    <param id="2" name="Volume">0</param>
-                    <param id="3" name="Object">GuaranaFinalFase</param>
-                    <param id="4" name="Inner angle">360</param>
-                    <param id="5" name="Outer angle">360</param>
-                    <param id="6" name="Outer gain">0</param>
-                    <param id="7" name="Tag (optional)">&quot;PerderVida&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="378564797738253">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="305160777681754" type="InimigoCarinhaBase">
-                    <param id="0" name="Instance variable">PontosVida</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="369429204019795" type="InimigoCarinha" />
-                <action id="-10" name="Add to" sid="489021851363339" type="System">
-                    <param id="0" name="Variable">DinheiroAtual</param>
-                    <param id="1" name="Value">2*OndaAtual</param>
                 </action>
             </actions>
         </event-block>
@@ -158,7 +76,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="143955018430874" type="InimigoCarinhaBase">
-                            <param id="0" name="Speed">INIMIGO_CARINHA_VELOCIDADE / 2</param>
+                            <param id="0" name="Speed">INIMIGO_CARINHA_VELOCIDADE - INIMIGO_CARINHA_VELOCIDADE / 2</param>
                         </action>
                         <action id="-15" name="Set visible" sid="702383073434345" type="InimigoCarinhaDevagar">
                             <param id="0" name="Visibility">1</param>

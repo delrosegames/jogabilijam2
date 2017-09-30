@@ -3,6 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FInimigoBase</name>
     <events>
+        <event-block sid="162073713039258">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="695728989515488" type="FInimigoBase">
+                    <param id="0" name="Instance variable">PontosVida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="873839589985636" type="FInimigoBase" />
+                <action id="-10" name="Add to" sid="582985047376988" type="System">
+                    <param id="0" name="Variable">DinheiroAtual</param>
+                    <param id="1" name="Value">FInimigoBase.DinheiroRecompensa</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="279775128876910">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="994081164050136" type="FInimigoBase">

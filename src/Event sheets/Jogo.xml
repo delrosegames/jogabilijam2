@@ -5,7 +5,7 @@
     <events>
         <variable comment="Opacidade a ser usada nas torres quando estão sendo construídas." constant="1" name="TORRE_CONSTRUINDO_OPACITY" sid="775097329495963" static="0" type="number">50</variable>
         <variable comment="Quantidade total de ondas que as fases possuem." constant="1" name="TOTAL_ONDAS" sid="762576535214477" static="0" type="number">10</variable>
-        <variable comment="Quantidade de dinheiro no início da fase." constant="1" name="DINHEIRO_INICIAL" sid="430335346948310" static="0" type="number">100</variable>
+        <variable comment="Quantidade de dinheiro no início da fase." constant="1" name="DINHEIRO_INICIAL" sid="430335346948310" static="0" type="number">50</variable>
         <variable constant="0" name="GameOver" sid="257251146644517" static="0" type="number">0</variable>
         <variable constant="0" name="Venceu" sid="703717148622194" static="0" type="number">0</variable>
         <variable constant="0" name="CustoTorreConstruindo" sid="667912732975726" static="0" type="number">0</variable>

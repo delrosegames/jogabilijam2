@@ -2442,6 +2442,7 @@
                 <instance-variable name="PontosVida" sid="656203848556588" type="number" />
                 <instance-variable name="TempoDevagar" sid="328320004728456" type="number" />
                 <instance-variable name="PontosVidaAnterior" sid="802792394524518" type="number" />
+                <instance-variable comment="Dinheiro ganho pelo jogador quando esse inimigo é derrotado." name="DinheiroRecompensa" sid="950663512017673" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="801531281151296">

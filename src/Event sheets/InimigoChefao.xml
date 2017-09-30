@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>InimigoChefao</name>
     <events>
-        <variable constant="1" name="INIMIGO_CHEFAO_VELOCIDADE" sid="813600602872014" static="0" type="number">60</variable>
+        <variable constant="1" name="INIMIGO_CHEFAO_VELOCIDADE" sid="813600602872014" static="0" type="number">50</variable>
         <variable constant="1" name="INIMIGO_CHEFAO_PV_BASE" sid="190620135001455" static="0" type="number">20</variable>
         <event-block sid="259521323885953">
             <conditions>
@@ -32,83 +32,6 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="193883269106999" type="InimigoChefaoHP">
                     <param id="0" name="Pin to">InimigoChefao</param>
                     <param id="1" name="Mode">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="149642953223078">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="371126679205420" type="InimigoChefaoBase">
-                    <param id="0" name="Object">PontoMovimento</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="569718410894432" type="InimigoChefaoBase">
-                    <param id="0" name="Instance variable">CurrentDestination</param>
-                    <param id="1" name="Value">PontoMovimento.Ordem+1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="923243965646297">
-            <conditions>
-                <condition id="-11" name="For Each" sid="110752673792560" type="System">
-                    <param id="0" name="Object">InimigoChefaoBase</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block disabled="1" sid="894993292610283">
-                    <conditions>
-                        <condition id="-34" name="Pick by evaluate" sid="910659798860316" type="System">
-                            <param id="0" name="Object">PontoMovimento</param>
-                            <param id="1" name="Expression">PontoMovimento.Ordem = InimigoChefaoBase.CurrentDestination</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-22" name="Set angle toward position" sid="327274626418325" type="InimigoChefaoBase">
-                            <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
-                            <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="678219259980013">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="765239662065059" type="InimigoChefaoBase">
-                    <param id="0" name="Object">EnemyGoal</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="771075332829699" type="InimigoChefaoBase" />
-                <action id="-11" name="Subtract from" sid="651772195741087" type="System">
-                    <param id="0" name="Variable">Vidas</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="25" name="Play at object" sid="453458076562693" type="Audio">
-                    <param id="0" name="Audio file">PerderVida</param>
-                    <param id="1" name="Loop">0</param>
-                    <param id="2" name="Volume">0</param>
-                    <param id="3" name="Object">GuaranaFinalFase</param>
-                    <param id="4" name="Inner angle">360</param>
-                    <param id="5" name="Outer angle">360</param>
-                    <param id="6" name="Outer gain">0</param>
-                    <param id="7" name="Tag (optional)">&quot;PerderVida&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="496045808184840">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="427605769768903" type="InimigoChefaoBase">
-                    <param id="0" name="Instance variable">PontosVida</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="818102140762064" type="InimigoChefao" />
-                <action id="-10" name="Add to" sid="317648844037520" type="System">
-                    <param id="0" name="Variable">DinheiroAtual</param>
-                    <param id="1" name="Value">2*OndaAtual</param>
                 </action>
             </actions>
         </event-block>

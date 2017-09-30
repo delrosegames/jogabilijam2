@@ -4,7 +4,7 @@
     <name>TorreCuca</name>
     <events>
         <variable constant="1" name="TEMPO_ANIMACAO_ATAQUE" sid="595301376026027" static="0" type="number">0.6</variable>
-        <variable constant="1" name="TORRE_CUCA_CUSTO" sid="756668379883790" static="0" type="number">50</variable>
+        <variable constant="1" name="TORRE_CUCA_CUSTO" sid="756668379883790" static="0" type="number">40</variable>
         <event-group description="" sid="496447630493579" title="Construção da Torre Cuca">
             <sub-events>
                 <event-block sid="519595430188753">

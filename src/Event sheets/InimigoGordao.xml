@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>InimigoGordao</name>
     <events>
-        <variable constant="1" name="INIMIGO_GORDAO_VELOCIDADE" sid="378485760750546" static="0" type="number">50</variable>
+        <variable constant="1" name="INIMIGO_GORDAO_VELOCIDADE" sid="378485760750546" static="0" type="number">40</variable>
         <variable constant="1" name="INIMIGO_GORDAO_PV_BASE" sid="645758954775981" static="0" type="number">10</variable>
         <event-block sid="798643924827674">
             <conditions>
@@ -32,83 +32,6 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="109995295491579" type="InimigoGordaoHP">
                     <param id="0" name="Pin to">InimigoGordao</param>
                     <param id="1" name="Mode">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="298397866811785">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="288745567313755" type="InimigoGordaoBase">
-                    <param id="0" name="Object">PontoMovimento</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="507801034250769" type="InimigoGordaoBase">
-                    <param id="0" name="Instance variable">CurrentDestination</param>
-                    <param id="1" name="Value">PontoMovimento.Ordem+1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="230087507913644">
-            <conditions>
-                <condition id="-11" name="For Each" sid="995652798392498" type="System">
-                    <param id="0" name="Object">InimigoGordaoBase</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block disabled="1" sid="354733957953038">
-                    <conditions>
-                        <condition id="-34" name="Pick by evaluate" sid="977049780126658" type="System">
-                            <param id="0" name="Object">PontoMovimento</param>
-                            <param id="1" name="Expression">PontoMovimento.Ordem = InimigoGordaoBase.CurrentDestination</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-22" name="Set angle toward position" sid="787794727020043" type="InimigoGordaoBase">
-                            <param id="0" name="X">PontoMovimento.ImagePointX(1)</param>
-                            <param id="1" name="Y">PontoMovimento.ImagePointY(1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="448280352086833">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="399777290046026" type="InimigoGordaoBase">
-                    <param id="0" name="Object">EnemyGoal</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="275479776008459" type="InimigoGordaoBase" />
-                <action id="-11" name="Subtract from" sid="732146664710497" type="System">
-                    <param id="0" name="Variable">Vidas</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="25" name="Play at object" sid="803062732286084" type="Audio">
-                    <param id="0" name="Audio file">PerderVida</param>
-                    <param id="1" name="Loop">0</param>
-                    <param id="2" name="Volume">0</param>
-                    <param id="3" name="Object">GuaranaFinalFase</param>
-                    <param id="4" name="Inner angle">360</param>
-                    <param id="5" name="Outer angle">360</param>
-                    <param id="6" name="Outer gain">0</param>
-                    <param id="7" name="Tag (optional)">&quot;PerderVida&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="483212388357781">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="681247985680296" type="InimigoGordaoBase">
-                    <param id="0" name="Instance variable">PontosVida</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="154945621173151" type="InimigoGordao" />
-                <action id="-10" name="Add to" sid="275383952471436" type="System">
-                    <param id="0" name="Variable">DinheiroAtual</param>
-                    <param id="1" name="Value">2*OndaAtual</param>
                 </action>
             </actions>
         </event-block>
@@ -153,7 +76,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="644556348127222" type="InimigoGordaoBase">
-                            <param id="0" name="Speed">INIMIGO_GORDAO_VELOCIDADE / 2</param>
+                            <param id="0" name="Speed">INIMIGO_CARINHA_VELOCIDADE - INIMIGO_GORDAO_VELOCIDADE / 3</param>
                         </action>
                         <action id="-15" name="Set visible" sid="798049340554697" type="InimigoGordaoDevagar">
                             <param id="0" name="Visibility">1</param>
