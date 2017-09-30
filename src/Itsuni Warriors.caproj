@@ -158,6 +158,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="CreditoFundo" sid="451842754617479">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722381323907634" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Dropbox\ARQUIVOS FINAIS -JogabiliJam Folclore\Tela de Créditos\PNG sem botão de Sair.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Torres">
             <object-type name="TorreCuca" sid="867839164798438">

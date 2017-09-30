@@ -95,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="InimigoCarinhaDevagar" uid="0">
+                <instance type="InimigoCarinhaDevagar" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -320,7 +320,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TorreCuca" uid="1">
+                <instance type="TorreCuca" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -956,7 +956,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextoPreco" uid="15">
+                <instance type="TextoPreco" uid="44">
                     <properties>
                         <character-width>6</character-width>
                         <character-height>8</character-height>
