@@ -124,7 +124,7 @@
                 <instance type="InimigoCarinhaHP" uid="48">
                     <properties>
                         <text>HP</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-13,700,0</font>
                         <color>0,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -651,7 +651,7 @@
                     </properties>
                     <instance-variables>
                         <Atacando>false</Atacando>
-                        <Damage>5</Damage>
+                        <Damage>4</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -766,7 +766,7 @@
                 <instance type="InimigoGordaoHP" uid="166">
                     <properties>
                         <text>HP</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-13,700,0</font>
                         <color>255,102,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -888,7 +888,7 @@
                 <instance type="InimigoChefaoHP" uid="170">
                     <properties>
                         <text>HP</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-13,700,0</font>
                         <color>255,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
