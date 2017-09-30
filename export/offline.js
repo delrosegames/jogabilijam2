@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1506781591,
+	"version": 1506793887,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -16,6 +16,10 @@
 		"images/miniaturafase3-sheet1.png",
 		"images/selecaofasesvoltar-sheet0.png",
 		"images/selecaofasesvoltar-sheet1.png",
+		"images/menuprincipallogo-sheet0.png",
+		"images/menuprincipalbotaocreditos-sheet0.png",
+		"images/menuprincipalbotaoiniciar-sheet0.png",
+		"images/menuprincipalbotaosair-sheet0.png",
 		"images/torrecuca-sheet0.png",
 		"images/torrecuca-sheet1.png",
 		"images/torrecucabase-sheet0.png",
